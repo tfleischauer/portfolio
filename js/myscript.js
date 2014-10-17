@@ -125,10 +125,10 @@ function showDescriptionNan() {
 }
 
 function showDescriptionRecreate() {
-  <!--alert('hi!');	-->
+  // alert('hi!');
   $("#description_recreate").show();
   var pageHref = $(this).attr("href");
-  /*console.log(pageHref);*/
+  // console.log(pageHref);
   //alert(pageHref + " .project_details_recreate");
   $("#description_recreate").load(pageHref + " .project_details_recreate"); 
   return false;	
