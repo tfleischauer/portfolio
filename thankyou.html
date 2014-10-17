@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UX Design, Web Production, Human-Computer Interaction | Troy Fleischauer</title>
+    <meta name="description" content="UX Design Portfolio | Troy Fleischauer" /> 
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--<link rel="stylesheet/less" href="css/mobile.less" />-->
+    <link rel="stylesheet" href="css/mobile.css" type="text/css">
+    
+    <!--<link rel="stylesheet/less" href="css/480.less" media="screen and (min-width:480px)" />-->
+    <link rel="stylesheet" href="css/480.css" media="screen and (min-width:480px)" />
+    
+    <!--<link rel="stylesheet/less" href="css/768.less" media="screen and (min-width:768px)" /> -->
+    <link rel="stylesheet" href="css/768.css" media="screen and (min-width:768px)" type="text/css" />   
+    
+    <!--<link rel="stylesheet/less" href="css/1080.less" media="screen and (min-width:1080px)" /> -->
+    <link rel="stylesheet" href="css/1080.css" media="screen and (min-width:1080px)" type="text/css" />    
+   
+    <meta name="viewport" content="width=device-width" />
+      
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <!-- form is for the ajax submit -->
+	<script src="js/jquery.form.js"></script> 
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/myscript.js"></script> 
+    <script src="js/formscript.js"></script> 
+    <script src="js/less-1.7.0.min.js"></script>
+    
+    
+    <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'> <!-- close to Century Gothic -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> <!-- close to Myriad Pro -->
+    
+  </head>
+  <body> 
+ 
+ 
+ 
+  <!-- <div id="page-contact" class="page">-->
+
+      <div class="contact-icons">
+              <a href="http://www.linkedin.com/pub/troy-fleischauer/57/106/a23/" target="_blank"><img class="icon-linkedin" src="images/icons-in-180x120.png" alt="LinkedIn icon" /></a>   
+      </div>
+        
+    	<div class="logo"><a href="http://www.portfolio.troyfleischauer.com/"> <img src="images/din-alt-bold.png" alt="Troy Fleischauer logo 06-2014" /> </a></div> <!-- end logo -->
+        
+        <!--<div id="filler-div-home"></div>  -->
+   
+   	<h1 class="section-label thankyou-page">Thank you! Your message has been sent.</h1>  
+    
+    <!--<div id="quote">
+        	<h1>Thank you! Your message has been sent.</h1>
+    </div> --> 
+        
+              
+              <fieldset>
+              	<!--<legend><h2>Contact</h2></legend>-->
+                <form id="contact-form" action="submit.php" method="post">
+                 <div class="error">
+                  <p>
+                  	<!--<label for="fname">First Name: </label>-->
+                    <label>First Name: </label>
+                  	<input type="text" id="first-name" name="first-name" required min-length="2" title="Please enter your first name." />
+                  </p>
+                  
+                  <p>
+                  	<!--<label for="lname">Last Name: </label>-->
+                    <label>Last Name: </label>
+                 	<input type="text" id="last-name" name="last-name" required min-length="2" title="Please enter your last name." />
+                  </p>
+                  
+                  <p>
+                  	<label for="email">Email:</label>
+                  	<input type="email" id="email" name="email" required title="Please enter a valid email address." /> <!--required data-msg-email-->
+                  </p>
+                  
+                  <p>
+                  	<label for="subject">Subject:</label>
+                  	<input type="text" id="subject" name="subject" required title="What is this email regarding?">
+                  </p>
+                  
+                  <p>
+                 	<label for="message">Message:</label>
+                  	<textarea name="message" id="message" required title="Please enter your message."></textarea>
+                  </p>
+                  
+                  <p id="buttons">
+                  	<button type="submit" name="submit" value="submit">Send Message</button>
+                  </p>
+                  
+                 </div> <!-- end error div -->
+                </form>
+              </fieldset>
+                   
+               <div id="result"></div>
+   
+  <!-- </div>--> <!-- end page-contact -->
+</body>
+</html>

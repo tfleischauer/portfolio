@@ -1,0 +1,606 @@
+/*** RESETS ***/
+
+/* *, *:before, *:after border-box does not apply to pseudo elements */
+
+* {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline; /* Descenders will go to the baseline but not drop below. Pictures will sit above/on the baseline. */
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;	
+	font-family: "Century Gothic", Muli, "Trebuchet MS", "Helvetica", Arial, sans-serif;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;	
+}
+
+img {
+	max-width:100%;	
+}
+
+.clear {
+	clear:both;	
+}
+
+/* MIXINS */
+
+.mobileProjectMixin {
+   border: .03em solid #000;
+   height:50px;
+   overflow:hidden;
+   width:96%;
+   margin:auto;
+   margin-bottom:2%;	
+}
+
+.projectDetailsMobile {
+	& h1 {
+		font-size:125%;
+		padding-bottom:4%;
+		padding-top:4%;	
+		
+	}
+	& img {
+		
+	
+	}
+	& p { /* each paragraph */
+		margin-bottom:.5em;
+		padding:0 0 0 0;
+	}
+	
+	/* all paragraphs as a group in project_details */
+	& .project_details_p { 
+		margin-bottom:.7em;
+		float:left;
+		padding:0 2% 2% 2%;
+		font-size:.8em;
+		width:96%;
+		margin:auto;
+	}
+	
+	& .pdf-link {
+		margin-top:1em;	
+		
+	}
+	/* div containing the image */
+	& .project_details_img {
+		width:96%;
+	}
+	
+	& ul {
+		padding-bottom:.6em;
+		padding-left: 1.1em;	
+	}
+	
+	& li {
+		padding-bottom:.3em;
+	}
+}
+
+
+/*** FUNCTIONS ***/
+/*** END FUNCTIONS ***/
+
+
+/*** MOBILE STRUCTURE ***/
+#home-page-container {
+		width:100%;
+		margin:auto;		
+}
+
+#home-header {
+	margin-bottom:7%;
+}
+
+.logo {
+	width:29.16666667%;	
+}
+
+
+/*** CONTACT ICONS ***/
+.contact-icons {
+	float:right;
+	width:29.16666667%;
+}
+
+.icon-email {
+	float:left;
+	/* margin-left:4.16666667%; */ 
+	 width:42.85714286%; 
+	 /*max-width:180px;*/
+}
+
+.icon-linkedin {
+	float:right;	
+	width:42.85714286%; 
+}
+/*** END CONTACT ICONS ***/
+
+#quote {
+	margin-top:-20%;
+	width:percentage(300/460);
+	padding:1%;
+	font-size:90%;
+	margin-left:percentage(140/460);	
+}
+
+.section-label {
+	font-size:200%;
+	margin-top:2%;
+	margin-bottom:3%;	
+}
+
+h2 {
+	margin-bottom:.5em;
+	width:96%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:90%;
+}
+
+.project {
+	position:relative;	
+}
+
+/*** PROJECT PAGE - ALL RECTANGLE ICONS ***/
+#page-projects {
+	/*display:none;	*/
+	visibility:visible;
+}
+
+/* numbering system - development only */
+.projectDiv { 
+	display:none;	
+}
+
+.greyscale-circle,
+.greyscale-circle-140 {
+	display:none;	
+}
+
+.color-circle,
+.color-circle-140 {
+	display:none;	
+}
+
+.mobile-rectangle {
+	display:block;
+}
+
+#project1 {}
+
+#artist {
+ .mobileProjectMixin;
+}
+
+#project2 {}
+
+#re-create {
+ .mobileProjectMixin;
+}
+
+header#reCreate img {
+	display:block;
+}
+
+#project3 {}
+
+#mark {
+ .mobileProjectMixin;
+ /*padding-bottom:0;	*/
+/* padding-top:2%;*/
+}
+
+#project4 {}
+
+#trombone {
+ .mobileProjectMixin;
+ /*background-image:url("../images/random-guitar-track-500x50px.png");*/
+ background-image:url("../images/wave-color-209x50px.png");
+ /*background-image:url("../images/wavelength-white-on-green-480x110px-century-gothic-1.jpg");*/
+ background-repeat:repeat;
+}
+
+#trombone h2.cover {
+	display:block;	
+}
+
+#project5 {} 
+
+#home-connect {
+ .mobileProjectMixin;
+ background-color:#CEE9FC;
+}
+
+header#header-homeconnect {
+	background-color:#CEE9FC;
+}
+
+header#header-homeconnect img {
+	display:block;	
+}
+
+/*#home-connect .mobile-rectangle {
+	text-align:center;
+}*/
+
+#project6 {}
+
+#major-exploration {
+ .mobileProjectMixin;
+ background-repeat:no-repeat; 
+ background-color:tint(#b3b3b4, 80%);
+}
+
+header#header-major-exploration {
+  background-color:tint(#B3B3B3, 80%);
+  /*border:1px solid #808080;*/
+  overflow:hidden;
+}
+
+header#header-major-exploration img {
+	display:block;	
+}
+
+#project7{}
+
+#wa-ensemble {
+ .mobileProjectMixin;
+}
+
+#project8{}
+
+#husky-health {
+ .mobileProjectMixin;
+}
+
+#project9{}
+
+#vo {
+ .mobileProjectMixin; 
+ /*background-repeat:no-repeat; */
+ /*background-color:#001821;*/
+}
+
+#project10{}
+
+#giddy-throng {
+ .mobileProjectMixin; 
+}
+
+.cover h2 {
+	text-decoration:none;
+	overflow:hidden;	
+}
+
+#artist h2.cover {
+		color:#FFF;
+		margin-left:50%;
+		margin-top:-19%;
+		font-size:26px;
+			
+}
+
+#artist a {
+	text-decoration:none;
+}
+
+#re-create h2.cover {
+		color:#000;
+		margin-left:20%;
+		margin-top:-18%;
+		font-size:24px;
+		font-family: "Myriad Pro", "PT Sans", sans-serif;
+		overflow:hidden;
+			
+}
+
+#re-create a {
+	text-decoration:none;
+	/*border-bottom:none;*/
+	overflow:hidden;
+}
+
+#major-exploration h2.cover {
+		color:#000;
+		font-size:24px;	
+		display:none;	
+}
+
+#mark .cover,
+#home-connect .cover {
+	display:none;	
+	
+}
+
+
+
+/*** PROJECT PAGES ***/
+.menu-content {
+	/*width:100%;*/
+	margin-top:1.25%;
+	margin-bottom:2%;
+	height:100%;
+	padding-bottom:1%;	
+}
+
+#content-area-recreate,
+#content-area-nan,
+#content-area-mark,
+#content-area-trombone,
+#content-area-major-exploration,
+#content-area-homeconnect,
+#content-area-giddy-throng {
+	width:96%;
+	/*border: 3px solid grey;*/
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* the nav items */
+.project_details_recreate,
+.project_details_nan,
+.project_details_mark,
+.project_details_trombone,
+.project_details_major_exploration,
+.project_details_homeconnect,
+.project_details_giddy_throng {
+	.projectDetailsMobile;
+}
+
+header#reCreate {
+	background-color:#C9D5DB;
+	overflow:hidden;	
+	/*margin-top:5%;*/
+}
+
+header#header-trombone {
+	overflow:hidden;
+	/*background-image: url('../hcde419/images/trombone-header-image-313x110px.jpg');*/
+	height:110px;
+	/*background-image: url("../hcde419/images/wavelength.png");*/
+	background-image: url("../images/wavelength-gold-on-green-481x110px-outerglow.jpg");
+}
+
+#header-trombone h1 {
+	font-size:2em;
+	line-height:110px;
+	text-align:left;
+	/*color:#FFF;*/
+	color:#B5A642;
+	/*-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: pink;
+	-webkit-text-stroke: 1px pink;*/
+}
+
+/*** MOBILE MAIN NAV ***/
+
+nav {
+	/*display:none;*/
+	position:fixed;
+	z-index:100;
+	width:100%;
+	left:0;
+	bottom:0;
+	margin:auto;
+	/*visibility:visible;	*/
+	/*background-color:#565656;*/
+	background-color:#4D4D4D;
+	/*padding-left:15%;*/
+	/*padding-right:15%;*/
+}
+
+nav ul {
+	list-style-type:none;
+	width:280px;
+	margin:auto;
+	/*padding:1% 0;*/
+	/*padding-bottom:3%;
+	padding-top:3%;*/
+}
+
+nav ul li {
+	float:left;
+	/*padding-right:1%;*/
+	/*padding-right:5px;*/
+	/*padding-left:5px;*/
+	font-size:1.1em;
+	/*padding-bottom:1%;
+	padding-top:1%;*/
+}
+
+nav li a {
+	display:block;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:5px;	
+	padding-bottom:5px;
+}
+
+nav a {
+	text-decoration:none;
+	color:#FFF;
+}
+
+nav a:hover {
+	text-decoration:underline;
+	color:#FFF;
+}
+
+/*** COLLAPSE NAVS ***/
+
+.nav-sub-mixin {
+	display:none;
+	background:#A9A9A9;	
+	
+	& li {
+		list-style-type:none;
+		display:block;
+		padding:1%;	
+		
+		& a {
+			text-decoration:none;
+			color:#FFF;		
+		}
+		
+		& a:hover {
+			text-decoration:underline;	
+		}
+	}		
+}
+
+.nav-collapse-mixin {
+	display:block;	
+	text-align:right;
+	width:100%;
+	padding:0.325em;
+	color:#FFF;
+	background:#000;
+	text-decoration:none;		
+}
+
+#nav-sub-nan,
+#nav-sub-recreate,
+#nav-sub-mark,
+#nav-sub-trombone,
+#nav-sub-major-exploration,
+#nav-sub-homeconnect,
+#nav-sub-giddy-throng {
+	.nav-sub-mixin;		
+}
+
+#nav-collapse-nan,
+#nav-collapse-recreate,
+#nav-collapse-mark,
+#nav-collapse-trombone,
+#nav-collapse-major-exploration,
+#nav-collapse-homeconnect,
+#nav-collapse-giddy-throng  {	
+	.nav-collapse-mixin;
+}
+
+/*** CONTACT FORM ***/
+form {
+	font-size:125%;	
+}
+
+/*label, input, p, textarea {*/
+	/*border:1px solid red;*/
+/*}*/
+
+label {
+margin-bottom:.75%;	
+}
+
+input,
+textarea {
+	border: 1px solid grey;
+	border-radius: 2px;
+	width:100%;	
+	margin-bottom:2%;
+	
+}
+
+/*input[type="email"] {
+	width:20%;	
+}*/
+
+#contact-form label {
+	width:67%;
+	display:block;
+}
+
+#contact-form input.error { /* input boxes */
+	border: 1px solid magenta;
+}
+
+#contact-form label.error { /* text */
+	color:magenta;
+	margin-bottom:1%;
+}
+
+#contact-form textarea.error {
+	color:magenta;
+	border: 1px solid magenta;
+}
+
+#contact-form button {
+	float:right;
+	margin:1%;	
+	padding:1%;
+}
+
+#contact-form p#buttons {
+}
+
+fieldset {
+	width:96%;
+	margin:auto;
+	/*border:1px solid black;	*/
+}
+
+#first-name,
+#last-name,
+#email,
+#subject {
+	height:36px;
+	margin-bottom:1.5%;	
+	
+}
+
+
+
+/*** MOBILE FONTS ***/
+
+/* IMAGE SIZES */
+.project_details_img_large {
+	display:block;	
+}
+
+.project_details_img_small {
+	display:none;	
+}
+
+iframe {
+	
+	/*width:percentage(460/700);*/
+	/*width:300px;*/
+	/* margin-left:auto;
+	margin-right:auto;*/
+	/*height:268px;*/
+	/*align:middle;*/
+	
+	/*text-align:center;
+	alignment-baseline:baseline;*/
+	/*min-width:350px;*/
+}
+
+.project_details_img.vid {
+	/*width:100%;*/
+	/*float:right;*/
+	/*width:percentage(460/700);*/
+	/*max-height:690px;*/
+	overflow:hidden;
+	/*border:2px solid black;*/
+	border:none;
+	/*padding-right:percentage(10/700);*/
+	/*margin-right:percentage(10/700);*/
+	/*padding-left:10%;*/
+	text-align:center;
+	alignment-baseline:baseline;
+}
+
+.project_details_img.vid {
+	/*border:none;*/
+}
+
+.no-border {
+	border:none;
+}
+
+

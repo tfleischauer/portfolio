@@ -1,0 +1,244 @@
+/* MIXINS */
+.circleMixin-210px {
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	width:210px;
+	height:210px;
+	background-color:white;
+	overflow:hidden;
+}
+/* END MIXINS */
+
+/* FUNCTIONS */
+.stroke(@outline-width : 3px, @outline-style : solid, @color : black) {
+	-moz-border:  @outline-width @outline-style @color;
+	-webkit-border:  @outline-width @outline-style @color;
+	-ms-border:  @outline-width @outline-style @color;
+	border: @outline-width @outline-style @color;
+	overflow:hidden;
+}
+/* END FUNCTIONS */
+
+
+/* CIRCLE BEHAVIORS */
+.mobile-rectangle,
+.greyscale-circle-140,
+.color-circle-140 {
+	display:none;
+}
+
+.greyscale-circle {
+	position:absolute;
+	top:0;
+	z-index:2;
+	opacity:1;
+	overflow:hidden;
+	display:block;
+	
+	-moz-transition:opacity 500ms ease-out 10ms;
+	-webkit-transition:opacity 500ms ease-out 10ms;
+	transition:opacity 500ms ease-out 10ms;		
+}
+
+.greyscale-circle:hover {
+	opacity:0;
+	overflow:hidden;
+}
+
+.color-circle {
+	position:absolute;
+	z-index:1;
+	top:0;
+	display:block;
+	overflow:hidden;
+}
+
+/* EACH PROJECT CIRCLE - POSITION & IMAGES */
+#artist {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		/*color:#FFF;*/
+		margin-left:64px;
+		margin-top:111px;
+		font-size:26px;	
+	}
+}
+
+#re-create {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		/*color:#000;*/
+		margin-left:101px;
+		margin-top:50px;
+		/*font-family: "Myriad Pro", "PT Sans", sans-serif;*/
+		font-size:20px;	
+		width:110px;
+		overflow:hidden;
+	}
+}
+
+#mark {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:26px;
+		margin-left:45px;
+		margin-top:86px;
+		/*color:#7ED9EF;
+		font-family:"Gotham";
+		letter-spacing:5px;*/
+	}	
+}
+
+#trombone {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	/*& h2.cover {
+		font-size:26px;
+		margin-left:7px;
+		margin-top:13px;
+		color:#FFF;
+		text-align:center;
+	}*/	
+	
+	& h2.cover {
+		font-size:20px;
+		margin-left:4px;
+		margin-top:88px;
+		/*text-align:center;*/
+	}	
+}
+
+#home-connect {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:23px;
+		margin-left:4px;
+		margin-top:85px;
+		/*color:#FFF;*/
+		/*text-align:center;*/
+	}	
+}
+
+#major-exploration {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);	
+	
+	& h2.cover {
+		font-size:18px;
+		margin-left:4px;
+		margin-top:90px;
+		/*color:#BE5C6C;*/
+		/*color:darkred;*/
+		/*color:red;*/
+		/*text-align:center;*/
+		/*background-color:#FFEC09;*/
+	}
+}
+		
+#wa-ensemble {
+
+/*#giddy-throng {
+*/	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:26px;
+		margin-left:4px;
+		margin-top:83px;
+		/*color:red;*/
+		/*text-align:center;*/
+	}		
+}
+			
+#husky-health {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:26px;
+		margin-left:4px;
+		margin-top:83px;
+		/*color:red;*/
+		/*text-align:center;*/
+	}		
+}
+				
+#vo {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:26px;
+		margin-left:3px;
+		margin-top:65px;
+		/*color:red;*/
+		/*text-align:center;*/
+	}		
+}
+/* END CIRCLE BEHAVIORS */
+
+/* IMAGE SIZES */
+.project_details_img_large {
+	display:block;	
+}
+
+.project_details_img_small {
+	display:none;	
+}
+
+.projectDetails768 {
+   & .project_details_p { 
+		font-size:.8em;
+	}
+}
+
+.project_details_recreate,
+.project_details_nan,
+.project_details_mark,
+.project_details_trombone,
+.project_details_major_exploration,
+.project_details_homeconnect,
+.project_details_giddy_throng {
+	.projectDetails768;
+}
+
+.long-text {
+	font-size:0.8em;
+}
+
+.long-text h1 {
+	font-size:2.25em;	
+}
+
+#page-nan #nav-sub-nan,
+#page-mark #nav-sub-mark,
+#page-reCreate #nav-sub-recreate,
+#page-trombone #nav-sub-trombone,
+#page-major-exploration #nav-sub-major-exploration,
+#page-homeconnect #nav-sub-homeconnect,
+#page-giddy-throng #nav-sub-giddy-throng {
+	font-size: 1.1em;
+	line-height: 1.5; /* 24px / 16 px */
+}
+
+iframe {
+	
+	/*width:percentage(460/700);*/
+	width:370px;
+	height:268px;
+	
+}
+
+.no-border {
+	border:none;
+}
