@@ -196,7 +196,7 @@ function showFirstDescriptionTrombone() {
 
 function showFirstDescriptionMajorExploration() {
   $("#description_major_exploration").show();
-  $("#description_major_exploration").load("info490/overview.html" + " .project_details_major_exploration");
+  $("#description_major_exploration").load("info490/video-prototype.html" + " .project_details_major_exploration");
   return false;	
 }
 
