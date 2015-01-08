@@ -249,8 +249,14 @@ header#header-major-exploration img {
 
 #project7{}
 
-#wa-ensemble {
+#giddy-throng {
  .mobileProjectMixin;
+  background-color:#262626;
+}
+
+#giddy-throng .mobile-rectangle {
+	padding: 9px 0 0 3px;
+	width:65%;
 }
 
 #project8{}
@@ -269,8 +275,15 @@ header#header-major-exploration img {
 
 #project10{}
 
-#giddy-throng {
- .mobileProjectMixin; 
+
+
+header#header-giddy-throng {
+  background:#262626;
+  padding: 20px 0 20px 5px;
+}
+
+header#header-giddy-throng img {
+  display:block;	
 }
 
 .cover h2 {
@@ -296,8 +309,7 @@ header#header-major-exploration img {
 		margin-top:-18%;
 		font-size:24px;
 		font-family: "Myriad Pro", "PT Sans", sans-serif;
-		overflow:hidden;
-			
+		overflow:hidden;		
 }
 
 #re-create a {
@@ -572,6 +584,7 @@ fieldset {
 .project_details_img.no-border {
 	border:none;
 }
+/* END PROJECT_DETAILS */
 
 /*** IFRAME ***/
 .iframe-wrapper {
@@ -579,10 +592,9 @@ fieldset {
 	position: relative;	
 	
 	/* padding is relative to the width of the element */
-	/* The aspect ratio of 16:9, is expressed by 9/16 = 56.25% */
-	padding-bottom:56.25%;
-	
-    /*padding-top: 1px;*/
+	/* The aspect ratio of 16:10, is expressed by 10/16 = 62.5% */
+	padding-bottom:62.5%;
+	z-index:1;
 }
 
 iframe {
@@ -593,5 +605,14 @@ iframe {
 	left:0;
 }
 /*** END IFRAME ***/
+
+#play {
+	position:absolute;
+	z-index:100;	
+}
+
+#maru {
+	z-index:1;	
+}
 
 
