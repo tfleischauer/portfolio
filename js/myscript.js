@@ -28,6 +28,8 @@ $(document).ready(function() {
   
   $("#nav-collapse-giddy-throng").click(showHideMenu);
   
+  $("#nav-collapse-earthship-seattle").click(showHideMenu);
+  
   // make id div after menu / inside #content-area-x
   $("#content-area-nan").prepend("<div id='description_nan'></div>");
   $("#content-area-recreate").prepend("<div id='description_recreate'></div>");
@@ -36,6 +38,7 @@ $(document).ready(function() {
   $("#content-area-major-exploration").prepend("<div id='description_major_exploration'></div>");
   $("#content-area-homeconnect").prepend("<div id='description_homeconnect'></div>");
   $("#content-area-giddy-throng").prepend("<div id='description_giddy_throng'></div>");
+  $("#content-area-earthship-seattle").prepend("<div id='description_earthship_seattle'></div>");
   
   // jQuery class 'hide', hides the contents of the div
   $("#description_nan").hide();
@@ -45,6 +48,7 @@ $(document).ready(function() {
   $("#description_major_exploration").hide();
   $("#description_homeconnect").hide();
   $("#description_giddy_throng").hide();
+  $("#description_earthship_seattle").hide();
   
   // each list item in the sub-nav
   $(".project_title_nan").click(showDescriptionNan); 
@@ -54,6 +58,7 @@ $(document).ready(function() {
   $(".project_title_major_exploration").click(showDescriptionMajorExploration);
   $(".project_title_homeconnect").click(showDescriptionHomeConnect);
   $(".project_title_giddy_throng").click(showDescriptionGiddyThrong);  
+  $(".project_title_earthship_seattle").click(showDescriptionEarthshipSeattle);  
   
   showFirstDescriptionNan();
   showFirstDescriptionRecreate();
@@ -62,6 +67,7 @@ $(document).ready(function() {
   showFirstDescriptionMajorExploration();
   showFirstDescriptionHomeConnect();
   showFirstDescriptionGiddyThrong();
+  showFirstDescriptionEarthshipSeattle();
 	  
 });
 
@@ -169,6 +175,13 @@ function showDescriptionGiddyThrong() {
   return false;
 }
 
+function showDescriptionEarthshipSeattle() {
+  $("#description_earthship_seattle").show();
+  var pageHref = $(this).attr("href");
+  $("#description_earthship_seattle").load(pageHref + " .project_details_earthship_seattle");
+  return false;	
+}
+
 /*** SET OPENING PAGES ***/
 function showFirstDescriptionNan() {
   $("#description_nan").show();
@@ -210,6 +223,12 @@ function showFirstDescriptionGiddyThrong() {
   $("#description_giddy_throng").show();
   $("#description_giddy_throng").load("web170/wp.html" + " .project_details_giddy_throng");
   return false;	
+}
+
+function showFirstDescriptionEarthshipSeattle() {
+  $("#description_earthship_seattle").show();
+  $("#description_earthship_seattle").load("web210/overview.html" + " .project_details_earthship_seattle");
+  return false;		
 }
 /*** END SET OPENING PAGES ***/
 
@@ -280,10 +299,3 @@ if (jQuery(window).width() < 480) {
 jQuery(".page").css('display', 'none');
 }
 });	*/
-
-
-
-
-
-
-

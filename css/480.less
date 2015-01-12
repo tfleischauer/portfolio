@@ -366,7 +366,8 @@ a.selected {
 #nav-sub-trombone,
 #nav-sub-major-exploration,
 #nav-sub-homeconnect,
-#nav-sub-giddy-throng {
+#nav-sub-giddy-throng,
+#nav-sub-earthship-seattle {
 	display:block !important;	
 }
 
@@ -376,7 +377,8 @@ a.selected {
 #nav-collapse-trombone,
 #nav-collapse-major-exploration,
 #nav-collapse-homeconnect,
-#nav-collapse-giddy-throng {
+#nav-collapse-giddy-throng,
+#nav-collapse-earthship-seattle {
 	display:none;	
 }
 /* END SUB-NAVIGATION */
@@ -736,16 +738,19 @@ h2.cover {
 	z-index:60;
 }
 
-#husky-health {
+#earthship-seattle {
 	.allCirclesMixin;
 	.circleMixin-140px;
 	
  	& h2.cover {
+		font-family:"PT Mono";
 		font-size:18px;
 		margin-left:3px;
-		margin-top:55px;
-		color:red;
+		margin-top:50px;
+		color:#FFF;
 		text-align:center;
+		
+		text-shadow: 0px 0px 5px #000;
 	}
 }
 
@@ -796,7 +801,8 @@ h2.cover {
 #content-area-trombone,
 #content-area-major-exploration,
 #content-area-homeconnect,
-#content-area-giddy-throng {
+#content-area-giddy-throng,
+#content-area-earthship-seattle {
 	.content-area;
 }
 
@@ -807,7 +813,8 @@ h2.cover {
 .project_details_trombone,
 .project_details_major_exploration,
 .project_details_homeconnect,
-.project_details_giddy_throng {
+.project_details_giddy_throng,
+.project_details_earthship_seattle {
 	.projectDetailsTablet;
 }
 
@@ -1105,10 +1112,37 @@ header#header-giddy-throng img{
 /*** END GIDDY THRONG PAGE ***/
 
 
+/*** EARTHSHIP SEATTLE PAGE ***/
+#page-earthship-seattle {
+	top:900%;
+	overflow:hidden;
+}
+
+header#header-earthship-seattle {
+	height:110px;
+	background-image: url("../images/skylinelogo2-460x100px.png");
+	background-repeat: no-repeat;
+	background-position:5px 50%;
+	display:block;	
+}
+
+header#header-earthship-seattle img{
+	display:none;
+}
+
+/* EARTHSHIP SEATTLE NAV 480 px and larger */
+#nav-sub-earthship-seattle {
+	.verticalMenuMixin-White;
+}
+/* END EARTHSHIP SEATTLE NAV 480 px and larger */
+
+/*** END EARTHSHIP SEATTLE PAGE ***/
+
+
 /*** CONTACT PAGE ***/
 
 #page-contact {
-	top:900%;
+	top:1000%;
 	/*background:hotpink;*/
 	/*color:#000;*/
 }
