@@ -25,6 +25,48 @@ img {
 .clear {
 	clear:both;	
 }
+/*** END RESETS ***/
+
+/*** GLOBAL SELECTORS ***/
+p {
+	margin-bottom:.5em;
+	padding:0 0 0 0;
+	font-family: "Open Sans";
+}
+
+a:link,
+a:visited {
+	color: #333;
+	text-decoration:none;
+	border-bottom-color: #CCCCCC;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+}
+/*  border instead of an underline, 
+underlines are notoriously inflexible. */
+
+a:hover,
+a:focus {
+	border-bottom: 1px solid #333;
+	text-decoration: none;
+	border-bottom-color: #333;
+}
+
+a:link img {
+	border-bottom:none;	
+	text-decoration:none;
+}
+
+.project_details_img a:link,
+.project_details_img a:hover,
+.logo a:link,
+.logo a:hover,
+a.project:link,
+a.project:hover {
+	border-bottom:none;	
+	text-decoration:none;
+}
+/*** END GLOBAL SELECTORS ***/
 
 /* MIXINS */
 
@@ -39,25 +81,22 @@ img {
 
 .projectDetailsMobile {
 	& h1 {
-		font-size:125%;
-		padding-bottom:4%;
-		padding-top:4%;	
+		font-size:115%;
+		padding-top:15px;	
+		padding-bottom:15px;
+		
 		
 	}
 	& img {
 		
 	
 	}
-	& p { /* each paragraph */
-		margin-bottom:.5em;
-		padding:0 0 0 0;
-	}
 	
 	/* all paragraphs as a group in project_details */
 	& .project_details_p { 
 		margin-bottom:.7em;
 		float:left;
-		padding:0 2% 2% 2%;
+		padding:0 0% 2% 0%;
 		font-size:.8em;
 		width:96%;
 		margin:auto;
@@ -137,10 +176,10 @@ img {
 
 h2 {
 	margin-bottom:.5em;
-	width:96%;
-	margin-left:auto;
-	margin-right:auto;
-	font-size:90%;
+	/*width:96%;*/
+	/*margin-left:auto;*/
+	/*margin-right:auto;*/
+	/*font-size:90%;*/
 }
 
 .project {
@@ -157,6 +196,7 @@ h2 {
 .projectDiv { 
 	display:none;	
 }
+/* end numbering system - development only */
 
 .greyscale-circle,
 .greyscale-circle-140 {
@@ -172,34 +212,26 @@ h2 {
 	display:block;
 }
 
-#project1 {}
-
-#artist {
+#artist,
+#re-create,
+#mark,
+#trombone,
+#home-connect,
+#major-exploration,
+#giddy-throng,
+#earthship-seattle,
+#vo  {
  .mobileProjectMixin;
 }
 
-#project2 {}
-
-#re-create {
- .mobileProjectMixin;
-}
-
-header#reCreate img {
+header#reCreate img,
+header#header-homeconnect img,
+header#header-major-exploration img,
+header#header-giddy-throng img {
 	display:block;
 }
 
-#project3 {}
-
-#mark {
- .mobileProjectMixin;
- /*padding-bottom:0;	*/
-/* padding-top:2%;*/
-}
-
-#project4 {}
-
 #trombone {
- .mobileProjectMixin;
  /*background-image:url("../images/random-guitar-track-500x50px.png");*/
  background-image:url("../images/wave-color-209x50px.png");
  /*background-image:url("../images/wavelength-white-on-green-480x110px-century-gothic-1.jpg");*/
@@ -210,31 +242,20 @@ header#reCreate img {
 	display:block;	
 }
 
-#project5 {} 
-
 #home-connect {
- .mobileProjectMixin;
  background-color:#CEE9FC;
+}
+
+#giddy-throng {
+  background-color:#262626;
+}
+
+#major-exploration {
+ 	background-color:tint(#b3b3b4, 80%);
 }
 
 header#header-homeconnect {
 	background-color:#CEE9FC;
-}
-
-header#header-homeconnect img {
-	display:block;	
-}
-
-/*#home-connect .mobile-rectangle {
-	text-align:center;
-}*/
-
-#project6 {}
-
-#major-exploration {
- .mobileProjectMixin;
- background-repeat:no-repeat; 
- background-color:tint(#b3b3b4, 80%);
 }
 
 header#header-major-exploration {
@@ -243,53 +264,25 @@ header#header-major-exploration {
   overflow:hidden;
 }
 
-header#header-major-exploration img {
-	display:block;	
-}
-
-#project7{}
-
-#giddy-throng {
- .mobileProjectMixin;
-  background-color:#262626;
-}
-
 #giddy-throng .mobile-rectangle {
 	padding: 9px 0 0 3px;
 	width:65%;
 }
 
-#project8{}
-
-#earthship-seattle {
- .mobileProjectMixin;
- 
- h2 {
+#earthship-seattle h2 {
 	font-family:"PT Mono"; 
 	font-size:1.5em;
 	padding-top:10px;
- }
+	padding-left:5px;
 }
-
-#project9{}
-
-#vo {
- .mobileProjectMixin; 
- /*background-repeat:no-repeat; */
- /*background-color:#001821;*/
-}
-
-#project10{}
-
-
 
 header#header-giddy-throng {
   background:#262626;
   padding: 20px 0 20px 5px;
 }
 
-header#header-giddy-throng img {
-  display:block;	
+#vo h2 {
+	
 }
 
 .cover h2 {
@@ -387,17 +380,6 @@ header#header-trombone {
 	background-image: url("../images/wavelength-gold-on-green-481x110px-outerglow.jpg");
 }
 
-#header-trombone h1 {
-	font-size:2em;
-	line-height:110px;
-	text-align:left;
-	/*color:#FFF;*/
-	color:#B5A642;
-	/*-webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: pink;
-	-webkit-text-stroke: 1px pink;*/
-}
-
 /*** MOBILE MAIN NAV ***/
 
 nav {
@@ -442,14 +424,21 @@ nav li a {
 	padding-bottom:5px;
 }
 
-nav a {
+/*nav a {
 	text-decoration:none;
 	color:#FFF;
+}*/
+
+nav a:link,
+nav a:visited {
+	text-decoration:none;
+	color:#FFF;
+	border-bottom:none;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
 	text-decoration:underline;
-	color:#FFF;
 }
 
 /*** COLLAPSE NAVS ***/
@@ -465,7 +454,8 @@ nav a:hover {
 		
 		& a {
 			text-decoration:none;
-			color:#FFF;		
+			color:#FFF;	
+			border-bottom: none;	
 		}
 		
 		& a:hover {
@@ -481,7 +471,8 @@ nav a:hover {
 	padding:0.325em;
 	color:#FFF;
 	background:#000;
-	text-decoration:none;		
+	text-decoration:none;
+	border-bottom:none;		
 }
 
 #nav-sub-nan,
