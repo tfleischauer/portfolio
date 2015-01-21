@@ -203,7 +203,7 @@ function showFirstDescriptionMark() {
 
 function showFirstDescriptionTrombone() {
   $("#description_trombone").show();
-  $("#description_trombone").load("hcde419/research-report.html" + " .project_details_trombone");
+  $("#description_trombone").load("hcde419/overview.html" + " .project_details_trombone");
   return false;	
 }
 
