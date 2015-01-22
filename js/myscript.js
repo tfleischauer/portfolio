@@ -191,7 +191,7 @@ function showFirstDescriptionNan() {
 
 function showFirstDescriptionRecreate() {
   $("#description_recreate").show();
-  $("#description_recreate").load("web202/wireframes-1.html" + " .project_details_recreate");  
+  $("#description_recreate").load("web202/overview.html" + " .project_details_recreate");  
   return false;	
 }
 
@@ -221,7 +221,7 @@ function showFirstDescriptionHomeConnect() {
 
 function showFirstDescriptionGiddyThrong() {
   $("#description_giddy_throng").show();
-  $("#description_giddy_throng").load("web170/wp.html" + " .project_details_giddy_throng");
+  $("#description_giddy_throng").load("web170/overview.html" + " .project_details_giddy_throng");
   return false;	
 }
 

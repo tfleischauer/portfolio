@@ -57,6 +57,10 @@ a:link img {
 	text-decoration:none;
 }
 
+.italic {
+	font-style: italic;	
+} 
+
 .project_details_img a:link,
 .project_details_img a:hover,
 .logo a:link,
@@ -66,10 +70,35 @@ a.project:hover {
 	border-bottom:none;	
 	text-decoration:none;
 }
+
+/* RAVEN'S VERTICAL LISTS */
+ol {
+	padding-left:2.25em;	
+}
+
+ul {
+	/*background-color: green;*/
+	padding-left: 1em; /* padding WILL show the background of the ul tag */
+}
+
+li {
+	/*background-color: red;*/
+	padding-bottom: 0.25em; /* 4px / 16px */ /* padding WILL show the background of the li tag */
+}
+
+p, ol, ul {
+	margin-bottom: 0.375em;	/* 6px / 16px */
+}
+
+ul li ul {
+	/*background-color: blue;*/
+	padding-top: 0.25em; /* creates vertical space for sub-list */
+	margin-bottom: 0; /* zeros out bottom of the sub-list */
+}
+/* END RAVEN'S VERTICAL LISTS */
 /*** END GLOBAL SELECTORS ***/
 
 /* MIXINS */
-
 .mobileProjectMixin {
    border: .03em solid #000;
    height:50px;
@@ -121,65 +150,92 @@ a.project:hover {
 	}
 }
 
-
 /*** FUNCTIONS ***/
 /*** END FUNCTIONS ***/
 
-
-/*** MOBILE STRUCTURE ***/
+/*** HOME PAGE ***/
 #home-page-container {
-		width:100%;
-		margin:auto;		
+	width:100%;
+	margin:auto;		
 }
 
-#home-header {
-	margin-bottom:7%;
+.header-main {
+	margin-bottom:25px;
+	background-color:#262626;
+	height:60px;
+	line-height:60px;	
+	padding:0 10px;
 }
 
-.logo {
-	width:29.16666667%;	
+.header-main p {
+	font-size:1.75em;
+	color:#FFF;	
+	display:inline-block;
 }
 
+.header-main a:link,
+.header-main a:visited,
+.header-main a:hover,
+.header-main a:focus,
+.header-main a:active {
+	border-bottom:none;	
+	text-decoration:none; 	
+}
 
 /*** CONTACT ICONS ***/
 .contact-icons {
 	float:right;
-	width:29.16666667%;
+	/*width:29.16666667%;*/
+	width: 55px;
+	display:inline-block;
+	margin-top:5px;
 }
 
-.icon-email {
+i.icon-email {
 	float:left;
 	/* margin-left:4.16666667%; */ 
-	 width:42.85714286%; 
+	 /*width:42.85714286%; */
 	 /*max-width:180px;*/
+	 font-size:1.4em;	
 }
 
-.icon-linkedin {
+i.icon-linkedin {
 	float:right;	
-	width:42.85714286%; 
+	/*width:42.85714286%;*/
+	font-size:1.4em;	
 }
 /*** END CONTACT ICONS ***/
 
-#quote {
-	margin-top:-20%;
-	width:percentage(300/460);
-	padding:1%;
-	font-size:90%;
-	margin-left:percentage(140/460);	
+.home-page-text {
+	padding:0 10px;	
 }
 
+.home-page-text h2 {
+	font-size:1.4em;
+	margin-top:.85em;
+}
+
+/*** END HOME ***/
+
 .section-label {
-	font-size:200%;
-	margin-top:2%;
-	margin-bottom:3%;	
+	font-size:1.55em;
+	margin: 15px 0 10px 10px;	
+}
+
+#page-contact .section-label {
+	/*margin-top: 15px;
+	margin-right: 10px;
+	margin-bottom: 5px;	*/
+	/*margin-left: 0;*/
+}
+
+#page-contact .header-main,
+#page-thankyou .header-main {
+	margin-bottom:0px;	
 }
 
 h2 {
 	margin-bottom:.5em;
-	/*width:96%;*/
-	/*margin-left:auto;*/
-	/*margin-right:auto;*/
-	/*font-size:90%;*/
 }
 
 .project {
@@ -232,10 +288,8 @@ header#header-giddy-throng img {
 }
 
 #trombone {
- /*background-image:url("../images/random-guitar-track-500x50px.png");*/
- background-image:url("../images/wave-color-209x50px.png");
- /*background-image:url("../images/wavelength-white-on-green-480x110px-century-gothic-1.jpg");*/
- background-repeat:repeat;
+ 	background-image:url("../images/wavelength-gold-on-green-200x50px.png");
+ 	background-repeat:repeat;
 }
 
 #trombone h2.cover {
@@ -254,6 +308,10 @@ header#header-giddy-throng img {
  	background-color:tint(#b3b3b4, 80%);
 }
 
+#major-exploration {
+	background-color:#B3B3B5;	
+}
+
 header#header-homeconnect {
 	background-color:#CEE9FC;
 }
@@ -262,11 +320,6 @@ header#header-major-exploration {
   background-color:tint(#B3B3B3, 80%);
   /*border:1px solid #808080;*/
   overflow:hidden;
-}
-
-#giddy-throng .mobile-rectangle {
-	padding: 9px 0 0 3px;
-	width:65%;
 }
 
 #earthship-seattle h2 {
@@ -281,8 +334,8 @@ header#header-giddy-throng {
   padding: 20px 0 20px 5px;
 }
 
-#vo h2 {
-	
+#vo h2.cover {
+	margin: 12px 10px;
 }
 
 .cover h2 {
@@ -291,11 +344,10 @@ header#header-giddy-throng {
 }
 
 #artist h2.cover {
-		color:#FFF;
-		margin-left:50%;
-		margin-top:-19%;
-		font-size:26px;
-			
+	color:#FFF;
+	margin-left:50%;
+	margin-top:-19%;
+	font-size:26px;		
 }
 
 #artist a {
@@ -303,12 +355,12 @@ header#header-giddy-throng {
 }
 
 #re-create h2.cover {
-		color:#000;
-		margin-left:20%;
-		margin-top:-18%;
-		font-size:24px;
-		font-family: "Myriad Pro", "PT Sans", sans-serif;
-		overflow:hidden;		
+	color:#000;
+	margin-left:12%;
+	margin-top:-17%;
+	font-size:1.4em;
+	font-family: "Myriad Pro", "PT Sans", sans-serif;
+	overflow:hidden;	
 }
 
 #re-create a {
@@ -318,18 +370,15 @@ header#header-giddy-throng {
 }
 
 #major-exploration h2.cover {
-		color:#000;
-		font-size:24px;	
-		display:none;	
+	color:#000;
+	font-size:24px;	
+	display:none;	
 }
 
 #mark .cover,
 #home-connect .cover {
 	display:none;	
-	
 }
-
-
 
 /*** PROJECT PAGES ***/
 .menu-content {
@@ -374,10 +423,8 @@ header#reCreate {
 
 header#header-trombone {
 	overflow:hidden;
-	/*background-image: url('../hcde419/images/trombone-header-image-313x110px.jpg');*/
 	height:110px;
-	/*background-image: url("../hcde419/images/wavelength.png");*/
-	background-image: url("../images/wavelength-gold-on-green-481x110px-outerglow.jpg");
+	background-image: url("../images/wavelength-gold-on-green-481x110px-outerglow-2.png");
 }
 
 /*** MOBILE MAIN NAV ***/
@@ -404,6 +451,7 @@ nav ul {
 	/*padding:1% 0;*/
 	/*padding-bottom:3%;
 	padding-top:3%;*/
+	padding-left: 0; /* removes global style */
 }
 
 nav ul li {
@@ -414,6 +462,7 @@ nav ul li {
 	font-size:1.1em;
 	/*padding-bottom:1%;
 	padding-top:1%;*/
+	/*padding-bottom: 0;*/ /* removes global style */
 }
 
 nav li a {
@@ -442,7 +491,6 @@ nav a:focus {
 }
 
 /*** COLLAPSE NAVS ***/
-
 .nav-sub-mixin {
 	display:none;
 	background:#A9A9A9;	
@@ -496,6 +544,7 @@ nav a:focus {
 #nav-collapse-earthship-seattle  {	
 	.nav-collapse-mixin;
 }
+/*** END COLLAPSE NAVS ***/
 
 /*** CONTACT FORM ***/
 form {
@@ -507,7 +556,7 @@ form {
 /*}*/
 
 label {
-margin-bottom:.75%;	
+	margin-bottom:.75%;	
 }
 
 input,
@@ -516,7 +565,6 @@ textarea {
 	border-radius: 2px;
 	width:100%;	
 	margin-bottom:2%;
-	
 }
 
 /*input[type="email"] {
@@ -565,6 +613,7 @@ fieldset {
 	margin-bottom:1.5%;	
 	
 }
+/*** END CONTACT FORM ***/
 
 /*** MOBILE FONTS ***/
 /*** END MOBILE FONTS ***/
@@ -596,6 +645,7 @@ fieldset {
 	/* The aspect ratio of 16:10, is expressed by 10/16 = 62.5% */
 	padding-bottom:62.5%;
 	z-index:1;
+	clear:both;
 }
 
 iframe {
@@ -615,5 +665,3 @@ iframe {
 #maru {
 	z-index:1;	
 }
-
-

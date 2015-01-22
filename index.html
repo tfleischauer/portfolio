@@ -22,13 +22,15 @@
     <!--<link rel="stylesheet" href="css/mobile.css" type="text/css">-->
     
     <link rel="stylesheet/less" href="css/480.less" media="screen and (min-width:480px)" />
-   <!-- <link rel="stylesheet" href="css/480.css" media="screen and (min-width:480px)" />-->
+    <!-- <link rel="stylesheet" href="css/480.css" media="screen and (min-width:480px)" />-->
     
     <link rel="stylesheet/less" href="css/768.less" media="screen and (min-width:768px)" /> 
     <!--<link rel="stylesheet" href="css/768.css" media="screen and (min-width:768px)" type="text/css" /> -->  
     
     <link rel="stylesheet/less" href="css/1080.less" media="screen and (min-width:1080px)" /> 
-   <!-- <link rel="stylesheet" href="css/1080.css" media="screen and (min-width:1080px)" type="text/css" />-->    
+    <!-- <link rel="stylesheet" href="css/1080.css" media="screen and (min-width:1080px)" type="text/css" />-->
+   
+   <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">    
     
     <meta name="viewport" content="width=device-width" />
       
@@ -45,48 +47,54 @@
     <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'> <!-- close to Century Gothic -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> <!-- close to Myriad Pro -->
     <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'> <!-- for Earthship Seattle -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'> <!-- using 400, -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'> <!-- using 400 -->
     
   </head>
   <body>
   <div id="home-page-container" class="page">
 
-    <header id="home-header">
-    
-    	<div class="contact-icons">
-        	<!--<div id="email-square"><p>email</p></div>-->
-           	<a href="#page-contact"><img class="icon-email" src="images/icons-email-180x120.png" alt="Email icon" /></a>
-            <!--<div id="in-square"><p>in</p></div>-->
-            <a href="https://www.linkedin.com/pub/troy-fleischauer/57/106/a23" target="_blank" ><img class="icon-linkedin" src="images/icons-in-180x120.png" alt="LinkedIn icon" /></a>     
-        </div>
-        
-    	<div class="logo"><img src="images/din-alt-bold.png" alt="Troy Fleischauer logo 06-2014" /></div> <!-- end logo -->
-        
-        <div id="filler-div-home"></div>  
-        
+    <header class="header-main">
+    	<div  class="max1260px">
+          <p>Troy Fleischauer</p>
+            <div class="contact-icons max1260px">
+                <a href="#page-contact"><i class="fa fa-envelope-o fa-inverse icon-email"></i></a>
+                <!--<i class="fa fa-envelope"></i>-->
+                <a href="https://www.linkedin.com/pub/troy-fleischauer/57/106/a23" target="_blank" ><i class="fa fa-linkedin-square fa-inverse icon-linkedin"></i></a>
+                <!--<i class="fa fa-git-square"></i>-->
+            </div>  
+        </div> <!-- end max1260 -->
+    </header>    
         <!--<h1>UX Design Portfolio | Troy Fleischauer</h1> -->   
-      
-        <div id="quote">
-        	<h1>I love being an advocate for any given system’s user. I live in the space between user objectives and business goals.</h1> <!-- next version h2 -->
-        </div> 
         
-        <!--<p>Welcome! My name is Troy Fleischauer. I am a designer and information professional located in the Pacific Northwest. Here you will see some examples of my client and academic work in Human-Computer Interaction and Web design.</p>--> 
-        
-        <!--<p>I enjoy the process of making information systems usable by researching user needs to make artifacts such as:</p>-->
-        	<!--<ul>
-            	<li>Information Architecture Diagrams</li>
-                <li>Wire Frames</li>
-                <li>User Interfaces</li>
-            </ul>-->
-            
-            <!--<p>I also enjoy producing Web content and working on team projects that involve:</p>-->
-            <!--<ul>
-            	<li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>Copy Writing</li>
-                <li>Interaction Design</li>
-                <li>Prototyping</li>
-            </ul>-->
+        <div class="home-page-text">
+          <h2>Welcome!</h2>
+          <p>My name is Troy Fleischauer. I am a designer and information professional located in the Pacific Northwest.</p> 
+          
+          <p class="italic">I love being an advocate for any given system’s user.</p>
+          
+          <p>Here you will see examples of my client and academic work in Human-Computer Interaction and Web design, and the process used to make them.</p> 
+          
+          <h2>Process</h2>
+          
+          <p>I enjoy the process of making information systems usable by researching user needs to make artifacts such as:</p>
+              <ul>
+                  <li>Information Architecture Diagrams</li>
+                  <li>Wire Frames</li>
+                  <li>User Interfaces</li>
+              </ul>
+              
+              <p>I also enjoy producing Web content and working on team projects that involve:</p>
+              <ul>
+                  <li>Photoshop</li>
+                  <li>Illustrator</li>
+                  <li>Copywriting</li>
+                  <li>Interaction Design</li>
+                  <li>Prototyping</li>
+              </ul>
+              
+              <p class="italic">I live in the space between user objectives and business goals.</p>
+              
+         </div> <!-- end home page text -->
         
         <nav>
         	<ul>
@@ -95,8 +103,7 @@
                 <li><a href="#page-contact">Contact</a></li> 
             </ul>
             <div class="clear"></div>
-       </nav>    
-    </header>
+        </nav>        
   
   </div>  <!-- end home-page-container -->
   
@@ -148,7 +155,7 @@
       	<div id="mark">
           <a class="project" href="#page-mark">
           
-           <img class="mobile-rectangle" src="images/mark-500x50px.png" alt="Icon: Link to *MARK project">
+           <img class="mobile-rectangle" src="images/mark-200x50px-2.jpg" alt="Icon: Link to *MARK project">
            
            <img class="greyscale-circle-140" src="images/mark-140x140px-greyscale.png" alt="Icon: Link to *MARK project">
            <img class="color-circle-140" src="images/mark-140x140px-color.png" alt="Icon: Link to *MARK project 140px">
@@ -166,7 +173,7 @@
       	<div id="trombone">
           <a class="project" href="#page-trombone">
           
-          <img class="mobile-rectangle" src= "images/wave-color-209x50px.png" alt="Icon: Link to Random Trombone project">
+          <img class="mobile-rectangle" src= "images/wavelength-gold-on-green-200x50px-2-outerglow.png" alt="Icon: Link to Random Trombone project">
           
           <img class="greyscale-circle-140" src="images/random-trombone-140x140px-posterize-filter-greyscale.png" alt="Icon: Link to Random Trombone project">
           <img class="color-circle-140" src="images/random-trombone-140x140px-posterize-filter-color.png" alt="Icon: Link to Random Trombone project">
@@ -209,7 +216,7 @@
             
                 <!--<img class="mobile-rectangle-370" src= "images/Major-Exploration-370x50px.png" alt="Icon: Link to Major Exploration project">-->
                 
-                <img class="mobile-rectangle" src= "images/Major-Exploration-592x80px.png" alt="Icon: Link to Major Exploration project">
+                <img class="mobile-rectangle" src= "images/mExploration-200x50px.jpg" alt="Icon: Link to Major Exploration project">
                 
                 <img class="greyscale-circle-140" src="images/mExploration-140x140px-yellow-filter-greyscale.png" alt="Icon: Link to Major Exploration project">
                 <img class="color-circle-140" src="images/mExploration-140x140px-color.png" alt="Icon: Link to Major Exploration project"> 
@@ -230,7 +237,7 @@
           	<!--<img class="mobile-rectangle" src= "">-->
             <!--<div class="mobile-rectangle"></div>-->
             
-            <img class="mobile-rectangle" src="images/giddy-throng-logo-4-280x35px-white.png" alt="Icon: Giddy Throng header image">
+            <img class="mobile-rectangle" src="images/giddy-throng-logo-200x50px-2.png" alt="Icon: Giddy Throng header image">
             
             <img class="greyscale-circle-140" src="images/giddy-logo-140-inverse-71-percent-opacity.png" alt="Icon: Link to Giddy Throng">
           	<img class="color-circle-140" src="images/giddy-logo-140-black.png" alt="Icon: Link to Giddy Throng"> 
@@ -279,7 +286,9 @@
    
    <div id="page-nan" class="page">
    	<header id="header-nan">
-    	<img src="images/logo-nalder-no-bg-460x110px.png" alt="Nalder header image" />
+    	<!--<div class="max1260px">-->
+    		<img src="images/logo-nalder-no-bg-460x110px.png" alt="Nalder header image" />
+         <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -321,17 +330,18 @@
          <div id="content-area-nan">
          </div>  <!--end content area-nan --> 
     
-   </div>  <!-- end menu content -->
+      </div>  <!-- end menu content -->
    
-   </div> <!-- end page-body -->
-   
+    </div> <!-- end page-body -->
    </div> <!-- end page-nan -->
       
    
    <div id="page-reCreate" class="page">
 
    	<header id="reCreate">
-    	<img src="images/tfleischauer-web202-a11-logo-441x110.png" alt="reCreate Outside header image" />
+    	<!--<div  class="max1260px">-->
+    		<img src="images/tfleischauer-web202-a11-logo-441x110.png" alt="reCreate Outside header image" />
+        <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -367,13 +377,14 @@
       
      </div>  <!-- end menu content -->
    
-   </div> <!-- end page-body -->
-   
+    </div> <!-- end page-body -->
    </div> <!-- end page-re-Create -->
    
    <div id="page-mark" class="page">
     <header id="header-mark">
-        <img src="images/mark-asterick-text-640x110px.jpg" alt="*MARK header image" />
+    	<!--<div  class="max1260px">-->
+        	<img src="images/mark-asterick-text-640x110px.jpg" alt="*MARK header image" />
+        <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -397,15 +408,16 @@
       
       </div>  <!-- end menu-content --> 
     
-   </div> <!-- end page-body --> 
-     
+    </div> <!-- end page-body -->  
    </div> <!-- end page-mark -->
    
    <div id="page-trombone" class="page">
     <header id="header-trombone">
+    	<!--<div  class="max1260px">-->
        <!-- <img src="images/trombone-header-image-313x110px.jpg" alt="Random Trombone header image" />-->
         <!--<img src="images/wavelength-1618x110px.jpg" alt="Random Trombone header image" />-->
         <!--<h1>Random Trombone</h1>-->
+        <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -431,13 +443,14 @@
       
       </div>  <!-- end menu-content --> 
     
-   </div> <!-- end page-body --> 
-     
+    </div> <!-- end page-body --> 
    </div> <!-- end page-trombone -->  
    
    <div id="page-major-exploration" class="page">
     <header id="header-major-exploration">
-        <img src="images/Major-Exploration-543x110px-2.png" alt="Major Exploration header image" />
+    	<!--<div  class="max1260px">-->
+        	<img src="images/Major-Exploration-543x110px-2.png" alt="Major Exploration header image" />
+        <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -469,13 +482,14 @@
       
       </div>  <!-- end menu-content --> 
     
-   </div> <!-- end page-body --> 
-     
+    </div> <!-- end page-body --> 
    </div> <!-- end page-major-exploration -->  
    
    <div id="page-homeconnect" class="page">
     <header id="header-homeconnect">
-        <img src="images/homeconnect-logo-470x110px.png" alt="HomeConnect header image" />
+    	<!--<div  class="max1260px">-->
+        	<img src="images/homeconnect-logo-470x110px.png" alt="HomeConnect header image" />
+        <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -503,13 +517,14 @@
       
       </div>  <!-- end menu-content --> 
     
-   </div> <!-- end page-body --> 
-     
+    </div> <!-- end page-body -->   
    </div> <!-- end page-homeconnect -->
       
    <div id="page-giddy-throng" class="page">
     <header id="header-giddy-throng">
-    	<img src="images/giddy-throng-logo-4-280x35px-white.png" alt="Giddy Throng header image" />
+    	<!--<div  class="max1260px">-->
+    		<img src="images/giddy-throng-logo-4-280x35px-white.png" alt="Giddy Throng header image" />
+        <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -535,15 +550,14 @@
       
       </div>  <!-- end menu-content --> 
     
-   </div> <!-- end page-body --> 
-     
-   </div> <!-- end page-giddy-throng -->  
-   
-   
+    </div> <!-- end page-body -->   
+   </div> <!-- end page-giddy-throng -->    
    
    <div id="page-earthship-seattle" class="page">
     <header id="header-earthship-seattle">
-    	<img src="images/skylinelogo2-460x100px.png" alt="Earthship Seattle header image" />
+    	<!--<div  class="max1260px">-->
+    		<img src="images/skylinelogo2-460x100px.png" alt="Earthship Seattle header image" />
+        <!--</div>-->
     </header>
     
     <div class="page-body">
@@ -571,21 +585,23 @@
       
       </div>  <!-- end menu-content --> 
     
-   </div> <!-- end page-body --> 
-     
-   </div> <!-- end page-earthship-seattle -->    
-   
-   
+    </div> <!-- end page-body -->    
+   </div> <!-- end page-earthship-seattle -->     
    
    <div id="page-contact" class="page">
-
-      <div class="contact-icons">
-              <a href="http://www.linkedin.com/pub/troy-fleischauer/57/106/a23/" target="_blank"><img class="icon-linkedin" src="images/icons-in-180x120.png" alt="LinkedIn icon" /></a>   
-      </div>
-        
-    	<div class="logo"><a href="http://www.portfolio.troyfleischauer.com/"> <img src="images/din-alt-bold.png" alt="Troy Fleischauer logo 06-2014" /> </a></div> <!-- end logo -->
    
-   <!--	<h2 class="section-label">Contact</h2> -->         
+   <header class="header-main">
+    	<div  class="max1260px">
+          <a href="#home-page-container"><p>Troy Fleischauer</p></a>
+            <div class="contact-icons max1260px">
+                <a href="https://github.com/tfleischauer" target="_blank" ><i class="fa fa-git-square fa-inverse icon-email"></i></a>
+                <a href="https://www.linkedin.com/pub/troy-fleischauer/57/106/a23" target="_blank" ><i class="fa fa-linkedin-square fa-inverse icon-linkedin"></i></a>            
+            </div>  
+        </div> <!-- end max1260 -->
+    </header>    
+    <!--<div  class="max1260px">-->
+
+   	<h2 class="section-label max1260px">Contact</h2>          
               
               <fieldset>
               	<!--<legend><h2>Contact</h2></legend>-->
@@ -625,7 +641,7 @@
               </fieldset>
                    
                <div id="result"></div>
-   
+   <!--</div>-->
    </div> <!-- end page-contact -->
   </body>
 </html>

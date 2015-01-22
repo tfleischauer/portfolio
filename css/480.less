@@ -1,11 +1,29 @@
-/* VARIABLES */
+/*** GLOBAL SELECTORS ***/
+ul {
+	padding-left: 1.25em;	/* padding WILL show the background of the ul tag */
+}
 
+h2 {
+	margin-bottom:.5em;
+}
+
+.section-label {
+	font-size:2em;	
+}
+
+#page-contact .section-label,
+#page-thankyou .section-label {
+	margin-top:40px;
+	margin-bottom:40px;	
+}
+/*** END GLOBAL SELECTORS ***/
+
+/*** VARIABLES ***/
 /* for developing placement of circles */
 @divColor:rgba(255,255,255,.4);
+/*** END VARIABLES ***/
 
-/* END VARIABLES */
-
-/* MIXINS */
+/*** MIXINS ***/
 .allCirclesMixin {
 	.circleMixin-140px;
  	.stroke(2px, solid, #000);
@@ -112,15 +130,14 @@
 	}
 	
 	& li {
-		font-size: 0.875em;		/* 14px / 16px */
+		font-size: 0.875em;	/* 14px / 16px */
 		padding: 0;	 /* overrides our global li padding */	
 	}
 	
 	& li a {
 		text-decoration: none;
-		display: block;    			/* fill the list item */
-		padding: .875em .875em .875em .75em;	/* 14px / 16px   12px / 16px  */
-		
+		display: block; /* fill the list item */
+		padding: .875em .875em .875em .75em; /* 14px / 16px   12px / 16px  */
 		color:#A9A9A9;
 		text-decoration:none;
 	}
@@ -174,7 +191,7 @@
 		list-style-type:none;	
 	}
 }
-/* END MIXINS */
+/*** END MIXINS ***/
 
 /* FUNCTIONS  outline-color, outline-style, outline-width. */
 .stroke(@outline-width : 2px, @outline-style : solid, @color : black) {
@@ -186,95 +203,45 @@
 }
 /* END FUNCTIONS */
 
-/* min-width:37.5em */
-/* @media all and (min-width:768px) { */
-
-/* DEVELOPMENT ONLY ***/
-div, header, footer, h1 {
-	/*border:1px solid red;	
-	overflow:hidden;*/
-}
-/* END DEVELOPMENT ONLY */
-
-/* RAVEN'S VERTICAL LISTS */
-ol {
-	padding-left:2.25em;	
+/*** HOME PAGE ***/
+.header-main {
+	padding:0 10px;
 }
 
-ul {
-	/*background-color: green;*/
-	padding-left: 1.25em;	/* padding WILL show the background of the ul tag */
-	/*padding-left: .75em;*/	
+.header-main p {
+	color:#FFF;
+	width:300px;	
+	display:inline;
+	font-size:2.5em;
+	position:relative;
+	line-height:100px;
 }
 
-li {
-	/*background-color: red;*/
-	/*padding-bottom: 0.25em; */	 /* 4px / 16px */ /* padding WILL show the background of the li tag */
+.home-page-text h2 {
+	font-size:1.75em;
+	margin-top:.75em;
+	margin-bottom:.4em;	
 }
-
-p, ol, ul {
-	/*margin-bottom: 0.375em;	*//* 6px / 16px */
-}
-
-ul li ul {
-	/*background-color: blue;*/
-	padding-top: 0.25em; /* creaters vertical space for sub list */
-	margin-bottom: 0; /* zeros out for bottom of th list */
-}
-/* END RAVEN'S VERTICAL LISTS */
-
-/*ul li ul li {
-	margin-left:.5em;
-	list-style-type:none;	
-}*/
-
-/*** TABLET STRUCTURE ***/
 
 /*** CONTACT ICONS ***/
 .contact-icons {
 	float:right;
-	 width:14.58333333%;
+	width:65px;
+	position: relative; /* positions relative to normal position */
+	top:17%;
 }
 
-.icon-email {
-	width:42.85714286%; /* 60/140px */
+i.icon-email {
+	/*width:42.85714286%;*/ /* 60/140px */
 	float:left;
+	font-size:1.7em;
 }
 
-.icon-linkedin {
-	width:42.85714286%; /* 60/140px */
+i.icon-linkedin {
+	/*width:42.85714286%;*/ /* 60/140px */
 	float:right;
+	font-size:1.7em;
 }
-
-#email-square {
-	/*width:percentage(60/140);*/
-	/*background-color:green;
-	float:left;
-	text-align:center;
-	font-size:percent(60/140);
-	padding: 4% 10% 4% 10%;	
-	color:#FFF;
-	overflow:hidden;*/
-	
-	/*  @sevenHundred {
-		 font-size:50%; 
-    }*/
-  }
-  
-  #in-square {
-	/*width:percentage(60/140);*/
-	/*background-color:green;
-	float:right;
-	text-align:center;
-	font-size:percent(60/140);
-	padding: 4% 18% 4% 18%;	
-	color:#FFF;
-	overflow:hidden;*/
-	
-	/*  @sevenHundred {
-		 font-size:50%; 
-    }*/
-  }
 /*** END CONTACT ICONS ***/
 
 /*** ONE-PAGE NAV MAIN CONTROLS ***/
@@ -395,41 +362,24 @@ nav li a {
 	top:0;	
 }
 
-#filler-div-home {
-	/*width:23.40425532%; /* 220/940 */ 
-	/*.nineSixtyPercent(220);
-	width: percentage(@divide);*/
-	/*float:right;*/
-	/*border:1px solid white;*/
-	/*visibility:hidden;*/
-	/*display:none;*/
+.header-main {
+	height:100px;
+	line-height:100px;
+	margin-bottom:30px;	
 }
 
-#quote {
-	width:percent(500/940);
-	margin-left:percentage(220/940);
-	margin-right:percentage(220/940);
-	margin-top:0;
-	padding:2%;
-	font-size:2.1em;
+.home-page-text {
+	max-width:500px;
+	margin:auto;
+	padding:0 20px;	
 }
 
-h2 {
-	margin-bottom:.5em;
-	/*font-size:175%;*/
-}
 /*** END HOME PAGE ***/
 
 
 /*** PROJECT PAGE - ALL CIRCLE ICONS ***/
 
 /* THE PAGE ITSELF */
-#page-projects h1,
-#page-contact h1 {
-	font-size:200%;
-	padding-left:6.25%;
-}
-
 #page-projects {
 	top:100%;
 	/*background:#00BFFF;*/
@@ -884,9 +834,9 @@ h2.cover {
 	text-decoration:underline;	
 }
 /* END NAN NAV - 480 px + */
+/*** END NAN PAGE ***/
 
 /*** reCREATE PAGE ***/
-
 /* reCreate VARIABLES */
 @reCreate-Blue:#C9D5DB;
 @reCreate-Super-Light-Blue:#F4F7F8;
@@ -957,10 +907,17 @@ header#reCreate img {
 #nav-sub-recreate ul li ul:last-child {
 	border-bottom: none;
 }
+
+/*#re-create h2.cover {
+	color:#000;
+	margin-left:30%;
+	margin-top:9%;
+	font-size:1em;
+	font-family: "Myriad Pro", "PT Sans", sans-serif;
+	overflow:hidden;		
+}*/
 /* END NAV RECREATE - 480px and larger */
-
 /*** END reCREATE PAGE ***/
-
 
 /*** MARK PAGE ***/
 #page-mark {
@@ -1042,8 +999,6 @@ header#header-major-exploration {
 /* END MAJOR EXPLORATION NAV 480 px and larger */
 /*** END MAJOR EXPLORATION PAGE ***/
 
-
-
 /*** HOMECONNECT PAGE ***/
 #page-homeconnect {
 	top:700%;
@@ -1070,7 +1025,6 @@ header#header-homeconnect {
 }
 /* END HOMECONNECT NAV 480 px and larger */
 /*** END HOMECONNECT PAGE ***/
-
 
 /*** GIDDY THRONG PAGE ***/
 #page-giddy-throng {
@@ -1104,7 +1058,6 @@ header#header-giddy-throng img{
 /* END GIDDY THRONG NAV 480 px and larger */
 /*** END GIDDY THRONG PAGE ***/
 
-
 /*** EARTHSHIP SEATTLE PAGE ***/
 #page-earthship-seattle {
 	top:900%;
@@ -1131,17 +1084,15 @@ header#header-earthship-seattle img{
 
 /*** END EARTHSHIP SEATTLE PAGE ***/
 
-
 /*** CONTACT PAGE ***/
-
 #page-contact {
 	top:1000%;
 	/*background:hotpink;*/
 	/*color:#000;*/
 }
+/*** END CONTACT PAGE ***/
 
 /*** FORM ***/
-
 fieldset {
 	border: 2px solid grey;
 	border-radius:3px;
@@ -1167,6 +1118,7 @@ fieldset {
 	float:left;
     margin-right:3%;
 	display:inline-block;
+	font-size:.8em;
 }
 
 #contact-form p input {
@@ -1196,22 +1148,7 @@ textarea {
 	font-size:200%;	
 	text-align:center;
 }
-
-
-
-/*** TABLET FONTS ***/
-
-/* }
-
-@media all and (min-width:1024px) {
-} */
-
-/*@media all and (min-width:768px) {
-
-
-
-	
-}*/
+/*** END FORM ***/
 
 /* IMAGE SIZES */
 .project_details_img_large {
@@ -1221,18 +1158,8 @@ textarea {
 .project_details_img_small {
 	display:none;	
 }
-/* END IMAGE SIZES */
 
 .project_details_img.no-border {
 	border:none;
 }
-
-#play {
-	position:absolute;
-	z-index:100;	
-}
-
-#maru {
-	z-index:1;	
-}
-
+/* END IMAGE SIZES */
