@@ -299,3 +299,40 @@ if (jQuery(window).width() < 480) {
 jQuery(".page").css('display', 'none');
 }
 });	*/
+
+// var first = $(".menu-content .first");
+
+
+// var underline = $(".project-menu a");
+var underline = $(".menu-content ul a");
+underline.on("click", function(event) {
+	event.preventDefault(); // prevent browser default such as jumping and url changing in Chrome
+	var $this = $(this); // vanilla JS to jQuery
+	// var hrefAttr = $this.attr("href");
+	// $(".menu-content .first").removeClass("first");
+	$(".menu-content .selected-item").removeClass("selected-item");
+	// $this.closest("li").addClass("active");
+  $this.addClass("selected-item");
+  // $(".menu-content .first").removeClass("first");
+  // $this.attr('id', 'active');
+});
+
+// var hash = location.hash; // || "#fruit"; // use #id or otherwise use default of #fruit
+// var firstItem = $(".project-menu ul li a[href='" + hash + "']");
+
+// firstItem = $("li a:first-child");
+
+// var firstItem = $(".project-menu ul a:first");
+
+// var firstItem = $(".menu-content ul a:first");
+
+// var hash = location.hash; // || "#fruit"; // use default or otherwise use fruit
+// var firstItem = $(".project-menu a[href='" + hash + "']");
+
+var firstItem = $(".first");
+console.log(firstItem);
+firstItem.addClass("selected-item");
+
+// firstItem.trigger("click");
+firstItem.click();
+	

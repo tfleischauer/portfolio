@@ -39,8 +39,8 @@ a:visited {
 	color: #333;
 	text-decoration:none;
 	border-bottom-color: #CCCCCC;
-    border-bottom-style: dotted;
-    border-bottom-width: 2px;
+	border-bottom-style: dotted;
+	border-bottom-width: 2px;
 }
 /*  border instead of an underline, 
 underlines are notoriously inflexible. */
@@ -96,6 +96,7 @@ ul li ul {
 	margin-bottom: 0; /* zeros out bottom of the sub-list */
 }
 /* END RAVEN'S VERTICAL LISTS */
+
 /*** END GLOBAL SELECTORS ***/
 
 /* MIXINS */
@@ -508,8 +509,16 @@ nav a:focus {
 		
 		& a:hover {
 			text-decoration:underline;	
-		}
-	}		
+		} 
+	}
+	
+	 /*** jQuery ACTIVE STATE ***/
+	// & li .selected-item {
+	& .selected-item {
+	  background:#FFF;
+	  display: block;
+	  color: #000;
+	}
 }
 
 .nav-collapse-mixin {
@@ -665,3 +674,7 @@ iframe {
 #maru {
 	z-index:1;	
 }
+
+//.first {
+//	background:pink;
+//}

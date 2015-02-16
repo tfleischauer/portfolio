@@ -33,15 +33,6 @@
    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">    
     
     <meta name="viewport" content="width=device-width" />
-      
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <!-- form is for the ajax submit -->
-	<script src="js/jquery.form.js"></script> 
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/myscript.js"></script> 
-    <script src="js/formscript.js"></script> 
-    <script src="js/less-1.7.0.min.js"></script>
     
     
     <link href='http://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'> <!-- close to Century Gothic -->
@@ -72,11 +63,11 @@
           
           <p class="italic">I love being an advocate for any given system’s user.</p>
           
-          <p>Here you will see examples of my client and academic work in Human-Computer Interaction and Web design, and the process used to make them.</p> 
+          <p>Here you will see examples of my client and academic work in Human-Computer Interaction and Web design<!--, and the process used to make them-->.</p> 
           
           <h2>Process</h2>
           
-          <p>I enjoy making information systems usable by researching user needs to make artifacts such as:</p>
+          <p>I enjoy the process of making information systems usable by researching user needs to make artifacts such as:</p>
               <ul>
                   <li>Information Architecture Diagrams</li>
                   <li>Wire Frames</li>
@@ -297,8 +288,9 @@
         <a href="#nav-sub-nan" id="nav-collapse-nan">Menu &equiv;</a>
         <div id="nav-sub-nan">
           <div id="project_details_nan_list">
+              <div class="project-menu">
               <ul>
-                  <!--<li <?php if ( $page == "aia.html" ) { print ' class="main-on"'; } ?>> -->
+                  
                   <!--<li><a class="project_title_nan nan_aia" href="web120/overview.html">Overview</a></li>-->
                   
                   <li><a class="project_title_nan nan_aia" href="web120/aia.html">Audience, Issues, Approach</a></li>
@@ -321,8 +313,9 @@
                       </ul>
                   </li>
                   
-                  <li><a class="project_title_nan nan_protosite" href="web120/protosite.html">Protosite</a></li>
+                  <li><a class="project_title_nan nan_protosite first" href="web120/protosite.html">Protosite</a></li>
                </ul>
+             </div> <!-- end project-menu -->
                <div class="clear"></div>
          </div><!-- project_details_recreate -->
          </div> <!-- end nav-sub -->
@@ -350,6 +343,7 @@
         <a href="#nav-sub-recreate" id="nav-collapse-recreate">Menu &equiv;</a>
         <div id="nav-sub-recreate">
           <div id="project_details_recreate">
+	      <div class="project-menu">
               <ul>
               	  <li><a class="project_title_recreate" href="web202/overview.html">Overview</a></li>
                   <li><a class="project_title_recreate" href="web202/site-objectives.html">Site Objectives</a></li>
@@ -367,7 +361,8 @@
                   </li>
                   <li><a class="project_title_recreate" href="web202/visual-design.html">Visual Design</a></li>
                   <li><a class="project_title_recreate" href="web202/protosite.html">Protosite</a></li>
-               </ul>
+              </ul>
+	      </div> <!-- end project-menu -->
                <div class="clear"></div>
           </div> <!-- project_details_recreate -->
          </div> <!-- end nav-sub -->
@@ -458,7 +453,7 @@
       <div class="menu-content">
         <a href="#nav-sub-major-exploration" id="nav-collapse-major-exploration">Menu &equiv;</a>
         <div id="nav-sub-major-exploration">
-          <div id="project_details_major_exploration_list">
+          <div id="project_details_major_exploration_list project-menu">
               <ul>
                   <li><a class="project_title_major_exploration" href="info490/overview.html">Overview</a></li>
                   <li><a class="project_title_major_exploration" href="info490/research.html">Research</a></li>
@@ -497,7 +492,7 @@
       <div class="menu-content">
         <a href="#nav-sub-homeconnect" id="nav-collapse-homeconnect">Menu &equiv;</a>
         <div id="nav-sub-homeconnect">
-          <div id="project_details_homeconnect_list">
+          <div id="project_details_homeconnect_list project-menu">
               <ul>
               	  <li><a class="project_title_homeconnect" href="hcde418/overview.html">Overview</a></li>  
                   <li><a class="project_title_homeconnect" href="hcde418/project-declaration.html">Project Declaration</a></li>
@@ -532,7 +527,7 @@
       <div class="menu-content">
         <a href="#nav-sub-giddy-throng" id="nav-collapse-giddy-throng">Menu &equiv;</a>
         <div id="nav-sub-giddy-throng">
-          <div id="project_details_giddy_throng_list">
+          <div id="project_details_giddy_throng_list project-menu">
               <ul>
               	  <li><a class="project_title_giddy_throng" href="web170/overview.html">Overview</a></li>
               	  <li><a class="project_title_giddy_throng" href="web170/wire-frame.html">Wire Frame</a></li>
@@ -565,7 +560,7 @@
       <div class="menu-content">
         <a href="#nav-sub-earthship-seattle" id="nav-collapse-earthship-seattle">Menu &equiv;</a>
         <div id="nav-sub-earthship-seattle">
-          <div id="project_details_earthship_seattle_list">
+          <div id="project_details_earthship_seattle_list project-menu">
               <ul>
               	  <li><a class="project_title_earthship_seattle" href="web210/overview.html">Overview</a></li>
                   <li><a class="project_title_earthship_seattle" href="web210/ia.html">Information Architecture</a></li>
@@ -643,8 +638,18 @@
                <div id="result"></div>
    <!--</div>-->
    </div> <!-- end page-contact -->
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <!-- form is for the ajax submit -->
+    <script src="js/jquery.form.js"></script> 
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- <script src="js/myscript.js"></script> --> 
+    <script src="js/formscript.js"></script> 
+    <script src="js/less-1.7.0.min.js"></script>
+
+    <script src="js/myscript.js"></script> 
    
-   <script>
+    <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
