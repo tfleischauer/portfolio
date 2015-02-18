@@ -99,6 +99,10 @@ ul li ul {
 
 /*** END GLOBAL SELECTORS ***/
 
+/* VARIABLES */
+//@majorExplorationColor: #B3B3B4;
+/* END VARIABLES */
+
 /* MIXINS */
 .mobileProjectMixin {
    border: .03em solid #000;
@@ -117,6 +121,7 @@ ul li ul {
 		
 		
 	}
+	
 	& img {
 		
 	
@@ -306,11 +311,10 @@ header#header-giddy-throng img {
 }
 
 #major-exploration {
- 	background-color:tint(#b3b3b4, 80%);
-}
-
-#major-exploration {
-	background-color:#B3B3B5;	
+ 	/* background-color:tint(#b3b3b4, 80%); */
+	/*background-color:lighten(#b3b3b4, 80%);*/
+	/*background-color: desaturate(@majorExplorationColor, 80%);*/
+	background-color: #B3B3B5;
 }
 
 header#header-homeconnect {
@@ -318,9 +322,15 @@ header#header-homeconnect {
 }
 
 header#header-major-exploration {
-  background-color:tint(#B3B3B3, 80%);
+  /*background-color:tint(#B3B3B3, 80%);*/
+  /* background-color:lighten(#b3b3b4, 80%); */
+  /* hsl(hue, saturation%, lightness%); */
+  /*background-color:desaturate(#b3b3b4, 10%);*/
   /*border:1px solid #808080;*/
-  overflow:hidden;
+ /* background-color: desaturate(@majorExplorationColor, 80%);*/
+ /*background: lighten(@majorExplorationColor, 80%);*/
+ 	background-color: #B3B3B5;
+ 	overflow:hidden;
 }
 
 #earthship-seattle h2 {
@@ -515,9 +525,9 @@ nav a:focus {
 	 /*** jQuery ACTIVE STATE ***/
 	// & li .selected-item {
 	& .selected-item {
-	  background:#FFF;
 	  display: block;
-	  color: #000;
+	  color: #FFF;
+	  text-decoration:underline;
 	}
 }
 

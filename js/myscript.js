@@ -300,21 +300,17 @@ jQuery(".page").css('display', 'none');
 }
 });	*/
 
-// var first = $(".menu-content .first");
+var firstItem = $(".first");
+console.log(firstItem);
+firstItem.addClass("selected-item");
 
-
-// var underline = $(".project-menu a");
-var underline = $(".menu-content ul a");
+// var underline = $(".project-menu a"); // recreate and nan
+var underline = $(".menu-content ul a"); // all projects have a menu-content class
 underline.on("click", function(event) {
 	event.preventDefault(); // prevent browser default such as jumping and url changing in Chrome
 	var $this = $(this); // vanilla JS to jQuery
-	// var hrefAttr = $this.attr("href");
-	// $(".menu-content .first").removeClass("first");
-	$(".menu-content .selected-item").removeClass("selected-item");
-	// $this.closest("li").addClass("active");
-  $this.addClass("selected-item");
-  // $(".menu-content .first").removeClass("first");
-  // $this.attr('id', 'active');
+	$this.closest(".menu-content").find(".selected-item").removeClass("selected-item");
+	$this.addClass("selected-item");
 });
 
 // var hash = location.hash; // || "#fruit"; // use #id or otherwise use default of #fruit
@@ -329,10 +325,26 @@ underline.on("click", function(event) {
 // var hash = location.hash; // || "#fruit"; // use default or otherwise use fruit
 // var firstItem = $(".project-menu a[href='" + hash + "']");
 
-var firstItem = $(".first");
-console.log(firstItem);
-firstItem.addClass("selected-item");
+
 
 // firstItem.trigger("click");
-firstItem.click();
+// firstItem.click();
+
+// var defaultSubNav = $(".project-menu");
+// Default diplay: first tab div, auto "click" on-load of page
+// defaultSubNav.filter("a:first").click();
+// var $defaultSubNav;
+// defaultSubNav.find(".project-menu a:first").click();
+
+
+// web120/aia.html
+
+// var hash = location.hash || "web120/aia.html"; // use default or otherwise use fruit
+	// var firstItem = $(".project-menu a[href='" + hash + "']");
+	// .tabs a[href='#fruit']
+	// var firstItem = $(".tabs a:first");
+	// firstItem.trigger("click");
+	// firstItem.click();
+	
+ // $(".menu-content ul li ").not(":first").hide();
 	

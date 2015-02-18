@@ -73,13 +73,18 @@ i.icon-linkedin {
 	
 	-moz-transition:opacity 500ms ease-out 10ms;
 	-webkit-transition:opacity 500ms ease-out 10ms;
-	transition:opacity 500ms ease-out 10ms;		
+	transition:opacity 500ms ease-out 10ms;
+	
+	.project:hover & {
+		opacity:0;
+		overflow:hidden;
+	}
 }
 
-.greyscale-circle:hover {
-	opacity:0;
-	overflow:hidden;
-}
+//.project:hover .greyscale-circle {
+//	opacity:0;
+//	overflow:hidden;
+//}
 
 .color-circle {
 	position:absolute;

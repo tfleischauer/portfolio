@@ -34,7 +34,7 @@ h2 {
 		height:100%;	
 	}
 	
-	& :hover .cover {
+	&:hover .cover {
 		opacity:1;
 		overflow:hidden;
 	}
@@ -405,11 +405,6 @@ nav li a {
 	display:none;
 }
 
-/*.greyscale-circle-140,
-.color-circle-140 {
-	display:block;
-}*/
-
 .greyscale-circle-140 {
 	position:absolute;
 	top:0;
@@ -427,28 +422,23 @@ nav li a {
 	
 	-moz-transition:opacity 500ms ease-out 10ms;
 	-webkit-transition:opacity 500ms ease-out 10ms;
-	transition:opacity 500ms ease-out 10ms;		
+	transition:opacity 500ms ease-out 10ms;
 	
-	/*-moz-transition:opacity ease-in 1s;
-	-webkit-transition:opacity ease-in 1s;
-	transition:opacity ease-in 1s;
-	
-	-moz-transition:opacity ease-out 20s;
-	-webkit-transition:opacity ease-out 20s;
-	transition:opacity ease-out 20s;*/
-	
-	/*-moz-transition:opacity 12s;
-	-webkit-transition:opacity 12s;
-	transition:opacity 12s;
-	
-	-moz-transition-delay: 1s;
-	-webkit-transition-delay: 1s;
-	transition-delay: 1s;*/
+	.project:hover & { // greyscale disappears when hovering over the whole project
+		opacity: 0; 
+		overflow: hidden;
+	}
 }
 
-.greyscale-circle-140:hover {
-	opacity:0;
-	overflow:hidden;
+// original rule - greyscale only disappeared when hovering over the greyscale circle
+// hovering over h2 .cover does not include the greyscale circle
+//.greyscale-circle-140:hover {
+//	opacity:0;
+//	overflow:hidden;
+//}
+// need to hover over the whole project to keep the greyscale circle transparent
+.project:hover .greyscale-circle-140 {
+	
 }
 
 .color-circle-140 {
@@ -505,7 +495,7 @@ h2.cover {
 		font-size:17px;	
 	}
 	
-	& :hover .cover {
+	&:hover .cover {
 		opacity:1;
 	}
 	
@@ -539,7 +529,7 @@ h2.cover {
 		overflow:hidden;
 	}
 	
-	& :hover .cover {
+	&:hover .cover {
 		opacity:1;
 		overflow:hidden;
 	}
@@ -574,7 +564,7 @@ h2.cover {
 		display:block;
 	}
 	
-	& :hover .cover {
+	&:hover .cover {
 		opacity:1;
 		overflow:hidden;
 	}
@@ -616,7 +606,7 @@ h2.cover {
 		font-family:"Trebuchet MS";
 	}
 	
-	& :hover .cover {
+	&:hover .cover {
 		opacity:1;
 		overflow:hidden;
 	}
@@ -857,11 +847,13 @@ header#reCreate img {
 	
 	& ul {
 		background-color: @reCreate-Blue;	
-		border-bottom: 1px solid tint(@reCreate-TreeColor, 50%);
+		/*border-bottom: 1px solid tint(@reCreate-TreeColor, 50%);*/
+		border-bottom: 1px solid #828383;
 	}
 	
 	& li {
-		border-top: 1px solid tint(@reCreate-TreeColor, 50%);
+		/*border-top: 1px solid tint(@reCreate-TreeColor, 50%);*/
+		border-top: 1px solid #828383;
 	}
 	
 	& li a {
@@ -888,6 +880,10 @@ header#reCreate img {
 	
 	& ul li ul:last-child {
 		border-bottom: none;
+	}
+	
+	& .selected-item {
+		background-color: #FFF;
 	}
 
 }
