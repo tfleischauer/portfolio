@@ -878,12 +878,17 @@ header#reCreate img {
 		background-color:#FFF;
 	}
 	
+	& ul li ul li a.selected-item {
+		background-color:#FFF;
+	}
+	
 	& ul li ul:last-child {
 		border-bottom: none;
 	}
 	
-	& .selected-item {
-		background-color: #FFF;
+	& li a.selected-item {
+		background-color:@reCreate-TreeColor;
+		color: #FFF;
 	}
 
 }
