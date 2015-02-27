@@ -1,9 +1,19 @@
 $(document).ready(function() {
-  
-  adjustPageSizes();
+    function changePage () {
+      $("nav a").removeClass("selected");
+      $(this).addClass("selected"); 
+      
+      var container = $(this).attr("href");
+      
+      $('html, body').animate({
+        scrollTop:$(container).offset().top}
+      , 1200);
+      
+      return false;     
+    }
   
   $("a.project").click(changePage);
-  $("nav li a").click(changePage);
+  $("nav li a.jump").click(changePage);
   $("#contact a").click(changePage);
   
   $("#hideable-ul-nan-designs").hide();
@@ -232,50 +242,6 @@ function showFirstDescriptionEarthshipSeattle() {
 }
 /*** END SET OPENING PAGES ***/
 
-function changePage () {
-  $("nav a").removeClass("selected");
-  $(this).addClass("selected");	
-  
-  var container = $(this).attr("href");
-  
-  $('html, body').animate({
-  scrollTop:$(container).offset().top}
-  , 1200);
-  
-  return false;		
-}
-
-$(window).resize(function() {
-  adjustPageSizes();
-});
-
-/*function adjustPageSizes() {
-  $(".page").each(function() { // apply this behavior to every page
-	  $(this).css("min-height", $(window).height()); // makes every page fit 		
-});
-}*/
-
-function adjustPageSizes() {
-  $(".page").each(function() { // apply this behavior to every page
-  
-	// find the viewport window
-	// if the width is greater than 480
-	if ($(window).width() > 480) {
-	// find the current window (this) and add a css class that makes the "min-height"
-	// the same as the full height of the window
-	$(this).css("min-height", $(window).height()); // makes every page fit 	
-	}
-	
-	// find the viewport window
-	// if the width is less than 480
-	if ($(window).width() < 480) {
-	// find the current window (this) and add a css class that makes the "margin-bottom"
-	// have a bottom margin
-	$(this).css("margin-bottom", "25%"); // makes every page have a bottom margin
-	}
-});
-}
-
 
 /*jQuery(window).resize(function(){
 
@@ -299,6 +265,168 @@ if (jQuery(window).width() < 480) {
 jQuery(".page").css('display', 'none');
 }
 });	*/
+
+///// PrevPage and NextPage Buttons /////
+
+// 1. get the document scroll position
+
+var getScrollPosition_jQuery = function() {
+  // find the window and put it in a variable (we are creating a cache)
+  var $window = $(window);
+
+  // shows how far the user has scrolled down the page
+  var howFarDown = $window.scrollTop();
+  console.log("howFarDown is " + howFarDown);
+
+  return howFarDown;
+};
+
+// var testGetScrollPosition = getScrollPosition();
+var testGetScrollPosition = getScrollPosition_jQuery();
+console.log("getScrollPosition_jQuery: " + testGetScrollPosition);
+
+
+//this function simply gets the window scroll position, works in all browsers
+// from http://browse-tutorials.com/tutorial/get-and-save-jquery-window-scroll-position
+function getPageScroll_VanillaJS() {
+  var yScrollPosition;
+  if (self.pageYOffset) {
+    yScrollPosition = self.pageYOffset;
+  } else if (document.documentElement && document.documentElement.scrollTop) {
+    yScrollPosition = document.documentElement.scrollTop;
+  } else if (document.body) {
+    yScrollPosition = document.body.scrollTop;
+  }
+  return yScrollPosition;
+}
+
+var testGetPageScroll = getPageScroll_VanillaJS();
+console.log("getPageScroll_VanillaJS is " + testGetPageScroll);
+
+
+// 1B. have prevPage and nextPage buttons return their positions
+
+var prevPage = $(".prevPage");
+var nextPage = $(".nextPage");
+
+prevPage.on('click', function(event) {
+  var position = getScrollPosition_jQuery();
+  console.log("I'm in the prevPage function: " + position);
+  return position; 
+});
+
+$("a.scroll").on('click', function(event) {
+  var pages = $(".page");
+  var current;
+  for (var i = 0; i < pages.length; i++) {
+    var page = pages.get(i);
+    var bounds = page.getBoundingClientRect();
+    if (bounds.top < window.innerHeight / 2 && bounds.bottom > 100) {
+        current = page;
+        break;
+    }
+  }
+  if (!current) return;
+  var next = $(this).is(".nextPage") ? $(current).next(".page") : $(current).prev(".page");
+  if (!next) return;
+  var offset = next.offset();
+  $("html, body").animate({ scrollTop: offset.top });
+});
+
+
+// 2. go through all the pages
+
+// array literal of site page objects
+var allPages = [
+{
+  id: "home-page-container",
+  percentFromTop: 0,
+  pixelsFromTop: 0
+
+},
+{
+  id: "page-projects",
+  percentFromTop: "100%",
+  pixelsFromTop: 882
+
+},
+{
+  id: "page-nan",
+  percentFromTop: "200%",
+  pixelsFromTop: 1764
+},
+{
+  id: "page-reCreate",
+  percentFromTop: "300%",
+  pixelsFromTop: 2646
+},
+{
+  id: "page-mark",
+  percentFromTop: "400%",
+  pixelsFromTop: 3528
+},
+{
+  id: "page-trombone",
+  percentFromTop: "500%",
+  pixelsFromTop: 4410
+},
+{
+  id: "page-major-exploration",
+  percentFromTop: "600%",
+  pixelsFromTop: 5292
+},
+{
+  id: "page-home-connect",
+  percentFromTop: "700%",
+  pixelsFromTop: 6174
+},
+{
+  id: "page-giddy-throng",
+  percentFromTop: "800%",
+  pixelsFromTop: 6645
+},
+{
+  id: "page-earthship-seattle",
+  percentFromTop: "900%",
+  pixelsFromTop: 6645
+},
+{
+  id: "page-contact",
+  percentFromTop: "1000%",
+  pixelsFromTop: 6645
+}
+];
+
+// 2. go through all the pages
+//for(var i = 0; i < allPages.length; i++) {
+  //  find ''this' position
+  // $this = $(this); // index.php nav is on line 95
+  // console.log("$this is " + $this);
+
+  // 3. get it's offset
+  // var offset = $('.page').offset();
+
+	// 4. locate first
+  // var firstOffset = $(offset:first);
+// }
+
+// 5. first - find next 'page'
+// note: every page starts with a div containing class="page", line 256 in 480.less
+// look for automated plugin for auto scroll
+
+// $(.page).find
+
+// 7. scroll to that
+
+// $( ".page" ).scrollTop( (100 - getScrollPosition_jQuery) + 100);
+var positionPlus100 = $( ".page" ).getScrollPosition_jQuery + 100;
+console.log("The position plus 100 is " + positionPlus100);
+
+/*** VANILLA JS ***/
+// element.getBoundingClientRect(); // Get position in viewport coordinates
+/*** END VANILLA JS ***/
+
+
 
 var firstItem = $(".first");
 console.log(firstItem);
