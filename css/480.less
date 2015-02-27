@@ -261,6 +261,7 @@ i.icon-linkedin {
 	left:0;	
 }
 
+// Thomas - makes pages stack instead of height: 100%
 /*.page {
 	position:relative;
 	min-height:100%;
@@ -285,16 +286,18 @@ nav {
 	padding-right:0;
 	
 	display:block;
+
 }
 
 nav ul {
 	list-style-type:none;
-	width:500px;
+	// width:500px;
+	width:420px;
 	/*width:23%;*/
 	margin:auto;
 	/*padding:10px 0;	*/
 	/*margin-bottom:25px;*/
-	padding-bottom:25px;
+	padding-bottom:30px;
 	/*padding:1% 0;*/
 	padding-left:0;
 }
@@ -313,6 +316,11 @@ nav ul li {
 	/*padding-left: 20px;*/
 	background-color:rgba(255,255,255,0.9);
 	font-size:1.1em;  
+}
+
+li .scroll {
+	border-bottom: none;
+	color: #000;
 }
 
 nav a:link,
@@ -384,9 +392,9 @@ nav li a {
 
 .home-page-text {
 	max-width:500px;
-	// margin:auto;
+	margin:auto;
 	// padding:0 20px;
-	padding:0 20px 0 0;
+	// padding:0 20px 0 0;
 }
 
 /*** END HOME PAGE ***/
