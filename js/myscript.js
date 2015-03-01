@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     function changePage () {
       $("nav a").removeClass("selected");
       $(this).addClass("selected"); 
@@ -266,7 +267,7 @@ jQuery(".page").css('display', 'none');
 }
 });	*/
 
-///// PrevPage and NextPage Buttons /////
+/*** prevPage AND nextPage BUTTONS ***/
 
 // 1. get the document scroll position
 
@@ -286,24 +287,6 @@ var testGetScrollPosition = getScrollPosition_jQuery();
 console.log("getScrollPosition_jQuery: " + testGetScrollPosition);
 
 
-//this function simply gets the window scroll position, works in all browsers
-// from http://browse-tutorials.com/tutorial/get-and-save-jquery-window-scroll-position
-function getPageScroll_VanillaJS() {
-  var yScrollPosition;
-  if (self.pageYOffset) {
-    yScrollPosition = self.pageYOffset;
-  } else if (document.documentElement && document.documentElement.scrollTop) {
-    yScrollPosition = document.documentElement.scrollTop;
-  } else if (document.body) {
-    yScrollPosition = document.body.scrollTop;
-  }
-  return yScrollPosition;
-}
-
-var testGetPageScroll = getPageScroll_VanillaJS();
-console.log("getPageScroll_VanillaJS is " + testGetPageScroll);
-
-
 // 1B. have prevPage and nextPage buttons return their positions
 
 var prevPage = $(".prevPage");
@@ -318,6 +301,7 @@ prevPage.on('click', function(event) {
 $("a.scroll").on('click', function(event) {
   var pages = $(".page");
   var current;
+  // 2. go through all the pages
   for (var i = 0; i < pages.length; i++) {
     var page = pages.get(i);
     var bounds = page.getBoundingClientRect();
@@ -334,75 +318,6 @@ $("a.scroll").on('click', function(event) {
 });
 
 
-// 2. go through all the pages
-
-// array literal of site page objects
-var allPages = [
-{
-  id: "home-page-container",
-  percentFromTop: 0,
-  pixelsFromTop: 0
-
-},
-{
-  id: "page-projects",
-  percentFromTop: "100%",
-  pixelsFromTop: 882
-
-},
-{
-  id: "page-nan",
-  percentFromTop: "200%",
-  pixelsFromTop: 1764
-},
-{
-  id: "page-reCreate",
-  percentFromTop: "300%",
-  pixelsFromTop: 2646
-},
-{
-  id: "page-mark",
-  percentFromTop: "400%",
-  pixelsFromTop: 3528
-},
-{
-  id: "page-trombone",
-  percentFromTop: "500%",
-  pixelsFromTop: 4410
-},
-{
-  id: "page-major-exploration",
-  percentFromTop: "600%",
-  pixelsFromTop: 5292
-},
-{
-  id: "page-home-connect",
-  percentFromTop: "700%",
-  pixelsFromTop: 6174
-},
-{
-  id: "page-giddy-throng",
-  percentFromTop: "800%",
-  pixelsFromTop: 6645
-},
-{
-  id: "page-earthship-seattle",
-  percentFromTop: "900%",
-  pixelsFromTop: 6645
-},
-{
-  id: "page-contact",
-  percentFromTop: "1000%",
-  pixelsFromTop: 6645
-}
-];
-
-// 2. go through all the pages
-//for(var i = 0; i < allPages.length; i++) {
-  //  find ''this' position
-  // $this = $(this); // index.php nav is on line 95
-  // console.log("$this is " + $this);
-
   // 3. get it's offset
   // var offset = $('.page').offset();
 
@@ -418,16 +333,14 @@ var allPages = [
 
 // 7. scroll to that
 
-// $( ".page" ).scrollTop( (100 - getScrollPosition_jQuery) + 100);
-var positionPlus100 = $( ".page" ).getScrollPosition_jQuery + 100;
-console.log("The position plus 100 is " + positionPlus100);
-
 /*** VANILLA JS ***/
 // element.getBoundingClientRect(); // Get position in viewport coordinates
 /*** END VANILLA JS ***/
 
+/*** END prevPage AND nextPage BUTTONS ***/
 
 
+/*** SELECTED ITEM IN NAVIGATION ***/
 var firstItem = $(".first");
 console.log(firstItem);
 firstItem.addClass("selected-item");
@@ -475,4 +388,8 @@ underline.on("click", function(event) {
 	// firstItem.click();
 	
  // $(".menu-content ul li ").not(":first").hide();
+
+ /*** END SELECTED ITEM IN NAVIGATION ***/
+
+
 	
