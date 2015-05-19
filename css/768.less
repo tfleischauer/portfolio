@@ -1,9 +1,11 @@
-/*.page {
+/*** 800px Grid for development only ***/
+.page {
 	background-image: url("../images/bg-800px-grid-.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	background-repeat:repeat-y;
-}*/
+}
+/*** END 800px Grid for development only ***/
 
 /*** HOME PAGE ***/
 .home-page-container {
@@ -81,11 +83,6 @@ i.icon-linkedin {
 	}
 }
 
-//.project:hover .greyscale-circle {
-//	opacity:0;
-//	overflow:hidden;
-//}
-
 .color-circle {
 	position:absolute;
 	z-index:1;
@@ -100,7 +97,6 @@ i.icon-linkedin {
 	.stroke(3px, solid, #000);
 	
 	& h2.cover {
-		/*color:#FFF;*/
 		margin-left:64px;
 		margin-top:111px;
 		font-size:26px;	
@@ -112,10 +108,8 @@ i.icon-linkedin {
 	.stroke(3px, solid, #000);
 	
 	& h2.cover {
-		/*color:#000;*/
 		margin-left:101px;
 		margin-top:50px;
-		/*font-family: "Myriad Pro", "PT Sans", sans-serif;*/
 		font-size:20px;	
 		width:110px;
 		overflow:hidden;
@@ -130,9 +124,7 @@ i.icon-linkedin {
 		font-size:26px;
 		margin-left:45px;
 		margin-top:86px;
-		/*color:#7ED9EF;
-		font-family:"Gotham";
-		letter-spacing:5px;*/
+		/* letter-spacing: 5px;*/
 	}	
 }
 
@@ -177,11 +169,6 @@ i.icon-linkedin {
 		font-size:18px;
 		margin-left:12.5%;
 		margin-top:90px;
-		/*color:#BE5C6C;*/
-		/*color:darkred;*/
-		/*color:red;*/
-		/*text-align:center;*/
-		/*background-color:#FFEC09;*/
 	}
 }
 		
@@ -193,8 +180,6 @@ i.icon-linkedin {
 		font-size:26px;
 		margin-left:4px;
 		margin-top:83px;
-		/*color:red;*/
-		/*text-align:center;*/
 	}		
 }
 			
@@ -206,8 +191,6 @@ i.icon-linkedin {
 		font-size:26px;
 		margin-left:4px;
 		margin-top:30%;
-		/*color:red;*/
-		/*text-align:center;*/
 	}		
 }
 				
@@ -215,13 +198,11 @@ i.icon-linkedin {
 	.circleMixin-210px;
 	.stroke(3px, solid, #000);
 	
-	& h2.cover {
+	/*& h2.cover {
 		font-size:26px;
-		margin-left:16%;
+		margin-left:10%;
 		margin-top:65px;
-		/*color:red;*/
-		/*text-align:center;*/
-	}		
+	}*/		
 }
 /* END CIRCLE BEHAVIORS */
 
@@ -233,7 +214,9 @@ i.icon-linkedin {
 .project_details_img_small {
 	display:none;	
 }
+/* END IMAGE SIZES */
 
+/* PROJECT PAGES */
 .projectDetails768 {
    & .project_details_p { 
 		font-size:.8em;
@@ -252,17 +235,14 @@ i.icon-linkedin {
 .project_details_major_exploration,
 .project_details_homeconnect,
 .project_details_giddy_throng,
-.project_details_earthship_seattle {
+.project_details_earthship_seattle,
+.project_details_joemicheals {
 	.projectDetails768;
 }
 
 .long-text {
 	font-size:0.85em;
 }
-
-/*.long-text h1 {
-	font-size:2.25em;	
-}*/
 
 #page-nan #nav-sub-nan,
 #page-mark #nav-sub-mark,
@@ -271,10 +251,20 @@ i.icon-linkedin {
 #page-major-exploration #nav-sub-major-exploration,
 #page-homeconnect #nav-sub-homeconnect,
 #page-giddy-throng #nav-sub-giddy-throng,
-#page-earthship-seattle #nav-sub-earthship-seattle {
+#page-earthship-seattle #nav-sub-earthship-seattle,
+#page-joemicheals #nav-sub-joemicheals  {
 	font-size: 1.1em;
 	line-height: 1.5; /* 24px / 16 px */
 }
+
+#header-joemicheals h1 {
+   font-size:2.25em;
+   margin-left: 12px;
+   width:740px;
+   position: relative;
+   top:25px;
+}
+/* END PROJECT PAGES */
 
 /*** CONTACT FORM ***/
 #contact-form p label {

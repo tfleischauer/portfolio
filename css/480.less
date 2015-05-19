@@ -1,6 +1,6 @@
 /*** GLOBAL SELECTORS ***/
 ul {
-	padding-left: 1.25em;	/* padding WILL show the background of the ul tag */
+	padding-left: 1.25em;
 }
 
 h2 {
@@ -8,13 +8,13 @@ h2 {
 }
 
 .section-label {
-	font-size:2em;	
+	font-size: 2em;	
 }
 
 #page-contact .section-label,
 #page-thankyou .section-label {
-	margin-top:40px;
-	margin-bottom:40px;	
+	margin-top: 40px;
+	margin-bottom: 40px;	
 }
 /*** END GLOBAL SELECTORS ***/
 
@@ -55,16 +55,13 @@ h2 {
 	& h1 {
 		padding-bottom:25px;
 	}
+	
 	& img {
-		/*border:2px solid grey;*/
-		/*margin-right:percentage(10/700);*/
-	   /* width:percentage(460/700);*/
 	   display:block;
-		
 	}
-	& p { /* each paragraph */
+	 /* each paragraph */
+	& p {
 		margin-bottom:.4em;
-		/*margin-right:percentage(10/700);*/
 		float:left;
 		padding:0 2% 2% 0%;	
 		overflow:hidden;
@@ -72,23 +69,17 @@ h2 {
 	/* all paragraphs as a group in project_details */
 	& .project_details_p { 
 		width:percentage(220/700);
-		/*max-width:220px;*/
 		float:left;		
 		padding-top:0;
-		/*padding-right:percentage(10/700);*/
 		padding-bottom:0;
 		padding-left:0;
 		font-size:.65em;
 		overflow:hidden;
-		/*margin-bottom:.7em;*/
-		/*margin:auto;*/
 	}
 	
 	& .project_details_p ul {
-		/*display:block;*/
 		clear:both;	
 		padding-left:1.375em;
-		/*margin-bottom:.4em;*/
 	}
 	
 	& .pdf-link {
@@ -96,14 +87,10 @@ h2 {
 	}
 	/* div contining the image */
 	& .project_details_img {
-		/*width:100%;*/
 		float:right;
 		width:percentage(460/700);
-		/*max-width:460px;*/
-		/*max-height:690px;*/
 		overflow:hidden;
 		border:2px solid grey;
-		/*padding-right:percentage(10/700);*/
 		margin-right:percentage(10/700);
 		text-align:center;
 		alignment-baseline:baseline;
@@ -117,7 +104,6 @@ h2 {
 
 .verticalMenuMixin-White {
 	width:23.40425532%; /* 220/940 */
-	/*max-width:220px;*/
 	float:left;	
 	color:#000;
 	background-color:#FFF;
@@ -153,7 +139,6 @@ h2 {
 	}
 	
 	& li a:active {
-		/*border-bottom:none;*/
 		text-decoration:none;
 		text-decoration:underline;
 		color: #000;	
@@ -191,7 +176,7 @@ h2 {
 		list-style-type:none;	
 	}
 	
-	// & li .selected-item { 
+	/* & li .selected-item { */
 	
 	/*** ACTIVE STATE ***/
 	& .selected-item { 
@@ -260,10 +245,10 @@ i.icon-linkedin {
 	top:0;
 	left:0;	
 
-	// min-height: 100vh;
+	/* min-height: 100vh; */
 }
 
-// Thomas - makes pages stack instead of height: 100%
+/* Thomas - makes pages stack instead of height: 100% */
 /*.page {
 	position:relative;
 	min-height:100%;
@@ -273,10 +258,7 @@ i.icon-linkedin {
 nav {
 	position:fixed;
 	z-index:100;
-	
 	width:100%;
-	/*margin:auto;*/
-	/*display:inline-block;*/
 	
 	left:0;
 	bottom:0;
@@ -293,29 +275,15 @@ nav {
 
 nav ul {
 	list-style-type:none;
-	// width:500px;
 	width:420px;
-	/*width:23%;*/
 	margin:auto;
-	/*padding:10px 0;	*/
-	/*margin-bottom:25px;*/
 	padding-bottom:30px;
-	/*padding:1% 0;*/
 	padding-left:0;
 }
 
 nav ul li {
-	/*float:left;*/
-	/*padding:0 10px;	*/
-	/*padding:0 4%;
-	font-size:100%;
-	padding-right:4%;*/
-	
 	float: left;
 	padding-top: 0;
-	/*padding-right: 20px;*/
-	/*padding-bottom: 0;*/
-	/*padding-left: 20px;*/
 	background-color:rgba(255,255,255,0.9);
 	font-size:1.1em;  
 }
@@ -352,7 +320,6 @@ nav li a {
 /*** END ONE-PAGE NAV MAIN CONTROLS ***/
 
 /*** GLOBAL TABLET NAV ***/
-
 /* SUB NAVIGATION */
 #nav-sub-recreate,
 #nav-sub-nan,
@@ -361,7 +328,8 @@ nav li a {
 #nav-sub-major-exploration,
 #nav-sub-homeconnect,
 #nav-sub-giddy-throng,
-#nav-sub-earthship-seattle {
+#nav-sub-earthship-seattle,
+#nav-sub-joemicheals {
 	display:block !important;	
 }
 
@@ -372,11 +340,11 @@ nav li a {
 #nav-collapse-major-exploration,
 #nav-collapse-homeconnect,
 #nav-collapse-giddy-throng,
-#nav-collapse-earthship-seattle {
+#nav-collapse-earthship-seattle,
+#nav-collapse-joemicheals {
 	display:none;	
 }
 /* END SUB-NAVIGATION */
-
 /*** END GLOBAL TABLET NAV ***/
 
 /*** HOME PAGE ***/
@@ -395,30 +363,21 @@ nav li a {
 .home-page-text {
 	max-width:500px;
 	margin:auto;
-	// padding:0 20px;
-	// padding:0 20px 0 0;
+	/* padding:0 20px; */
+	/* padding:0 20px 0 0; */
 }
-
 /*** END HOME PAGE ***/
 
-
 /*** PROJECT PAGE - ALL CIRCLE ICONS ***/
-
 /* THE PAGE ITSELF */
 #page-projects {
 	top:100%;
 	height:100%;
-	// height: 900px;
-	/*background:#00BFFF;*/
 	visibility:visible;
-	/*max-width:940px;
-	width:100%;*/
 	margin:auto;	
-
 }
 
 /* CIRCLE BEHAVIORS */
-
 .mobile-rectangle,
 .greyscale-circle,
 .color-circle {
@@ -444,21 +403,10 @@ nav li a {
 	-webkit-transition:opacity 500ms ease-out 10ms;
 	transition:opacity 500ms ease-out 10ms;
 	
-	.project:hover & { // greyscale disappears when hovering over the whole project
+	.project:hover & { /* greyscale image disappears when hovering over the whole project */
 		opacity: 0; 
 		overflow: hidden;
 	}
-}
-
-// original rule - greyscale only disappeared when hovering over the greyscale circle
-// hovering over h2 .cover does not include the greyscale circle
-//.greyscale-circle-140:hover {
-//	opacity:0;
-//	overflow:hidden;
-//}
-// need to hover over the whole project to keep the greyscale circle transparent
-.project:hover .greyscale-circle-140 {
-	
 }
 
 .color-circle-140 {
@@ -739,7 +687,7 @@ h2.cover {
 	
  	& h2.cover {
 		font-size:18px;
-		margin-left:15%;
+		margin-left:12%;
 		margin-top:45px;
 		color:#FFF;
 		text-align:center;
@@ -774,7 +722,8 @@ h2.cover {
 #content-area-major-exploration,
 #content-area-homeconnect,
 #content-area-giddy-throng,
-#content-area-earthship-seattle {
+#content-area-earthship-seattle,
+#content-area-joemicheals {
 	.content-area;
 }
 
@@ -786,7 +735,8 @@ h2.cover {
 .project_details_major_exploration,
 .project_details_homeconnect,
 .project_details_giddy_throng,
-.project_details_earthship_seattle {
+.project_details_earthship_seattle,
+.project_details_joemicheals {
 	.projectDetailsTablet;
 }
 
@@ -809,24 +759,13 @@ h2.cover {
 /*** NAN PAGE ***/
 #page-nan {
 	top:200%;
-	/*background:#66CDAA;*/
 	color:black;
 }
-
-/*#header-nan {
-	background-image:url("web120/images/1967-Phantom-Ship-2-500x100.jpg");
-	background-repeat:repeat;
-}*/
 
 /* structure */
 #page-nan #header-nan {
 	width:100%; /* 940/940 */
-	/*height:100px;*/ /* Doing height in pixels is OK! */
-	/*background-image:url("images/tfleischauer-web202-a11-logo-441x110.png");*/
 	background-color:#FFF;
-	/*background-repeat:repeat;*/	
-/*	background-image:url("web120/images/1967-Phantom-Ship-2-500x100.jpg");
-	background-repeat:repeat;*/
 }
 
 /* NAN NAV - 480 px + */
@@ -867,12 +806,10 @@ header#reCreate img {
 	
 	& ul {
 		background-color: @reCreate-Blue;	
-		/*border-bottom: 1px solid tint(@reCreate-TreeColor, 50%);*/
 		border-bottom: 1px solid #828383;
 	}
 	
 	& li {
-		/*border-top: 1px solid tint(@reCreate-TreeColor, 50%);*/
 		border-top: 1px solid #828383;
 	}
 	
@@ -941,22 +878,8 @@ header#header-mark {
 }
 
 header#header-trombone {
-	/*overflow:hidden;*/
-	/*background-image: url('../hcde419/images/trombone-header-image-313x110px.jpg');*/
-	/*background-repeat:repeat;*/
-	/*background-image: url("../hcde419/images/wavelength.png");*/
-	/*background-image: url("../hcde419/images/wavelength-1618x110px.jpg");*/
-	/*background-image: url("../hcde419/images/wavelength-black-on-gold-1618x110px-trebuchet.jpg");*/
-	/*background-image: url("../hcde419/images/wavelength-black-on-gold-1618x110px-trebuchet-2.jpg");*/
-	/*background-image: url("../hcde419/images/wavelength-white-on-green-1618x110px-century-gothic-34pt.jpg");*/
-	/*background-image: url("../hcde419/images/wavelength-white-on-green-2426x110px-century-gothic-34pt.jpg");*/
 	background-image: url("../images/wavelength-gold-on-green-3000x136px-outerglow.jpg");
 	height:136px;	
-	
-	/*background-color:#000;*/
-	/*height:110px;*/	
-	/*-webkit-text-stroke: 1px pink;
-	text-stroke: 1px pink;*/
 }
 
 /* TROMBONE NAV 480 px and larger */
@@ -979,7 +902,6 @@ header#header-trombone {
 
 header#header-major-exploration {
 	height:114px;
-	/*background-color:tint(#b3b3b4, 80%);*/
 }
 
 #header-major-exploration h1 {
@@ -1022,9 +944,44 @@ header#header-homeconnect {
 /* END HOMECONNECT NAV 480 px and larger */
 /*** END HOMECONNECT PAGE ***/
 
+/*** JOE MICHEALS PAGE ***/
+#page-joemicheals {
+	top:800%;
+	color:#000;
+	overflow:hidden;
+}
+
+header#header-joemicheals {
+	height:110px;
+}
+
+#header-joemicheals h1 {
+   display:block;
+   font-size:1.4em;
+   color:#FFF;	
+   /*line-height: 110px;*/
+   margin-left: 10px;
+   width:460px;
+   background: #000;
+   position: relative;
+   top: 30px;
+   padding: 10px 5px 10px 5px;
+}
+
+#header-joemicheals h1.fold {
+	display: none;	
+}
+
+/* JOE MICHEALS NAV 480 px and larger */
+#nav-sub-joemicheals {
+	.verticalMenuMixin-White;
+}
+/* END JOE MICHEALS NAV 480 px and larger */
+/*** END JOE MICHEALS PAGE ***/
+
 /*** GIDDY THRONG PAGE ***/
 #page-giddy-throng {
-	top:800%;
+	top:900%;
 	color:#000;
 	overflow:hidden;
 }
@@ -1056,7 +1013,7 @@ header#header-giddy-throng img{
 
 /*** EARTHSHIP SEATTLE PAGE ***/
 #page-earthship-seattle {
-	top:900%;
+	top:1000%;
 	overflow:hidden;
 }
 
@@ -1077,14 +1034,11 @@ header#header-earthship-seattle img{
 	.verticalMenuMixin-White;
 }
 /* END EARTHSHIP SEATTLE NAV 480 px and larger */
-
 /*** END EARTHSHIP SEATTLE PAGE ***/
 
 /*** CONTACT PAGE ***/
 #page-contact {
-	top:1000%;
-	/*background:hotpink;*/
-	/*color:#000;*/
+	top:1100%;
 }
 /*** END CONTACT PAGE ***/
 
@@ -1140,7 +1094,6 @@ textarea {
 }
 
 .thankyou-page {
-	/*margin-left:percentage(260/940);*/
 	font-size:200%;	
 	text-align:center;
 }

@@ -37,9 +37,12 @@ $(document).ready(function() {
   
   $("#nav-collapse-homeconnect").click(showHideMenu);
   
+  $("#nav-collapse-joemicheals").click(showHideMenu);
+  
   $("#nav-collapse-giddy-throng").click(showHideMenu);
   
   $("#nav-collapse-earthship-seattle").click(showHideMenu);
+  
   
   // make id div after menu / inside #content-area-x
   $("#content-area-nan").prepend("<div id='description_nan'></div>");
@@ -50,6 +53,7 @@ $(document).ready(function() {
   $("#content-area-homeconnect").prepend("<div id='description_homeconnect'></div>");
   $("#content-area-giddy-throng").prepend("<div id='description_giddy_throng'></div>");
   $("#content-area-earthship-seattle").prepend("<div id='description_earthship_seattle'></div>");
+  $("#content-area-joemicheals").prepend("<div id='description_joemicheals'></div>");
   
   // jQuery class 'hide', hides the contents of the div
   $("#description_nan").hide();
@@ -60,6 +64,7 @@ $(document).ready(function() {
   $("#description_homeconnect").hide();
   $("#description_giddy_throng").hide();
   $("#description_earthship_seattle").hide();
+  $("#description_joemicheals").hide();
   
   // each list item in the sub-nav
   $(".project_title_nan").click(showDescriptionNan); 
@@ -70,6 +75,7 @@ $(document).ready(function() {
   $(".project_title_homeconnect").click(showDescriptionHomeConnect);
   $(".project_title_giddy_throng").click(showDescriptionGiddyThrong);  
   $(".project_title_earthship_seattle").click(showDescriptionEarthshipSeattle);  
+  $(".project_title_joemicheals").click(showDescriptionJoeMicheals); 
   
   showFirstDescriptionNan();
   showFirstDescriptionRecreate();
@@ -79,6 +85,7 @@ $(document).ready(function() {
   showFirstDescriptionHomeConnect();
   showFirstDescriptionGiddyThrong();
   showFirstDescriptionEarthshipSeattle();
+  showFirstDescriptionJoeMicheals();
 	  
 });
 
@@ -193,6 +200,13 @@ function showDescriptionEarthshipSeattle() {
   return false;	
 }
 
+function showDescriptionJoeMicheals() {
+  $("#description_joemicheals").show();
+  var pageHref = $(this).attr("href");
+  $("#description_joemicheals").load(pageHref + " .project_details_joemicheals");
+  return false;	
+}
+
 /*** SET OPENING PAGES ***/
 function showFirstDescriptionNan() {
   $("#description_nan").show();
@@ -239,6 +253,12 @@ function showFirstDescriptionGiddyThrong() {
 function showFirstDescriptionEarthshipSeattle() {
   $("#description_earthship_seattle").show();
   $("#description_earthship_seattle").load("web210/overview.html" + " .project_details_earthship_seattle");
+  return false;		
+}
+
+function showFirstDescriptionJoeMicheals() {
+  $("#description_joemicheals").show();
+  $("#description_joemicheals").load("joemicheals/overview.html" + " .project_details_joemicheals");
   return false;		
 }
 /*** END SET OPENING PAGES ***/
@@ -390,6 +410,17 @@ underline.on("click", function(event) {
  // $(".menu-content ul li ").not(":first").hide();
 
  /*** END SELECTED ITEM IN NAVIGATION ***/
+
+ /***** PSEUDO CODE FOR INTERNAL LINKING ***/
+ // determine what link has been clicked
+var $this = $(this);
+// put location in variable
+var clickedLink = $this;
+// get href attribute
+var internalLink;
+// navigate to the internalLink address
+// apply active state
+// move window to location of the internalLink
 
 
 	
