@@ -219,21 +219,22 @@ h2 {
 /*** CONTACT ICONS ***/
 .contact-icons {
 	float:right;
-	width:65px;
-	position: relative; /* positions relative to normal position */
-	top:17%;
+	max-width: none;
+	width: 100px;
+	position: relative; /* position relative to normal position */
+	top:20px;
 }
 
-i.icon-email {
+i.icon-github {
 	/*width:42.85714286%;*/ /* 60/140px */
 	float:left;
-	font-size:1.7em;
+	font-size:45px;	
 }
 
 i.icon-linkedin {
 	/*width:42.85714286%;*/ /* 60/140px */
 	float:right;
-	font-size:1.7em;
+	font-size:45px;	
 }
 /*** END CONTACT ICONS ***/
 
@@ -752,7 +753,7 @@ h2.cover {
 	display:inline;	
 }
 
-.project_details_mark .mark-design {
+.no-border {
 	border:none;	
 }
 
@@ -962,10 +963,11 @@ header#header-joemicheals {
    /*line-height: 110px;*/
    margin-left: 10px;
    width:460px;
-   background: #000;
+   background-color: rgba(0, 0, 0, 0.8);
    position: relative;
    top: 30px;
    padding: 10px 5px 10px 5px;
+   /*box-shadow: 2px 2px 2px #333;*/ /* horizontal, vertical, blur, color */
 }
 
 #header-joemicheals h1.fold {
@@ -975,6 +977,30 @@ header#header-joemicheals {
 /* JOE MICHEALS NAV 480 px and larger */
 #nav-sub-joemicheals {
 	.verticalMenuMixin-White;
+	
+	& ul {
+		background-color: #000;	
+	}
+	
+	& li {
+		color:#FFF;
+	}
+	
+	& li a:link,
+	& li a:visited {
+		/*color:#FFF;*/
+		color: #FFCB39;
+	}
+
+	& li a:hover,
+	& li a:focus {	/* use full descendent selector! */
+		background-color:#000;
+		color: #FFCB39;
+	}
+	
+	& li a:active {
+		/*border-bottom: none;*/
+	}
 }
 /* END JOE MICHEALS NAV 480 px and larger */
 /*** END JOE MICHEALS PAGE ***/
