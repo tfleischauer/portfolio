@@ -210,7 +210,7 @@ function showDescriptionJoeMicheals() {
 /*** SET OPENING PAGES ***/
 function showFirstDescriptionNan() {
   $("#description_nan").show();
-  $("#description_nan").load("web120/protosite.html" + " .project_details_nan");
+  $("#description_nan").load("web120/overview.html" + " .project_details_nan");
   return false;	
 }
 
@@ -234,7 +234,7 @@ function showFirstDescriptionTrombone() {
 
 function showFirstDescriptionMajorExploration() {
   $("#description_major_exploration").show();
-  $("#description_major_exploration").load("info490/video-prototype.html" + " .project_details_major_exploration");
+  $("#description_major_exploration").load("info490/overview.html" + " .project_details_major_exploration");
   return false;	
 }
 
@@ -262,30 +262,6 @@ function showFirstDescriptionJoeMicheals() {
   return false;		
 }
 /*** END SET OPENING PAGES ***/
-
-
-/*jQuery(window).resize(function(){
-
-if (jQuery(window).width() > 980) {
-jQuery(".menu-main-menu-container").css('display', 'block');
-}
-
-if (jQuery(window).width() < 980) {
-jQuery(".menu-main-menu-container").css('display', 'none');
-}
-});	
-*/
-
-/*jQuery(window).resize(function(){
-
-if (jQuery(window).width() > 480) {
-jQuery(".page").css('display', 'block');
-}
-
-if (jQuery(window).width() < 480) {
-jQuery(".page").css('display', 'none');
-}
-});	*/
 
 /*** prevPage AND nextPage BUTTONS ***/
 
@@ -336,29 +312,7 @@ $("a.scroll").on('click', function(event) {
   var offset = next.offset();
   $("html, body").animate({ scrollTop: offset.top });
 });
-
-
-  // 3. get it's offset
-  // var offset = $('.page').offset();
-
-	// 4. locate first
-  // var firstOffset = $(offset:first);
-// }
-
-// 5. first - find next 'page'
-// note: every page starts with a div containing class="page", line 256 in 480.less
-// look for automated plugin for auto scroll
-
-// $(.page).find
-
-// 7. scroll to that
-
-/*** VANILLA JS ***/
-// element.getBoundingClientRect(); // Get position in viewport coordinates
-/*** END VANILLA JS ***/
-
 /*** END prevPage AND nextPage BUTTONS ***/
-
 
 /*** SELECTED ITEM IN NAVIGATION ***/
 var firstItem = $(".first");
@@ -373,51 +327,15 @@ underline.on("click", function(event) {
 	$this.closest(".menu-content").find(".selected-item").removeClass("selected-item");
 	$this.addClass("selected-item");
 });
-
-// var hash = location.hash; // || "#fruit"; // use #id or otherwise use default of #fruit
-// var firstItem = $(".project-menu ul li a[href='" + hash + "']");
-
-// firstItem = $("li a:first-child");
-
-// var firstItem = $(".project-menu ul a:first");
-
-// var firstItem = $(".menu-content ul a:first");
-
-// var hash = location.hash; // || "#fruit"; // use default or otherwise use fruit
-// var firstItem = $(".project-menu a[href='" + hash + "']");
-
-
-
-// firstItem.trigger("click");
-// firstItem.click();
-
-// var defaultSubNav = $(".project-menu");
-// Default diplay: first tab div, auto "click" on-load of page
-// defaultSubNav.filter("a:first").click();
-// var $defaultSubNav;
-// defaultSubNav.find(".project-menu a:first").click();
-
-
-// web120/aia.html
-
-// var hash = location.hash || "web120/aia.html"; // use default or otherwise use fruit
-	// var firstItem = $(".project-menu a[href='" + hash + "']");
-	// .tabs a[href='#fruit']
-	// var firstItem = $(".tabs a:first");
-	// firstItem.trigger("click");
-	// firstItem.click();
-	
- // $(".menu-content ul li ").not(":first").hide();
-
  /*** END SELECTED ITEM IN NAVIGATION ***/
 
  /***** PSEUDO CODE FOR INTERNAL LINKING ***/
  // determine what link has been clicked
-var $this = $(this);
+// var $this = $(this);
 // put location in variable
-var clickedLink = $this;
+// var clickedLink = $this;
 // get href attribute
-var internalLink;
+// var internalLink;
 // navigate to the internalLink address
 // apply active state
 // move window to location of the internalLink
