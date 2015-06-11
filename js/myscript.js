@@ -339,6 +339,4 @@ underline.on("click", function(event) {
 // navigate to the internalLink address
 // apply active state
 // move window to location of the internalLink
-
-
-	
+/*** END PSEUDO CODE FOR INTERNAL LINKING ***/
