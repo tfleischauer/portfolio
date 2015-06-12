@@ -108,10 +108,13 @@ ul li ul {
 /* END RAVEN'S VERTICAL LISTS */
 
 .page {
-	height:100%;
-	top:0;
-	left:0;	
+	height: 100%;
+	/*top: 0;*/
+	/*left: 0;*/	
 	min-height: 100vh;
+	
+	/*position: relative;*/
+	padding-bottom: 50px;
 }
 
 /*** END GLOBAL SELECTORS ***/
@@ -503,14 +506,16 @@ nav {
 
 nav ul {
 	list-style-type:none;
-	width:320px;
+	/*min-width:320px;*/
+	max-width: 480px;
+	width: 320px;
 	margin:auto;
 	padding-left: 0; /* removes global style */
 }
 
 nav ul li {
 	float:left;
-	font-size:.85em;
+	font-size:1em;
 	/*padding-bottom: 0;*/ /* removes global style */
 }
 
@@ -522,9 +527,9 @@ li .scroll {
 /* a is any link (including ones w/o an href) */
 nav li a {
 	display:block;
-	padding-left:15px;
-	padding-right:15px;
-	padding-top:5px;	
+	padding-left:12px;
+	padding-right:13px;
+	padding-top:10px;	
 	padding-bottom:5px;
 	cursor: pointer;
 }
