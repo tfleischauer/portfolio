@@ -1,3 +1,5 @@
+/***** STYLE SHEET FOR WIDTHS LESS THAN 480px *****/
+
 /*** RESETS ***/
 
 /* *, *:before, *:after border-box does not apply to pseudo elements */
@@ -306,24 +308,28 @@ header#reCreate img,
 header#header-homeconnect img,
 header#header-major-exploration img,
 header#header-giddy-throng img {
-	display:block;
+	display: block;
+}
+
+header#header-nan img {
+	margin-left: 10px;	
 }
 
 #trombone {
- 	background-image:url("../images/wavelength-gold-on-green-200x50px.png");
- 	background-repeat:repeat;
+ 	background-image: url("../images/wavelength-gold-on-green-200x50px.png");
+ 	background-repeat: repeat;
 }
 
 #trombone h2.cover {
-	display:block;	
+	display: block;	
 }
 
 #home-connect {
- background-color:#CEE9FC;
+ background-color: #CEE9FC;
 }
 
 #giddy-throng {
-  background-color:#262626;
+  background-color: #262626;
 }
 
 #major-exploration {
@@ -331,12 +337,16 @@ header#header-giddy-throng img {
 }
 
 header#header-homeconnect {
-	background-color:#CEE9FC;
+	background-color: #CEE9FC;
 }
 
 header#header-major-exploration {
  	background-color: #B3B3B5;
  	overflow:hidden;
+}
+
+#header-earthship-seattle img {
+	margin-left: 5px;	
 }
 
 #earthship-seattle h2 {
@@ -349,6 +359,14 @@ header#header-major-exploration {
 header#header-giddy-throng {
     background:#262626;
     padding: 20px 0 20px 5px;
+}
+
+header#header-giddy-throng .small-header-image {
+	display: block;
+}
+
+header#header-giddy-throng .large-header-image {
+	display: none;
 }
 
 header#header-joemicheals {
@@ -488,6 +506,10 @@ header#header-trombone {
 	overflow:hidden;
 	height:110px;
 	background-image: url("../images/wavelength-gold-on-green-481x110px-outerglow-2.png");
+}
+
+#header-trombone img {
+	display: none;	
 }
 /*** END PROJECT PAGES ***/
 

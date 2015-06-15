@@ -1,3 +1,5 @@
+/***** STYLE SHEET FOR WIDTHS 480px - 767px *****/
+
 /*** GLOBAL SELECTORS ***/
 ul {
 	padding-left: 1.25em;
@@ -443,7 +445,7 @@ h2.cover {
 }
 
 #project1 {
-	margin-right:-1.5%;	
+	/*margin-right:-1.5%;	*/
 	position:relative;
 	/*background-color:@divColor;*/
 }
@@ -700,10 +702,10 @@ h2.cover {
 
 /*** ALL PAGES - GLOBAL STYLES ***/
 .page-body {
-	max-width:1280px;
-	margin-left:auto;
-	margin-right:auto;
-	padding-top:.15em;
+	max-width: 1260px; /* 1260px of columns + 2 x 10px margin = 1280px */
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: .15em;
 }
 /*** END ALL PAGES - GLOBAL STYLES ***/
 
@@ -751,7 +753,7 @@ h2.cover {
 }*/
 
 .no-block img {
-	display:inline;	
+	display: inline;	
 }
 
 .no-border {
@@ -760,14 +762,18 @@ h2.cover {
 
 /*** NAN PAGE ***/
 #page-nan {
-	top:200%;
-	color:black;
+	top: 200%;
+	color: #000;
 }
 
 /* structure */
 #page-nan #header-nan {
-	width:100%; /* 940/940 */
-	background-color:#FFF;
+	width: 100%;
+	background-color: #FFF;
+}
+
+header#header-nan img {
+	margin-left: 0;	
 }
 
 /* NAN NAV - 480 px + */
@@ -880,8 +886,9 @@ header#header-mark {
 }
 
 header#header-trombone {
-	background-image: url("../images/wavelength-gold-on-green-3000x136px-outerglow.jpg");
-	height:136px;	
+	background-image: url("../images/wavelength-gold-on-green-2144x110px-outerglow.png");
+	background-repeat: repeat-x;
+	height: 110px;	
 }
 
 /* TROMBONE NAV 480 px and larger */
@@ -891,6 +898,10 @@ header#header-trombone {
 
 #nav-sub-trombone li a {
 	color: #567566;	/* green sub nav list items */
+}
+
+#header-trombone img {
+	display: block;	
 }
 /* END TROMBONE NAV 480 px and larger */
 /*** END TROMBONE PAGE ***/
@@ -927,10 +938,15 @@ header#header-major-exploration {
 }
 
 header#header-homeconnect {
-	background-image: url("../images/homeconnect-logo-470x110px.png");
 	height:110px;
 	background-color:#CEE9FC;
-	background-repeat:no-repeat;
+	/*background-image: url("../images/homeconnect-logo-470x110px.png");*/
+	/*background-repeat:no-repeat;*/
+}
+
+header#header-home-connect img {
+	/*margin-left: 0;*/
+	/*padding-left: 0;*/
 }
 
 #header-homeconnect h1 {
@@ -980,7 +996,7 @@ header#header-joemicheals {
 	.verticalMenuMixin-White;
 	
 	& ul {
-		background-color: #000;	
+		 background-color: rgba(0, 0, 0, 0.9);	
 	}
 	
 	& li {
@@ -1008,21 +1024,30 @@ header#header-joemicheals {
 
 /*** GIDDY THRONG PAGE ***/
 #page-giddy-throng {
-	top:900%;
-	color:#000;
-	overflow:hidden;
+	top: 900%;
+	color: #000;
+	overflow: hidden;
 }
 
 header#header-giddy-throng {
-	height:110px;
-	background-image: url("../images/giddy-throng-logo-140829-450x56px.png");
-	background-repeat: no-repeat;
-	background-position:5px 50%;
-	display:block;
+	height: 110px;
+	/*background-image: url("../images/giddy-throng-logo-140829-450x56px.png");*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: 5px 50%;*/
+	/*display: block;*/
 }
 
 header#header-giddy-throng img{
-	display:none;
+	/*display: none;*/
+}
+
+header#header-giddy-throng .small-header-image {
+	display: none;
+}
+
+header#header-giddy-throng .large-header-image {
+	display: block;
+	margin-top: 10px;
 }
 
 #header-giddy-throng h1 {
@@ -1040,20 +1065,22 @@ header#header-giddy-throng img{
 
 /*** EARTHSHIP SEATTLE PAGE ***/
 #page-earthship-seattle {
-	top:1000%;
-	overflow:hidden;
+	top: 1000%;
+	overflow: hidden;
 }
 
 header#header-earthship-seattle {
-	height:110px;
-	background-image: url("../images/skylinelogo2-460x100px.png");
-	background-repeat: no-repeat;
-	background-position:5px 50%;
-	display:block;	
+	height: 110px;
+	/*background-image: url("../images/skylinelogo2-460x100px.png");*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: 5px 50%;*/
+	/*display: block;	*/
 }
 
 header#header-earthship-seattle img{
-	display:none;
+	/*display:none;*/
+	margin-top: 5px;
+	margin-left: 0;	
 }
 
 /* EARTHSHIP SEATTLE NAV 480 px and larger */
@@ -1065,7 +1092,7 @@ header#header-earthship-seattle img{
 
 /*** CONTACT PAGE ***/
 #page-contact {
-	top:1100%;
+	top: 1100%;
 }
 /*** END CONTACT PAGE ***/
 
