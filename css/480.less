@@ -10,7 +10,7 @@ h2 {
 }
 
 .section-label {
-	font-size: 2em;	
+	font-size: 2.15em;
 }
 
 #page-contact .section-label,
@@ -26,32 +26,7 @@ h2 {
 /*** END VARIABLES ***/
 
 /*** MIXINS ***/
-.allCirclesMixin {
-	.circleMixin-140px;
- 	.stroke(2px, solid, #000);
-	
-	a {
-		display:block;
-		width:100%;
-		height:100%;	
-	}
-	
-	&:hover .cover {
-		opacity:1;
-		overflow:hidden;
-	}
-	
-}
 
-.circleMixin-140px {
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	width:140px;
-	height:140px;
-	background-color:white;
-	overflow:hidden;
-}
 
 .projectDetailsTablet {
 	& h1 {
@@ -373,325 +348,6 @@ nav li a {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	clear: both;
-}
-
-/* CIRCLE BEHAVIORS */
-.mobile-rectangle,
-.greyscale-circle,
-.color-circle {
-	display:none;
-}
-
-.greyscale-circle-140 {
-	position:absolute;
-	top:0;
-	z-index:2;
-	opacity:1;
-	overflow:hidden;
-	display:block;	
-	
-	/* transition: 
-	1. opacity is the transition property
-	2. transition duration, the amount if time time to transition from 1 to zero
-	3. ease-out is the transition timing function
-	4. transition delay, amount of time before opacity is fully opaque, 
-	   then amount of time before going from opaque to no opacity */
-	
-	-moz-transition:opacity 500ms ease-out 10ms;
-	-webkit-transition:opacity 500ms ease-out 10ms;
-	transition:opacity 500ms ease-out 10ms;
-	
-	.project:hover & { /* greyscale image disappears when hovering over the whole project */
-		opacity: 0; 
-		overflow: hidden;
-	}
-}
-
-.color-circle-140 {
-	position:absolute;
-	z-index:1;
-	top:0;
-	display:block;
-	overflow:hidden;
-}
-
-/* EACH PROJECT CIRCLE - POSITION & IMAGES */
-.cover {
-	opacity:0;
-	margin-left:20px;
-	margin-top:20px;
-	position:absolute;
-	z-index:3;
-	
-	-moz-transition:opacity 2s;
-	-webkit-transition:opacity 2s;
-	transition:opacity 2s;
-	
-	-moz-transition-delay: .5s;
-	-webkit-transition-delay: .5s;
-	transition-delay: .5s;
-	
-	overflow:hidden;
-}
-
-h2.cover {
-	font-size:24px;
-}
-
-#project1 {
-	margin-right:-1.5%;	
-	position:relative;
-	/*background-color:@divColor;*/
-}
-
-#artist {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
- float:right;
-	a {
-		display:block;
-		width:100%;
-		height:100%;
-	}
-	
-	& h2.cover {
-		color:#FFF;
-		margin-left:42px;
-		margin-top:73px;
-		font-size:17px;	
-	}
-	
-	&:hover .cover {
-		opacity:1;
-	}
-	
-}
-
-#project2 {
-	padding-left:percentage(140/940);
-	z-index:40;
-	position:absolute;
-	top:10%;
-	/*background-color:@divColor;*/
-}
-
-#re-create {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
-	a {
-	  display:block;
-	  width:100%;
-	  height:100%;
-	  overflow:hidden;
-	}
-	
-	& h2.cover {
-		color:#000;
-		margin-left:67px;
-		margin-top:33px;
-		font-family: "Myriad Pro", "PT Sans", sans-serif;
-		font-size:13px;	
-		width:73px;
-		overflow:hidden;
-	}
-	
-	&:hover .cover {
-		opacity:1;
-		overflow:hidden;
-	}
-}
-
-#project3 {
-	padding-left:percentage(320/940);
-	z-index:30;
-	position:absolute;
-	top:15%;
-	/*background-color:@divColor;*/	
-}
-
-#mark {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
-	a {
-		display:block;
-		width:100%;
-		height:100%;
-		overflow:hidden;
-	}
-	
-	& h2.cover {
-		font-size:17px;
-		margin-left:30px;
-		margin-top:57px;
-		color:#7ED9EF;
-		font-family:"Gotham";
-		letter-spacing:3px;
-		overflow:hidden;
-		display:block;
-	}
-	
-	&:hover .cover {
-		opacity:1;
-		overflow:hidden;
-	}
-}
-
-#project4 {
-	clear:both;
-	padding-left:percentage(610/940);
-	position:absolute;
-	top:35%;
-	/*background-color:@divColor;*/
-	z-index:10;
-}
-
-#trombone {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
- float:right;
-	a {
-		display:block;
-		width:100%;
-		height:100%;	
-	}
-	
-	/*& h2.cover {
-		font-size:17px;
-		margin-left:3px;
-		margin-top:10px;
-		color:#FFF;
-		text-align:center;
-	}*/
-	
-	& h2.cover {
-		font-size:13px;
-		margin-left:8%;
-		margin-top:59px;
-		color:#B5A642;
-		text-align:center;
-		font-family:"Trebuchet MS";
-	}
-	
-	&:hover .cover {
-		opacity:1;
-		overflow:hidden;
-	}
-}
-
-#project5 {
-	clear:both;
-	padding-left:percentage(45/940);
-	position:absolute;
-	top:52%;
-	/*background-color:@divColor;*/
-	z-index:95;	
-}
-
-#home-connect {
-	.allCirclesMixin;
-	.circleMixin-140px;
-	/*background-color:#CEE9FC;*/
-	
-	& h2.cover {
-		font-size:15px;
-		margin-left:11%;
-		margin-top:56px;
-		color:#FFF;
-		text-align:center;
-		display:block;
-	}	
-}
-
-#project6 {
-	clear:both;
-	padding-left:percentage(220/940);
-	position:absolute;
-	top:47%;
-	/*background-color:@divColor;*/
-	z-index:65;
-}
-
-#major-exploration {
- 	.allCirclesMixin;
-	.circleMixin-140px;
-	
-	& h2.cover {
-		font-size:12px;
-		margin-left:13%;
-		margin-top:60px;
-		color:red;
-		text-align:center;
-		display:block;
-	}
-}
-
-#project7 {
-	clear:both;
-	padding-left:percentage(155/940);
-	position:absolute;
-	top:75%;
-	z-index:90;
-}
-
-#giddy-throng {
-	.allCirclesMixin;
-	.circleMixin-140px;
-	
- 	& h2.cover {
-		font-size:18px;
-		margin-left:3px;
-		margin-top:55px;
-		color:red;
-		text-align:center;
-	}
-}
-
-#project8 {
-	clear:both;
-	padding-left:percentage(600/940);
-	position:absolute;
-	top:71%;
-	/*background-color:@divColor;*/
-	z-index:60;
-}
-
-#earthship-seattle {
-	.allCirclesMixin;
-	.circleMixin-140px;
-	
- 	& h2.cover {
-		font-family:"PT Mono";
-		font-size:18px;
-		margin-left:0;
-		margin-top:38px;
-		color:#FFF;
-		text-align:center;
-		text-shadow: 0px 0px 5px #000;
-	}
-}
-
-#project9 {
-	clear:both;
-	padding-left:percentage(740/940);
-	position:absolute;
-	top:65%;
-	/*background-color:@divColor;*/
-	z-index:50;
-}
-
-#vo {
-	.allCirclesMixin;
-	.circleMixin-140px;
-	
- 	& h2.cover {
-		font-size:18px;
-		margin-left:12%;
-		margin-top:45px;
-		color:#FFF;
-		text-align:center;
-		text-shadow: 0px 0px 5px #000;
-		
-	}
 }
 
 /*** ALL PAGES - GLOBAL STYLES ***/
@@ -1160,3 +816,345 @@ textarea {
 	border:none;
 }
 /* END IMAGE SIZES */
+
+/*** MIXINS ***/
+.allCirclesMixin {
+	.circleMixin-70px;
+ 	.stroke(2px, solid, #000);
+	
+	a {
+		display:block;
+		width:100%;
+		height:100%;	
+	}
+	
+	&:hover .cover {
+		opacity:1;
+		overflow:hidden;
+	}
+	
+}
+
+.circleMixin-70px {
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	width:70px;
+	height:70px;
+	background-color:white;
+	overflow:hidden;
+}
+/*** END MIXINS ***/
+
+/* CIRCLE BEHAVIORS */
+.mobile-rectangle,
+.greyscale-circle-140,
+.color-circle-140,
+.greyscale-circle,
+.color-circle {
+	display:none;
+}
+
+.greyscale-circle-70 {
+	position:absolute;
+	top:0;
+	z-index:2;
+	opacity:1;
+	overflow:hidden;
+	display:block;	
+	
+	-moz-transition:opacity 500ms ease-out 10ms;
+	-webkit-transition:opacity 500ms ease-out 10ms;
+	transition:opacity 500ms ease-out 10ms;
+	
+	.project:hover & {
+		opacity: 0; 
+		overflow: hidden;
+	}
+}
+
+.color-circle-70 {
+	position:absolute;
+	z-index:1;
+	top:0;
+	display:block;
+	overflow:hidden;
+}
+
+/* EACH PROJECT CIRCLE - POSITION & IMAGES */
+.cover {
+	opacity:0;
+	margin-left:20px;
+	margin-top:20px;
+	position:absolute;
+	z-index:3;
+	
+	-moz-transition:opacity 2s;
+	-webkit-transition:opacity 2s;
+	transition:opacity 2s;
+	
+	-moz-transition-delay: .5s;
+	-webkit-transition-delay: .5s;
+	transition-delay: .5s;
+	
+	overflow:hidden;
+}
+
+h2.cover {
+	font-size:24px;
+}
+
+#project1 {
+	margin-right:-1.5%;	
+	position:relative;
+	/*background-color:@divColor;*/
+	clear: both;
+	display: block;
+}
+
+#artist {
+ .circleMixin-70px;
+ .stroke(2px, solid, #000);
+ float:right;
+	a {
+		display:block;
+		width:100%;
+		height:100%;
+	}
+	
+	& h2.cover {
+		color:#FFF;
+		margin-left:14px;
+		margin-top:38px;
+		font-size:.85em;	
+	}
+	
+	&:hover .cover {
+		opacity:1;
+	}
+	
+}
+
+#project2 {
+	padding-left:percentage(140/940);
+	z-index:40;
+	position:absolute;
+	top:10%;
+	/*background-color:@divColor;*/
+	clear: both;
+	display: block;
+}
+
+#re-create {
+ .circleMixin-70px;
+ .stroke(2px, solid, #000);
+ clear: both;
+	a {
+	  display:block;
+	  width:100%;
+	  height:100%;
+	  overflow:hidden;
+	}
+	
+	& h2.cover {
+		color:#000;
+		margin-left:31px;
+		margin-top:16px;
+		font-family: "Myriad Pro", "PT Sans", sans-serif;
+		font-size:8px;	
+		width:58px;
+		overflow:hidden;
+	}
+	
+	&:hover .cover {
+		opacity:1;
+		overflow:hidden;
+	}
+}
+
+#project3 {
+	padding-left:percentage(320/940);
+	z-index:30;
+	position:absolute;
+	top:15%;
+	/*background-color:@divColor;*/	
+}
+
+#mark {
+ .circleMixin-70px;
+ .stroke(2px, solid, #000);
+	a {
+		display:block;
+		width:100%;
+		height:100%;
+		overflow:hidden;
+	}
+	
+	& h2.cover {
+		font-size:.8em;
+		margin-left:5%;
+		margin-top:40%;
+		color:#7ED9EF;
+		font-family:"Gotham";
+		letter-spacing:3px;
+		overflow:hidden;
+		display:block;
+	}
+	
+	&:hover .cover {
+		opacity:1;
+		overflow:hidden;
+	}
+}
+
+#project4 {
+	clear:both;
+	padding-left:percentage(610/940);
+	position:absolute;
+	top:35%;
+	/*background-color:@divColor;*/
+	z-index:10;
+}
+
+#trombone {
+ .circleMixin-70px;
+ .stroke(2px, solid, #000);
+ float:right;
+	a {
+		display:block;
+		width:100%;
+		height:100%;	
+	}
+	
+	& h2.cover {
+		font-size: .7em;
+		margin-left: 0;
+		margin-top: 0;
+		color: #B5A642;
+		text-align: center;
+		font-family: "Trebuchet MS";
+		line-height: 3;
+	}
+	
+	&:hover .cover {
+		opacity:1;
+		overflow:hidden;
+	}
+}
+
+#project5 {
+	clear:both;
+	padding-left:percentage(45/940);
+	position:absolute;
+	top:52%;
+	/*background-color:@divColor;*/
+	z-index:95;	
+}
+
+#home-connect {
+	.allCirclesMixin;
+	.circleMixin-70px;
+	/*background-color:#CEE9FC;*/
+	
+	& h2.cover {
+		font-size:8px;
+		margin-left:8%;
+		margin-top:42%;
+		color:#FFF;
+		text-align:center;
+		display:block;
+	}	
+}
+
+#project6 {
+	clear:both;
+	padding-left:percentage(220/940);
+	position:absolute;
+	top:47%;
+	/*background-color:@divColor;*/
+	z-index:65;
+}
+
+#major-exploration {
+ 	.allCirclesMixin;
+	.circleMixin-70px;
+	
+	& h2.cover {
+		font-size:.55em;
+		margin-left:1%;
+		margin-top:30%;
+		color:red;
+		text-align:center;
+		display:block;
+	}
+}
+
+#project7 {
+	clear:both;
+	padding-left:percentage(155/940);
+	position:absolute;
+	top:75%;
+	z-index:90;
+}
+
+#giddy-throng {
+	.allCirclesMixin;
+	.circleMixin-70px;
+	
+ 	& h2.cover {
+		font-size:18px;
+		margin-left:3px;
+		margin-top:55px;
+		color:red;
+		text-align:center;
+	}
+}
+
+#project8 {
+	clear:both;
+	padding-left:percentage(600/940);
+	position:absolute;
+	top:71%;
+	/*background-color:@divColor;*/
+	z-index:60;
+}
+
+#earthship-seattle {
+	.allCirclesMixin;
+	.circleMixin-70px;
+	
+ 	& h2.cover {
+		font-family:"PT Mono";
+		font-size:.7em;
+		margin-left:-5px;
+		margin-top:20%;
+		color:#FFF;
+		text-align:center;
+		text-shadow: 0px 0px 5px #000;
+	}
+}
+
+#project9 {
+	clear:both;
+	padding-left:percentage(740/940);
+	position:absolute;
+	top:65%;
+	/*background-color:@divColor;*/
+	z-index:50;
+}
+
+#vo {
+	.allCirclesMixin;
+	.circleMixin-70px;
+	
+ 	& h2.cover {
+		font-size:18px;
+		margin-left:12%;
+		margin-top:45px;
+		color:#FFF;
+		text-align:center;
+		text-shadow: 0px 0px 5px #000;
+		
+	}
+}
+/*** END EACH PROJECT CIRCLE - POSITION & IMAGES ***/

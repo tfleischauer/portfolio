@@ -6,11 +6,9 @@
 #home-page-container,
 #page-projects {
 	background-image: url("../images/grid-1280x15-.jpg");
-	/*background-image: url("../images/bg-980px-grid-.png");*/
-	background-repeat:no-repeat;
-	background-position:center;
-	background-repeat:repeat-y;
-	/*max-width:980px;*/
+	background-image: url("../images/bg-980px-grid-.png");
+	background-position: center;
+	background-repeat: repeat-y;
 }
 /*** END DEVELOPMENT ONLY ***/
 
@@ -100,3 +98,175 @@ header#reCreate .max1260px {
    top:20px;
    margin-left: 0;
 }
+
+/* MIXINS */
+.circleMixin-210px {
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	width:210px;
+	height:210px;
+	background-color:white;
+	overflow:hidden;
+}
+/* END MIXINS */
+
+/* FUNCTIONS */
+.stroke(@outline-width : 3px, @outline-style : solid, @color : black) {
+	-moz-border:  @outline-width @outline-style @color;
+	-webkit-border:  @outline-width @outline-style @color;
+	-ms-border:  @outline-width @outline-style @color;
+	border: @outline-width @outline-style @color;
+	overflow:hidden;
+}
+/* END FUNCTIONS */
+
+/* CIRCLE BEHAVIORS */
+.mobile-rectangle,
+.greyscale-circle-70,
+.color-circle-70,
+.greyscale-circle-140,
+.color-circle-140 {
+	display:none;
+}
+
+.greyscale-circle {
+	position:absolute;
+	top:0;
+	z-index:2;
+	opacity:1;
+	overflow:hidden;
+	display:block;
+	
+	-moz-transition:opacity 500ms ease-out 10ms;
+	-webkit-transition:opacity 500ms ease-out 10ms;
+	transition:opacity 500ms ease-out 10ms;
+	
+	.project:hover & {
+		opacity:0;
+		overflow:hidden;
+	}
+}
+
+.color-circle {
+	position:absolute;
+	z-index:1;
+	top:0;
+	display:block;
+	overflow:hidden;
+}
+
+/* EACH PROJECT CIRCLE - POSITION & IMAGES */
+#artist {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		margin-left:64px;
+		margin-top:111px;
+		font-size:26px;	
+	}
+}
+
+#re-create {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		margin-left:101px;
+		margin-top:50px;
+		font-size:20px;	
+		width:110px;
+		overflow:hidden;
+	}
+}
+
+#mark {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:26px;
+		margin-left:45px;
+		margin-top:86px;
+		/* letter-spacing: 5px;*/
+	}	
+}
+
+#trombone {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	/*& h2.cover {
+		font-size:26px;
+		margin-left:7px;
+		margin-top:13px;
+		color:#FFF;
+		text-align:center;
+	}*/	
+	
+	& h2.cover {
+		font-size:20px;
+		margin-left:7%;
+		margin-top:88px;
+		/*text-align:center;*/
+	}	
+}
+
+#home-connect {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:23px;
+		margin-left:10%;
+		margin-top:85px;
+		/*color:#FFF;*/
+		/*text-align:center;*/
+	}	
+}
+
+#major-exploration {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);	
+	
+	& h2.cover {
+		font-size:18px;
+		margin-left:12.5%;
+		margin-top:90px;
+	}
+}
+		
+#giddy-throng {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:26px;
+		margin-left:4px;
+		margin-top:83px;
+	}		
+}
+			
+#earthship-seattle {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	& h2.cover {
+		font-size:26px;
+		margin-left:4px;
+		margin-top:30%;
+	}		
+}
+				
+#vo {
+	.circleMixin-210px;
+	.stroke(3px, solid, #000);
+	
+	/*& h2.cover {
+		font-size:26px;
+		margin-left:10%;
+		margin-top:65px;
+	}*/		
+}
+/* END CIRCLE BEHAVIORS */
