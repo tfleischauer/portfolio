@@ -281,8 +281,8 @@ nav li a {
 
 /*** HOME PAGE ***/
 #home-page-container {
-	/*background:#FF1493;
-	color:#FFF;*/
+	/*background:#FF1493;*/ /* magenta */
+	/*color:#FFF;*/
 	top:0;	
 	clear:both;
 }
@@ -347,9 +347,8 @@ i.icon-linkedin {
 	/*height: 100vh;*/
 	visibility: visible;
 	margin: auto;	
-	/* prevents horizontal scroll bar */
-	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-x: hidden; /* prevents horizontal scroll bar */
+	overflow-y: hidden; /* prevents vertical scroll bar */
 	clear: both;
 }
 
@@ -416,6 +415,7 @@ i.icon-linkedin {
 	display:block;
 	overflow:hidden;
 }
+/* END CIRCLE BEHAVIORS */
 
 /*** EACH PROJECT CIRCLE - POSITION & IMAGES ***/
 .cover {
@@ -450,7 +450,7 @@ h2.cover {
 
 #artist {
  .circleMixin-70px;
- .stroke(2px, solid, #000);
+ .stroke(1px, solid, #000);
  float:right;
 	a {
 		display:block;
@@ -483,7 +483,7 @@ h2.cover {
 
 #re-create {
  .circleMixin-70px;
- .stroke(2px, solid, #000);
+ .stroke(1px, solid, #000);
  clear: both;
 	a {
 	  display:block;
@@ -494,11 +494,11 @@ h2.cover {
 	
 	& h2.cover {
 		color:#000;
-		margin-left:31px;
-		margin-top:16px;
-		font-family: "Myriad Pro", "PT Sans", sans-serif;
 		font-size:8px;	
 		width:58px;
+		margin-left:48%;
+		margin-top:16px;
+		font-family: "Myriad Pro", "PT Sans", sans-serif;
 		overflow:hidden;
 	}
 	
@@ -518,7 +518,7 @@ h2.cover {
 
 #mark {
  .circleMixin-70px;
- .stroke(2px, solid, #000);
+ .stroke(1px, solid, #000);
 	a {
 		display:block;
 		width:100%;
@@ -554,7 +554,7 @@ h2.cover {
 
 #trombone {
  .circleMixin-70px;
- .stroke(2px, solid, #000);
+ .stroke(1px, solid, #000);
  float:right;
 	a {
 		display:block;
@@ -590,6 +590,7 @@ h2.cover {
 #home-connect {
 	.allCirclesMixin;
 	.circleMixin-70px;
+	.stroke(1px, solid, #000);
 	/*background-color:#CEE9FC;*/
 	
 	& h2.cover {
@@ -614,6 +615,7 @@ h2.cover {
 #major-exploration {
  	.allCirclesMixin;
 	.circleMixin-70px;
+	.stroke(1px, solid, #000);
 	
 	& h2.cover {
 		font-size:.55em;
@@ -636,6 +638,7 @@ h2.cover {
 #giddy-throng {
 	.allCirclesMixin;
 	.circleMixin-70px;
+	.stroke(1px, solid, #000);
 	
  	& h2.cover {
 		font-size:18px;
@@ -658,6 +661,7 @@ h2.cover {
 #earthship-seattle {
 	.allCirclesMixin;
 	.circleMixin-70px;
+	.stroke(1px, solid, #000);
 	
  	& h2.cover {
 		font-family:"PT Mono";
@@ -682,6 +686,7 @@ h2.cover {
 #vo {
 	.allCirclesMixin;
 	.circleMixin-70px;
+	.stroke(1px, solid, #000);
 	
  	& h2.cover {
 		font-size:18px;
@@ -703,7 +708,7 @@ h2.cover {
 	margin-bottom:2%;
 	height:100%;
 	padding-bottom:1%;	
-	overflow:hidden; /* gets rid of text extending into page beneath */
+	/*overflow:hidden;*/ /* gets rid of text extending into page beneath */
 }
 
 #content-area-recreate,
@@ -1018,10 +1023,6 @@ header#header-joemicheals {
 
 header#header-giddy-throng {
 	height: 110px;
-	/*background-image: url("../images/giddy-throng-logo-140829-450x56px.png");*/
-	/*background-repeat: no-repeat;*/
-	/*background-position: 5px 50%;*/
-	/*display: block;*/
 }
 
 header#header-giddy-throng img{
@@ -1058,14 +1059,9 @@ header#header-giddy-throng .large-header-image {
 
 header#header-earthship-seattle {
 	height: 110px;
-	/*background-image: url("../images/skylinelogo2-460x100px.png");*/
-	/*background-repeat: no-repeat;*/
-	/*background-position: 5px 50%;*/
-	/*display: block;	*/
 }
 
 header#header-earthship-seattle img{
-	/*display:none;*/
 	margin-top: 5px;
 	margin-left: 0;	
 }
