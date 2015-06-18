@@ -43,12 +43,14 @@ h2 {
 	}
 	/* all paragraphs as a group in project_details */
 	& .project_details_p { 
-		width:percentage(220/700);
-		float:left;		
+		/*width:percentage(220/700);*/
+		/*width:percentage(300/460);*/
+		width: 100%;
+		/*float:left;	*/	
 		padding-top:0;
-		padding-bottom:0;
+		padding-bottom: 1.5em;
 		padding-left:0;
-		font-size:.65em;
+		font-size:.8em;
 		overflow:hidden;
 	}
 	
@@ -62,23 +64,26 @@ h2 {
 	}
 	/* div contining the image */
 	& .project_details_img {
-		float:right;
-		width:percentage(460/700);
+		/*float:right;*/
+		/*width:percentage(300/460);*/
+		width: 100%;
 		overflow:hidden;
 		border:2px solid grey;
-		margin-right:percentage(10/700);
+		/*margin-right:percentage(10/700);*/
 		text-align:center;
 		alignment-baseline:baseline;
 	}
 }
 
 .content-area {
-	width:percentage(700/940);
+	/*width:percentage(700/940);*/
+	width:percentage(300/460);
 	float:right;	
 }
 
 .verticalMenuMixin-White {
-	width:23.40425532%; /* 220/940 */
+	/*width: percentage(220/940);*/
+	width: percentage(140/460);
 	float:left;	
 	color:#000;
 	background-color:#FFF;
@@ -172,20 +177,24 @@ h2 {
 /*** END FUNCTIONS ***/
 
 /*** ALL PAGES - GLOBAL STYLES ***/
-.page-body {
+.page-body { /* body of each project page NOT including header */
 	max-width: 1260px; /* 1260px of columns + 2 x 10px margin = 1280px */
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: .15em;
+	padding-left: percentage(10/480);
+	padding-right: percentage(10/480);
 }
 /*** END ALL PAGES - GLOBAL STYLES ***/
 
 /*** ONE-PAGE NAV MAIN CONTROLS ***/
 .page {
 	position:relative;
-	/*margin-bottom: 3em;*/
 	min-height: 100vh;
-}
+	background-image: url("../images/grid-480px-.jpg");
+	background-position: center;
+	background-repeat: repeat-y;
+}	
 
 nav {
 	position:fixed;
@@ -988,7 +997,7 @@ header#header-joemicheals {
 	.verticalMenuMixin-White;
 	
 	& ul {
-		 background-color: rgba(0, 0, 0, 0.9);	
+		 /*background-color: rgba(0, 0, 0, 0.9);*/	
 	}
 	
 	& li {
@@ -998,12 +1007,12 @@ header#header-joemicheals {
 	& li a:link,
 	& li a:visited {
 		/*color:#FFF;*/
-		color: #FFCB39;
+		/*color: #FFCB39;*/
 	}
 
 	& li a:hover,
 	& li a:focus {	/* use full descendent selector! */
-		background-color:#000;
+		background-color: rgba(0, 0, 0, 0.9);
 		color: #FFCB39;
 	}
 	
@@ -1079,62 +1088,14 @@ header#header-earthship-seattle img{
 }
 /*** END CONTACT PAGE ***/
 
-/*** FORM ***/
 fieldset {
 	border: 2px solid grey;
-	border-radius:3px;
-	width:percentage(500/940);
-	margin:auto;
-	padding:2% 1% 1% 2%;
+	border-radius: 3px;
+	width: percentage(460/480);
+	max-width: 460px;
+	margin: auto;
+	padding: 2% 1% 1% 2%;
 }
-
-/*legend h2 {
-	padding:5%;
-	margin:5%;	
-	font-size:130%;
-}*/
-
-#contact-form p {
-	overflow:hidden;
-	padding:1%;
-}
-
-#contact-form p label {
-	/*width:100px;*/
-	width:30%;
-	float:left;
-    margin-right:3%;
-	display:inline-block;
-	font-size:.8em;
-}
-
-#contact-form p input {
-	float:left;
-	width:67%;
-}
-
-textarea {
-	width:67%;
-}
-
-#contact-form p#buttons {
-	padding-right:3%;	
-}
-
-#contact-form button {
-	float:right;
-	margin:1%;	
-}
-
-#result {
-	margin-top:2%;	
-}
-
-.thankyou-page {
-	font-size:200%;	
-	text-align:center;
-}
-/*** END FORM ***/
 
 /* IMAGE SIZES */
 .project_details_img_large {

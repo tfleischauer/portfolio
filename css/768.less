@@ -2,8 +2,8 @@
 
 /*** Grids for development only ***/
 .page {
-	background-image: url("../images/bg-800px-grid-.png");
-	background-image: url("../images/bg-980px-grid-.png");
+	background-image: url("../images/grid-800px-.png");
+	background-image: url("../images/grid-980px-.png");
 	background-position: center;
 	background-repeat: repeat-y;
 }
@@ -217,14 +217,44 @@ i.icon-linkedin {
 /***** END UX PROJECTS PAGE *****/
 
 /* PROJECT PAGES */
+.page-body {
+	padding-left: percentage(20/980);
+	padding-right: percentage(20/980);
+}
+
 .projectDetails768 {
    & .project_details_p { 
-		font-size:.8em;
+		/*font-size:.8em;*/
 	}
 	
    & .project_details_img {
-	float:right;
-	margin-right:0;	
+	/*float:right;*/
+	/*margin-right:0;	*/
+	}
+	
+	& .project_details_p { 
+		width:percentage(220/700);
+		float:left;		
+		padding-top:0;
+		padding-bottom:0;
+		padding-left:0;
+		/*font-size:.65em;*/
+		overflow:hidden;
+		
+		font-size:.9em;
+	}
+	
+	/* div contining the image */
+	& .project_details_img {
+		float:right;
+		width:percentage(460/700);
+		overflow:hidden;
+		border:2px solid grey;
+		/*margin-right:percentage(10/700);*/
+		text-align:center;
+		alignment-baseline:baseline;
+		
+		margin-right:0;	
 	}
 }
 
@@ -255,6 +285,7 @@ i.icon-linkedin {
 #page-joemicheals #nav-sub-joemicheals  {
 	font-size: 1.1em;
 	line-height: 1.5; /* 24px / 16 px */
+	width: percentage(220/940);
 }
 
 #header-joemicheals h1 {
@@ -271,3 +302,77 @@ i.icon-linkedin {
 	font-size:1em;
 }
 /*** END CONTACT FORM ***/
+
+.content-area {
+	width:percentage(700/940);
+}
+
+#content-area-recreate,
+#content-area-nan,
+#content-area-mark,
+#content-area-trombone,
+#content-area-major-exploration,
+#content-area-homeconnect,
+#content-area-giddy-throng,
+#content-area-earthship-seattle,
+#content-area-joemicheals {
+	.content-area;
+}
+
+
+/*** FORM ***/
+fieldset {
+	/*border: 2px solid grey;*/
+	/*border-radius:3px;*/
+	width:percentage(500/940);
+	/*margin:auto;*/
+	/*padding:2% 1% 1% 2%;*/
+}
+
+/*legend h2 {
+	padding:5%;
+	margin:5%;	
+	font-size:130%;
+}*/
+
+#contact-form p {
+	overflow:hidden;
+	padding:1%;
+}
+
+#contact-form p label {
+	/*width:100px;*/
+	width:30%;
+	float:left;
+    margin-right:3%;
+	display:inline-block;
+	font-size:.8em;
+}
+
+#contact-form p input {
+	float:left;
+	width:67%;
+}
+
+textarea {
+	width:67%;
+}
+
+#contact-form p#buttons {
+	padding-right:3%;	
+}
+
+#contact-form button {
+	float:right;
+	margin:1%;	
+}
+
+#result {
+	margin-top:2%;	
+}
+
+.thankyou-page {
+	font-size:200%;	
+	text-align:center;
+}
+/*** END FORM ***/
