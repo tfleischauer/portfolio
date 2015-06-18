@@ -7,7 +7,7 @@
 	background-position: center;
 	background-repeat: repeat-y;
 }
-/*** END 800px Grid for development only ***/
+/*** END Grids for development only ***/
 
 /*** HOME PAGE ***/
 .home-page-container {
@@ -130,7 +130,6 @@ i.icon-linkedin {
 		font-size:1.3em;	
 		margin-left:23%;
 		margin-top:75px;
-		
 	}
 }
 
@@ -143,7 +142,6 @@ i.icon-linkedin {
 		width:70px;
 		margin-left:67px;
 		margin-top:33px;
-		
 	}
 }
 
@@ -222,25 +220,31 @@ i.icon-linkedin {
 	padding-right: percentage(20/980);
 }
 
+.content-area {
+	width:percentage(700/940);
+}
+
+#content-area-recreate,
+#content-area-nan,
+#content-area-mark,
+#content-area-trombone,
+#content-area-major-exploration,
+#content-area-homeconnect,
+#content-area-giddy-throng,
+#content-area-earthship-seattle,
+#content-area-joemicheals {
+	.content-area;
+}
+
 .projectDetails768 {
-   & .project_details_p { 
-		/*font-size:.8em;*/
-	}
-	
-   & .project_details_img {
-	/*float:right;*/
-	/*margin-right:0;	*/
-	}
-	
+		
 	& .project_details_p { 
 		width:percentage(220/700);
 		float:left;		
 		padding-top:0;
 		padding-bottom:0;
 		padding-left:0;
-		/*font-size:.65em;*/
 		overflow:hidden;
-		
 		font-size:.9em;
 	}
 	
@@ -250,10 +254,8 @@ i.icon-linkedin {
 		width:percentage(460/700);
 		overflow:hidden;
 		border:2px solid grey;
-		/*margin-right:percentage(10/700);*/
 		text-align:center;
 		alignment-baseline:baseline;
-		
 		margin-right:0;	
 	}
 }
@@ -303,37 +305,10 @@ i.icon-linkedin {
 }
 /*** END CONTACT FORM ***/
 
-.content-area {
-	width:percentage(700/940);
-}
-
-#content-area-recreate,
-#content-area-nan,
-#content-area-mark,
-#content-area-trombone,
-#content-area-major-exploration,
-#content-area-homeconnect,
-#content-area-giddy-throng,
-#content-area-earthship-seattle,
-#content-area-joemicheals {
-	.content-area;
-}
-
-
 /*** FORM ***/
 fieldset {
-	/*border: 2px solid grey;*/
-	/*border-radius:3px;*/
 	width:percentage(500/940);
-	/*margin:auto;*/
-	/*padding:2% 1% 1% 2%;*/
 }
-
-/*legend h2 {
-	padding:5%;
-	margin:5%;	
-	font-size:130%;
-}*/
 
 #contact-form p {
 	overflow:hidden;
@@ -341,7 +316,6 @@ fieldset {
 }
 
 #contact-form p label {
-	/*width:100px;*/
 	width:30%;
 	float:left;
     margin-right:3%;

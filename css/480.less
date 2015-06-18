@@ -43,14 +43,12 @@ h2 {
 	}
 	/* all paragraphs as a group in project_details */
 	& .project_details_p { 
-		/*width:percentage(220/700);*/
 		/*width:percentage(300/460);*/
 		width: 100%;
-		/*float:left;	*/	
 		padding-top:0;
 		padding-bottom: 1.5em;
 		padding-left:0;
-		font-size:.8em;
+		font-size:.8em; /* breaks reCreate at 8.5em and larger */
 		overflow:hidden;
 	}
 	
@@ -64,25 +62,21 @@ h2 {
 	}
 	/* div contining the image */
 	& .project_details_img {
-		/*float:right;*/
 		/*width:percentage(300/460);*/
 		width: 100%;
 		overflow:hidden;
 		border:2px solid grey;
-		/*margin-right:percentage(10/700);*/
 		text-align:center;
 		alignment-baseline:baseline;
 	}
 }
 
 .content-area {
-	/*width:percentage(700/940);*/
-	width:percentage(300/460);
-	float:right;	
+	width: percentage(300/460);
+	float: right;	
 }
 
 .verticalMenuMixin-White {
-	/*width: percentage(220/940);*/
 	width: percentage(140/460);
 	float:left;	
 	color:#000;
@@ -254,10 +248,6 @@ nav li a {
 	padding-top: 10px;	
 	padding-bottom:2px;
 }
-
-/*nav a.selected {
-	color:magenta;	
-}*/
 /*** END ONE-PAGE NAV MAIN CONTROLS ***/
 
 /*** GLOBAL TABLET NAV ***/
@@ -592,7 +582,7 @@ h2.cover {
 	padding-left:percentage(45/940);
 	position:absolute;
 	top:52%;
-	/*background-color:@divColor;*/
+	/*background-color: @divColor;*/
 	z-index:95;	
 }
 
@@ -617,7 +607,7 @@ h2.cover {
 	padding-left:percentage(220/940);
 	position:absolute;
 	top:47%;
-	/*background-color:@divColor;*/
+	/*background-color: @divColor;*/
 	z-index:65;
 }
 
@@ -663,7 +653,7 @@ h2.cover {
 	padding-left:percentage(600/940);
 	position:absolute;
 	top:71%;
-	/*background-color:@divColor;*/
+	/*background-color: @divColor;*/
 	z-index:60;
 }
 
@@ -688,7 +678,7 @@ h2.cover {
 	padding-left:percentage(740/940);
 	position:absolute;
 	top:65%;
-	/*background-color:@divColor;*/
+	/*background-color: @divColor;*/
 	z-index:50;
 }
 
@@ -712,12 +702,10 @@ h2.cover {
 
 /* EACH PROJECT PAGE */
 .menu-content {
-	/*width:100%;*/
 	margin-top:1.25%;
 	margin-bottom:2%;
 	height:100%;
 	padding-bottom:1%;	
-	/*overflow:hidden;*/ /* gets rid of text extending into page beneath */
 }
 
 #content-area-recreate,
@@ -744,14 +732,6 @@ h2.cover {
 .project_details_joemicheals {
 	.projectDetailsTablet;
 }
-
-/*.long-text {
-	font-size:0.5em;
-}
-
-.long-text h1 {
-	font-size:2.25em;	
-}*/
 
 .no-block img {
 	display: inline;	
@@ -941,8 +921,6 @@ header#header-major-exploration {
 header#header-homeconnect {
 	height:110px;
 	background-color:#CEE9FC;
-	/*background-image: url("../images/homeconnect-logo-470x110px.png");*/
-	/*background-repeat:no-repeat;*/
 }
 
 header#header-home-connect img {
@@ -978,14 +956,12 @@ header#header-joemicheals {
    display:block;
    font-size:1.4em;
    color:#FFF;	
-   /*line-height: 110px;*/
    margin-left: 10px;
    width:460px;
    background-color: rgba(0, 0, 0, 0.8);
    position: relative;
    top: 30px;
    padding: 10px 5px 10px 5px;
-   /*box-shadow: 2px 2px 2px #333;*/ /* horizontal, vertical, blur, color */
 }
 
 #header-joemicheals h1.fold {
@@ -995,30 +971,6 @@ header#header-joemicheals {
 /* JOE MICHEALS NAV 480 px and larger */
 #nav-sub-joemicheals {
 	.verticalMenuMixin-White;
-	
-	& ul {
-		 /*background-color: rgba(0, 0, 0, 0.9);*/	
-	}
-	
-	& li {
-		color:#FFF;
-	}
-	
-	& li a:link,
-	& li a:visited {
-		/*color:#FFF;*/
-		/*color: #FFCB39;*/
-	}
-
-	& li a:hover,
-	& li a:focus {	/* use full descendent selector! */
-		background-color: rgba(0, 0, 0, 0.9);
-		color: #FFCB39;
-	}
-	
-	& li a:active {
-		/*border-bottom: none;*/
-	}
 }
 /* END JOE MICHEALS NAV 480 px and larger */
 /*** END JOE MICHEALS PAGE ***/
@@ -1032,10 +984,6 @@ header#header-joemicheals {
 
 header#header-giddy-throng {
 	height: 110px;
-}
-
-header#header-giddy-throng img{
-	/*display: none;*/
 }
 
 header#header-giddy-throng .small-header-image {
