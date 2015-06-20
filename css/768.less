@@ -16,8 +16,8 @@
 }
 
 .section-label {
-	padding-left: percentage(20/980);
-	padding-right: percentage(20/980);
+	padding-left: 0;
+	padding-right: 0;
 }
 /*** END GLOBAL STYLES ***/
 
@@ -32,12 +32,15 @@
 	position: relative; /* positions relative to normal position */
 	top:25px;
 	margin-top:0;
-}
-
-.contact-icons.max1260px {
+	/*display: block;*/
 	padding: 0;
 	margin: 0;
 }
+
+/*.contact-icons.max1260px {
+	padding: 0;
+	margin: 0;
+}*/
 
 i.icon-github,
 i.icon-linkedin {
@@ -50,7 +53,11 @@ i.icon-linkedin {
 }
 
 .header-main {	
-	margin-bottom:50px;
+	margin-bottom: 50px;
+	/*padding-left: percentage(20/980);
+	padding-right: percentage(20/980);*/
+	padding-left: 0;
+	padding-right: 0;
 }
 /*** END HOME PAGE ***/
 
@@ -278,6 +285,10 @@ header .max1260px {
 		text-align:center;
 		alignment-baseline:baseline;
 		margin-right:0;	
+	}
+	
+	& .project_details_img.no-border {
+		border: none;	
 	}
 }
 
