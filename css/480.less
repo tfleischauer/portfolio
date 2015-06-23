@@ -1,28 +1,11 @@
 /***** STYLE SHEET FOR WIDTHS 480px - 767px *****/
 
-/*** GLOBAL SELECTORS ***/
-ul {
-	padding-left: 1.25em;
-}
-
-h2 {
-	margin-bottom:.5em;
-}
-
-.section-label {
-	font-size: 2.15em;
-}
-
-#page-contact .section-label,
-#page-thankyou .section-label {
-	margin-top: 40px;
-	margin-bottom: 40px;	
-}
-/*** END GLOBAL SELECTORS ***/
-
 /*** VARIABLES ***/
-/* for developing placement of circles */
-@divColor:rgba(255,255,255,.4);
+@circleDiv:rgba(255,255,255,.4); /* for developing placement of circles */
+@reCreate-Blue:#C9D5DB;
+@reCreate-Super-Light-Blue:#F4F7F8;
+@reCreate-TreeColor:#040707;
+@reCreate-Almost-Black:#A9A9A9;
 /*** END VARIABLES ***/
 
 /*** GLOBAL MIXINS ***/
@@ -68,6 +51,18 @@ h2 {
 		border: 2px solid grey;
 		text-align: center;
 		alignment-baseline: baseline;
+	}
+	
+	& .project_details_img_large {
+		display: block;	
+	}
+	
+	& .project_details_img_small {
+		display: none;	
+	}
+	
+	& .project_details_img.no-border {
+		border: none;
 	}
 }
 
@@ -121,42 +116,45 @@ h2 {
 	& ul li ul {
 		padding-top: 0.25em; /* creaters vertical space for sub list */
 		margin-bottom: 0; /* zeros out for bottom of the list */
-		padding: 0;	/* overrides our global ul padding */
-		margin-left:0;	
+		padding: 0;	/* overrides global ul padding */
+		margin-left: 0;	
 	}
 	
 	& ul li ul li a:link {
-		padding-left:.5em;	
-		color:#000;
+		padding-left: .5em;	
+		color: #000;
 	}
 	
 	& ul li ul li a:visited {
-		padding-left:.5em;	
-		color:#000;
+		padding-left: .5em;	
+		color: #000;
 	}
 	
 	& ul li ul li a:hover {
-		background-color:#FFF;
-		color:#000;	
+		background-color: #FFF;
+		color: #000;	
 	}
 	
 	& ul li ul li a:focus {
-		background-color:#FFF;
-		color:#000;
+		background-color: #FFF;
+		color: #000;
 	}
 	
 	& ul li ul li {
-		margin-left:.5em;
-		list-style-type:none;	
+		margin-left: .5em;
+		list-style-type: none;	
 	}
-	
-	/* & li .selected-item { */
 	
 	/*** ACTIVE STATE ***/
 	& .selected-item { 
 	  color: #333;
-          text-decoration: underline;
+      text-decoration: underline;
 	}
+}
+
+.projectPages {
+	color: #000;
+	overflow: hidden;
 }
 /*** END GLOBAL MIXINS ***/
 
@@ -170,7 +168,25 @@ h2 {
 }
 /*** END FUNCTIONS ***/
 
-/*** ALL PAGES - GLOBAL STYLES ***/
+/*** GLOBAL SELECTORS ***/
+ul {
+	padding-left: 1.25em;
+}
+
+h2 {
+	margin-bottom: .5em;
+}
+
+.section-label {
+	font-size: 2.15em;
+}
+
+#page-contact .section-label,
+#page-thankyou .section-label {
+	margin-top: 40px;
+	margin-bottom: 40px;	
+}
+
 .page-body { /* body of each project page NOT including header */
 	max-width: 1260px; /* 1260px of columns + 2 x 10px margin = 1280px */
 	margin-left: auto;
@@ -179,12 +195,7 @@ h2 {
 	padding-left: percentage(10/480);
 	padding-right: percentage(10/480);
 }
-
-/*header .max1260px {
-	padding-left: percentage(10/480);
-	padding-right: percentage(10/480);
-}*/
-/*** END ALL PAGES - GLOBAL STYLES ***/
+/*** END GLOBAL SELECTORS ***/
 
 /*** ONE-PAGE NAV MAIN CONTROLS ***/
 .page {
@@ -199,18 +210,14 @@ nav {
 	position:fixed;
 	z-index:100;
 	width:100%;
-	
 	left:0;
 	bottom:0;
 	background:none;
 	color:#FFF;
 	visibility:visible;	
-	
 	padding-left:0;
 	padding-right:0;
-	
 	display:block;
-
 }
 
 nav ul {
@@ -343,8 +350,7 @@ i.icon-linkedin {
 /*** END CONTACT ICONS ***/
 /*** END HOME PAGE ***/
 
-/***** UX PROJECTS PAGE - ALL CIRCLE ICONS *****/
-/* THE UX PROJECTS PAGE ITSELF */
+/***** THE UX PROJECTS PAGE - ALL CIRCLE ICONS *****/
 #page-projects {
 	top: 100%;
 	/*height: 100%;*/
@@ -447,7 +453,7 @@ h2.cover {
 #project1 {
 	margin-right:-1.5%;	
 	position:relative;
-	/*background-color:@divColor;*/
+	/*background-color:@circleDiv;*/
 	clear: both;
 	display: block;
 }
@@ -480,7 +486,7 @@ h2.cover {
 	z-index:40;
 	position:absolute;
 	top:10%;
-	/*background-color:@divColor;*/
+	/*background-color:@circleDiv;*/
 	clear: both;
 	display: block;
 }
@@ -517,7 +523,7 @@ h2.cover {
 	z-index:30;
 	position:absolute;
 	top:15%;
-	/*background-color:@divColor;*/	
+	/*background-color:@circleDiv;*/	
 }
 
 #mark {
@@ -552,7 +558,7 @@ h2.cover {
 	padding-left:percentage(610/940);
 	position:absolute;
 	top:35%;
-	/*background-color:@divColor;*/
+	/*background-color:@circleDiv;*/
 	z-index:10;
 }
 
@@ -587,7 +593,7 @@ h2.cover {
 	padding-left:percentage(45/940);
 	position:absolute;
 	top:52%;
-	/*background-color: @divColor;*/
+	/*background-color: @circleDiv;*/
 	z-index:95;	
 }
 
@@ -612,7 +618,7 @@ h2.cover {
 	padding-left:percentage(220/940);
 	position:absolute;
 	top:47%;
-	/*background-color: @divColor;*/
+	/*background-color: @circleDiv;*/
 	z-index:65;
 }
 
@@ -658,7 +664,7 @@ h2.cover {
 	padding-left:percentage(600/940);
 	position:absolute;
 	top:71%;
-	/*background-color: @divColor;*/
+	/*background-color: @circleDiv;*/
 	z-index:60;
 }
 
@@ -683,7 +689,7 @@ h2.cover {
 	padding-left:percentage(740/940);
 	position:absolute;
 	top:65%;
-	/*background-color: @divColor;*/
+	/*background-color: @circleDiv;*/
 	z-index:50;
 }
 
@@ -703,14 +709,97 @@ h2.cover {
 	}
 }
 /*** END EACH PROJECT CIRCLE - POSITION & IMAGES ***/
-/***** END UX PROJECTS PAGE - ALL CIRCLE ICONS *****/
+/***** END THE UX PROJECTS PAGE - ALL CIRCLE ICONS *****/
 
-/* EACH PROJECT PAGE */
+/***** PROJECT PAGES *****/
+/*** PROJECT HEADERS ***/
+header#reCreate {
+	overflow: hidden;
+	background-color: @reCreate-Blue;
+	
+	& img {
+		display: block;
+	}
+}
+
+header#header-mark {
+	overflow: hidden;	
+}
+
+header#header-trombone {
+	background-image: url("../images/wavelength-gold-on-green-2144x110px-outerglow.png");
+	background-repeat: repeat-x;
+	height: 110px;	
+	
+	& img {
+		display: block;
+	}
+}
+
+#header-major-exploration h1 {
+   display: block;
+   font-size: 3em;
+   color: #000;	
+}
+
+header#header-homeconnect {
+	height: 110px;
+	background-color: #CEE9FC;
+}
+
+header#header-joemicheals {
+	height: 110px;
+	
+	& h1 {
+	   display: none;
+	   font-size: 1.45em;
+	   color: #FFF;	
+	   width: 460px;
+	   background-color: rgba(0, 0, 0, 0.8);
+	   position: relative;
+	   top: 30px;
+	   padding: 10px 5px 10px 5px;
+	}
+	
+	& h1.fold {
+	  display: block;
+	  font-size: 1.6em;
+	  top: 19px;
+	  width: 340px;
+	  margin-left: 0;
+	  margin-right: percentage(10/480);
+	}
+}
+
+header#header-giddy-throng {
+	height: 110px;
+	
+	& .small-header-image {
+		display: none;
+	}
+	
+	& .large-header-image {
+		display: block;
+	    margin-top: 10px;
+	}
+}
+
+header#header-earthship-seattle {
+	height: 110px;
+	
+	& img {
+		margin-top: 5px;
+		margin-left: percentage(5/480);	
+	}
+}
+/*** END PROJECT HEADERS ***/
+
+/***** GLOBAL - PROJECT PAGES *****/
 .menu-content {
-	margin-top:1.25%;
-	margin-bottom:2%;
-	height:100%;
-	padding-bottom:1%;	
+	margin-top: 1.25%;
+	margin-bottom: 2%;
+	height: 100%;
+	padding-bottom: 1%;	
 }
 
 #content-area-recreate,
@@ -741,65 +830,22 @@ h2.cover {
 .no-block img {
 	display: inline;	
 }
+/***** END GLOBAL - PROJECT PAGES *****/
 
-.no-border {
-	border: none;	
-}
-
-/*** NAN PAGE ***/
-#page-nan {
-	top: 200%;
-	color: #000;
-	overflow: hidden;
-}
-
-/* structure */
-#page-nan #header-nan {
-	width: 100%;
-	background-color: #FFF;
-}
-
-header#header-nan img {
-	margin-left: 0;	
-}
-
-/* NAN NAV - 480 px + */
-#nav-sub-nan {
+/*** SUB-NAVIGATION ***/
+#nav-sub-nan,
+#nav-sub-mark,
+#nav-sub-recreate,
+#nav-sub-trombone,
+#nav-sub-major-exploration,
+#nav-sub-homeconnect,
+#nav-sub-joemicheals,
+#nav-sub-giddy-throng,
+#nav-sub-earthship-seattle {
 	.verticalMenuMixin-White;
 }
-/*** END NAN PAGE ***/
 
-/*** reCREATE PAGE ***/
-/* reCreate VARIABLES */
-@reCreate-Blue:#C9D5DB;
-@reCreate-Super-Light-Blue:#F4F7F8;
-@reCreate-TreeColor:#040707;
-@reCreate-Almost-Black:#A9A9A9;
-/* END reCreate VARIABLES */
-
-#page-reCreate {
-	top:300%;
-	background:#FFF;
-	color:#000;
-	overflow: hidden;
-	clear: both;
-}
-
-header#reCreate {
-	overflow: hidden;
-	/*margin-top:0;*/
-	background-color:@reCreate-Blue;	
-	/*background-image:url("images/tfleischauer-web202-a11-logo-441x110.png");*/
-}
-
-header#reCreate img {
-	display:block;
-}
-
-/* NAV RECREATE - 480px and larger */
-#nav-sub-recreate {
-	.verticalMenuMixin-White;
-	
+#nav-sub-recreate {	
 	& ul {
 		background-color: @reCreate-Blue;	
 		border-bottom: 1px solid #828383;
@@ -811,16 +857,13 @@ header#reCreate img {
 	
 	& li a {
 		text-decoration: none;
-		color:@reCreate-TreeColor;
+		color: @reCreate-TreeColor;
 	}
 
-	& li a:hover {	/* use full descendent selector! */
-		background-color:#FFF;
-		color:@reCreate-TreeColor;
-	}
-	
-	& li a:focus {
-
+	& li a:hover,
+	& li a:focus {	/* use full descendent selector! */
+		background-color: #FFF;
+		color: @reCreate-TreeColor;
 	}
 	
 	& li a:active {
@@ -828,11 +871,11 @@ header#reCreate img {
 	}
 	
 	& ul li ul {
-		background-color:#FFF;
+		background-color: #FFF;
 	}
 	
 	& ul li ul li a.selected-item {
-		background-color:#FFF;
+		background-color: #FFF;
 	}
 	
 	& ul li ul:last-child {
@@ -840,208 +883,68 @@ header#reCreate img {
 	}
 	
 	& li a.selected-item {
-		background-color:@reCreate-TreeColor;
+		background-color: @reCreate-TreeColor;
 		color: #FFF;
 	}
-
-}
-/* END NAV RECREATE - 480px and larger */
-/*** END reCREATE PAGE ***/
-
-/*** MARK PAGE ***/
-#page-mark {
-	top:400%;
-	color:#000;
-	overflow: hidden;
-}
-
-header#header-mark {
-	overflow: hidden;	
-}
-
-/* MARK NAV 480 px and larger */
-#nav-sub-mark {
-	.verticalMenuMixin-White;
-}
-/* END MARK NAV 480 px and larger */
-/*** END MARK PAGE ***/
-
-/*** TROMBONE PAGE ***/
-#page-trombone {
-	top:500%;
-	color:#000;
-	overflow: hidden;
-}
-
-header#header-trombone {
-	background-image: url("../images/wavelength-gold-on-green-2144x110px-outerglow.png");
-	background-repeat: repeat-x;
-	height: 110px;	
-}
-
-/* TROMBONE NAV 480 px and larger */
-#nav-sub-trombone {
-	.verticalMenuMixin-White;
 }
 
 #nav-sub-trombone li a {
 	color: #567566;	/* green sub nav list items */
 }
+/*** END SUB-NAVIGATION ***/
 
-#header-trombone img {
-	display: block;	
+/*** EACH PROJECT PAGE ***/
+#page-nan {
+	top: 200%;
+	.projectPages;
 }
-/* END TROMBONE NAV 480 px and larger */
-/*** END TROMBONE PAGE ***/
 
-/*** MAJOR EXPLORATION PAGE ***/
+#page-reCreate {
+	top: 300%;
+	.projectPages;
+}
+
+#page-mark {
+	top: 400%;
+	.projectPages;
+}
+
+#page-trombone {
+	top: 500%;
+	.projectPages;
+}
+
 #page-major-exploration {
-	top:600%;
-	color:#000;
-	overflow: hidden;
+	top: 600%;
+	.projectPages;
 }
 
-header#header-major-exploration {
-	height:114px;
-}
-
-#header-major-exploration h1 {
-   display:block;
-   font-size:3em;
-   color:#000;	
-}
-
-/* MAJOR EXPLORATION NAV 480 px and larger */
-#nav-sub-major-exploration {
-	.verticalMenuMixin-White;
-}
-/* END MAJOR EXPLORATION NAV 480 px and larger */
-/*** END MAJOR EXPLORATION PAGE ***/
-
-/*** HOMECONNECT PAGE ***/
 #page-homeconnect {
-	top:700%;
-	color:#000;
-	overflow: hidden;
+	top: 700%;
+	.projectPages;
 }
 
-header#header-homeconnect {
-	height:110px;
-	background-color:#CEE9FC;
-}
-
-header#header-home-connect img {
-	/*margin-left: 0;*/
-	/*padding-left: 0;*/
-}
-
-#header-homeconnect h1 {
-   display:block;
-   font-size:3em;
-   color:#000;	
-}
-
-/* HOMECONNECT NAV 480 px and larger */
-#nav-sub-homeconnect {
-	.verticalMenuMixin-White;
-}
-/* END HOMECONNECT NAV 480 px and larger */
-/*** END HOMECONNECT PAGE ***/
-
-/*** JOE MICHEALS PAGE ***/
 #page-joemicheals {
-	top:800%;
-	color:#000;
-	overflow: hidden;
+	top: 800%;
+	.projectPages;
 }
 
-header#header-joemicheals {
-	height:110px;
-}
-
-#header-joemicheals h1 {
-   display:block;
-   font-size:1.4em;
-   color:#FFF;	
-   margin-left: 10px;
-   width:460px;
-   background-color: rgba(0, 0, 0, 0.8);
-   position: relative;
-   top: 30px;
-   padding: 10px 5px 10px 5px;
-}
-
-#header-joemicheals h1.fold {
-	display: none;	
-}
-
-/* JOE MICHEALS NAV 480 px and larger */
-#nav-sub-joemicheals {
-	.verticalMenuMixin-White;
-}
-/* END JOE MICHEALS NAV 480 px and larger */
-/*** END JOE MICHEALS PAGE ***/
-
-/*** GIDDY THRONG PAGE ***/
 #page-giddy-throng {
 	top: 900%;
-	color: #000;
-	overflow: hidden;
+	.projectPages;
 }
 
-header#header-giddy-throng {
-	height: 110px;
-}
-
-header#header-giddy-throng .small-header-image {
-	display: none;
-}
-
-header#header-giddy-throng .large-header-image {
-	display: block;
-	margin-top: 10px;
-}
-
-#header-giddy-throng h1 {
-   display:block;
-   font-size:3em;
-   color:#000;	
-}
-
-/* GIDDY THRONG NAV 480 px and larger */
-#nav-sub-giddy-throng {
-	.verticalMenuMixin-White;
-}
-/* END GIDDY THRONG NAV 480 px and larger */
-/*** END GIDDY THRONG PAGE ***/
-
-/*** EARTHSHIP SEATTLE PAGE ***/
 #page-earthship-seattle {
 	top: 1000%;
-	overflow: hidden;
+	.projectPages;
 }
-
-header#header-earthship-seattle {
-	height: 110px;
-}
-
-header#header-earthship-seattle img{
-	margin-top: 5px;
-	margin-left: 0;	
-}
-
-/* EARTHSHIP SEATTLE NAV 480 px and larger */
-#nav-sub-earthship-seattle {
-	.verticalMenuMixin-White;
-}
-/* END EARTHSHIP SEATTLE NAV 480 px and larger */
-/*** END EARTHSHIP SEATTLE PAGE ***/
+/*** END EACH PROJECT PAGE ***/
+/***** END PROJECT PAGES *****/
 
 /*** CONTACT PAGE ***/
 #page-contact {
 	top: 1100%;
 }
-/*** END CONTACT PAGE ***/
 
 fieldset {
 	border: 2px solid grey;
@@ -1051,17 +954,4 @@ fieldset {
 	margin: auto;
 	padding: 2% 1% 1% 2%;
 }
-
-/* IMAGE SIZES */
-.project_details_img_large {
-	display: block;	
-}
-
-.project_details_img_small {
-	display: none;	
-}
-
-.project_details_img.no-border {
-	border: none;
-}
-/* END IMAGE SIZES */
+/*** END CONTACT PAGE ***/

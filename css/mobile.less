@@ -17,7 +17,7 @@
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display:block;	
+	display: block;	
 }
 
 img {
@@ -110,14 +110,8 @@ ul li ul {
 /* END RAVEN'S VERTICAL LISTS */
 
 .page {
-	height: 100%;
-	/*top: 0;*/
-	/*left: 0;*/	
+	height: 100%;	
 	min-height: 100vh;
-	
-	/*position: relative;*/
-	/*padding-bottom: 50px;*/
-	/*padding-bottom: 3em;*/
 	margin-bottom: 3em;
 }
 
@@ -144,11 +138,6 @@ ul li ul {
 		padding-bottom:15px;
 		
 		
-	}
-	
-	& img {
-		
-	
 	}
 	
 	/* all paragraphs as a group in project_details */
@@ -255,7 +244,6 @@ i.icon-linkedin {
 
 .section-label {
 	font-size:1.55em;
-	/*margin: 15px 10px 10px 10px;	*/
 	margin-top: 15px;
 	margin-right: 2%;
 	margin-bottom: 15px;
@@ -313,17 +301,6 @@ h2 {
  .mobileProjectMixin;
 }
 
-header#reCreate img,
-header#header-homeconnect img,
-header#header-major-exploration img,
-header#header-giddy-throng img {
-	display: block;
-}
-
-header#header-nan img {
-	/*margin-left: percentage(10/320);*/	
-}
-
 #trombone {
  	background-image: url("../images/random-trombone-200x50px-no-text.png");
  	background-repeat: repeat;
@@ -345,83 +322,8 @@ header#header-nan img {
 	background-color: #B3B3B5;
 }
 
-header#header-homeconnect {
-	background-color: #CEE9FC;
-}
-
-header#header-major-exploration {
- 	background-color: #B3B3B5;
- 	overflow: hidden;
-}
-
-#header-earthship-seattle img {
-	margin-left: 5px;	
-}
-
-#earthship-seattle h2 {
-	font-family:"PT Mono"; 
-	font-size:1.5em;
-	padding-top:10px;
-	padding-left:5px;
-}
-
-header#header-giddy-throng {
-    background:#262626;
-    padding: 20px 0 20px 5px;
-}
-
-header#header-giddy-throng .small-header-image {
-	display: block;
-}
-
-header#header-giddy-throng .large-header-image {
-	display: none;
-}
-
-header#header-joemicheals {
-	height:100px;
-	background-repeat:no-repeat;
-}
-
-#header-joemicheals {
-	/* fallback color */
-	background-color:#6F848D; /* original greyish blue background color */
-	/* Firefox 3.6+ */
-	background-image: -moz-linear-gradient(#01161E, #DCF1FB);
-	/* Safari 4+, Chrome 1+ */
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#01161E), to(#DCF1FB));
-	/* Safari 5.1+, Chrome 10+ */
-	background-image: -webkit-linear-gradient(#01161E, #DCF1FB); 
-	/* Opera 11.10+ */
-	background-image: -o-linear-gradient(#01161E, #DCF1FB);
-	height: 100%;
-	/* This line is the money code, and not in Duckett CSS3: Gradients */
-	/* background-attachment: fixed;	*/
-}
-
-#header-joemicheals h1 {
-   display: none; 
-}
-
-#header-joemicheals h1.fold {
-   display:block;
-   font-size:1.5em;
-   color:#FFF;	
-   margin-left: 6px;
-   width:320px;
-   position: relative;
-   top: 15px;
-   padding: 5px 5px 5px 5px;
-   background-color: rgba(0, 0, 0, 0.8);
-   /*box-shadow: 2px 2px 2px #333;*/ /* horizontal, vertical, blur, color */
-}
-
-.yellow-flair {
-   color: #FFCB39;
-}
-
 #vo {	  
-	  background-color: #000;  
+   background-color: #000;  
 }
 
 #vo h2.cover {
@@ -429,7 +331,7 @@ header#header-joemicheals {
 }
 
 .cover h2 {
-	text-decoration:none;
+	text-decoration: none;
 	overflow: hidden;	
 }
 
@@ -471,6 +373,141 @@ header#header-joemicheals {
 /*** END PROJECT PAGE ICONS & PROJECT HEADERS ***/
 
 /*** PROJECT PAGES ***/
+/* PROJECT HEADERS */
+header img {
+	margin-left: percentage(5/480);
+	padding-right: percentage(10/480);
+}
+
+header#header-homeconnect img,
+header#header-major-exploration img,
+header#header-giddy-throng img {
+	display: block;
+}
+
+header#header-nan img {
+	/*height: 75px;	*/
+	/*max-height: 75px;*/
+}
+
+header#reCreate {
+	background-color:#C9D5DB;
+	overflow:hidden;
+	/*height: 75px;*/	
+}
+
+header#header-mark img {
+	padding: 5px 0 5px 0;	
+}
+
+header#reCreate img {
+	display: block;	
+	margin-left: 0;
+}
+
+header#header-trombone {
+	overflow: hidden;
+	height: 110px;
+	background-image: url("../images/wavelength-gold-on-green-481x110px-outerglow-2.png");
+	background-repeat: no-repeat;
+}
+
+/*header#header-trombone .small-header-image {
+	display: block;
+}
+
+header#header-trombone .large-header-image {
+	display: none;
+}*/
+
+#header-trombone img {
+	display: none;
+	margin-left: 0;	
+}
+
+header#header-homeconnect {
+	background-color: #CEE9FC;
+}
+
+header#header-major-exploration {
+ 	background-color: #B3B3B5;
+ 	overflow: hidden;
+}
+
+header#header-giddy-throng {
+    background:#262626;
+    padding: 20px 0 20px 0;
+	/*height: 75px;*/
+}
+
+header#header-giddy-throng .small-header-image {
+	display: block;
+	/*width: 96%;*/
+	padding-left: percentage(5/480);
+}
+
+header#header-giddy-throng .large-header-image {
+	display: none;
+}
+
+header#header-joemicheals {
+	height: 75px;
+	background-repeat: no-repeat;
+	padding-left: percentage(5/320);
+}
+
+#header-joemicheals {
+	/* fallback color */
+	background-color:#6F848D; /* original greyish blue background color */
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(#01161E, #DCF1FB);
+	/* Safari 4+, Chrome 1+ */
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#01161E), to(#DCF1FB));
+	/* Safari 5.1+, Chrome 10+ */
+	background-image: -webkit-linear-gradient(#01161E, #DCF1FB); 
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(#01161E, #DCF1FB);
+	height: 100%;
+	/* This line is the money code, and not in Duckett CSS3: Gradients */
+	/* background-attachment: fixed;	*/
+}
+
+#header-joemicheals h1 {
+   display: none; 
+}
+
+#header-joemicheals h1.fold {
+   display: block;
+   font-size: 1.4em;
+   color: #FFF;	
+   width: 300px;
+   margin: 0;
+   position: relative;
+   top: 5px;
+   padding: 5px 5px 5px 5px;
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.yellow-flair {
+   color: #FFCB39;
+}
+
+#header-earthship-seattle {
+	padding-top: 1vh;	
+}
+
+#header-earthship-seattle img {
+	margin-left: percentage(5/480);	
+}
+
+#earthship-seattle h2 {
+	font-family: "PT Mono"; 
+	font-size: 1.5em;
+	padding-top: 10px;
+	padding-left: 5px;
+}
+/* END PROJECT HEADERS */
+
 .menu-content {
 	/*width:100%;*/
 	margin-top:1.25%;
@@ -504,21 +541,6 @@ header#header-joemicheals {
 .project_details_earthship_seattle,
 .project_details_joemicheals {
 	.projectDetailsMobile;
-}
-
-header#reCreate {
-	background-color:#C9D5DB;
-	overflow:hidden;	
-}
-
-header#header-trombone {
-	overflow: hidden;
-	height:110px;
-	background-image: url("../images/wavelength-gold-on-green-481x110px-outerglow-2.png");
-}
-
-#header-trombone img {
-	display: none;	
 }
 /*** END PROJECT PAGES ***/
 
@@ -750,10 +772,4 @@ iframe {
 	top:0;
 	left:0;
 }
-
-/* to change iframe cover image */
-/*#play {
-	position:absolute;
-	z-index:100;	
-}*/
 /*** END IFRAME ***/
