@@ -44,24 +44,32 @@
 		margin-top: 2em;	
 	}
 	/* div contining the image */
-	& .project_details_img {
+	& figure {
 		/*width:percentage(300/460);*/
 		width: 100%;
 		overflow: hidden;
-		border: 2px solid grey;
+		/*border: 2px solid grey;*/
 		text-align: center;
 		alignment-baseline: baseline;
 	}
 	
-	& .project_details_img_large {
+	& figure img {
+		border: 2px solid grey;
+	}
+	
+	& figcaption {
+		font-size: .75em;
+	}
+	
+	& .figure_large {
 		display: block;	
 	}
 	
-	& .project_details_img_small {
+	& .figure_small {
 		display: none;	
 	}
 	
-	& .project_details_img.no-border {
+	& img.no-border {
 		border: none;
 	}
 }

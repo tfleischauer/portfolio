@@ -73,8 +73,8 @@ a:link img {
 	font-style: italic;	
 } 
 
-.project_details_img a:link,
-.project_details_img a:hover,
+figure a:link,
+figure a:hover,
 .logo a:link,
 .logo a:hover,
 a.project:link,
@@ -155,8 +155,19 @@ ul li ul {
 		
 	}
 	/* div containing the image */
-	& .project_details_img {
+	& figure {
 		width:96%;
+	}
+	
+	& figure img {
+		border: 2px solid grey;
+	}
+	
+	& figcaption {
+		font-size: .7em;
+		margin-top: .5em;
+		text-align: center;	
+		font-weight: 600;
 	}
 	
 	& ul {
@@ -166,6 +177,10 @@ ul li ul {
 	
 	& li {
 		padding-bottom:.3em;
+	}
+	
+	& img.no-border {
+		border: none;
 	}
 }
 /* END MIXINS */
@@ -736,20 +751,12 @@ fieldset {
 /*** END MOBILE FONTS ***/
 
 /*** PROJECT_DETAILS ***/
-.project_details_img_large {
-	display:block;	
+.figure_large {
+	display: block;	
 }
 
-.project_details_img_small {
-	display:none;	
-}
-
-.no-border {
-	border: none;
-}
-
-.project_details_img.no-border {
-	border:none;
+.figure_small {
+	display: none;	
 }
 /*** END PROJECT_DETAILS ***/
 

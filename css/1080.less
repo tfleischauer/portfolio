@@ -18,11 +18,11 @@
 	margin:auto;	
 }
 
-.project_details_img_large {
+.figure_large {
 	display:none;	
 }
 
-.project_details_img_small {
+.figure_small {
 	display:block;	
 }
 
@@ -33,7 +33,16 @@
 
 .projectDetails1080 {
    & .project_details_p { 
-		font-size:1em;
+   		width: percentage(220/700);
+		font-size: 1em;
+	}
+	
+	& figure {
+		width:percentage(460/700);
+	}
+	
+	& img.no-border {
+		border: none;
 	}
 }
 
