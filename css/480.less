@@ -373,28 +373,28 @@ i.icon-linkedin {
 /*** CIRCLE MIXINS ***/
 .allCirclesMixin {
 	.circleMixin-70px;
- 	.stroke(2px, solid, #000);
+ 	.stroke(1px, solid, #000);
 	
 	a {
-		display:block;
-		width:100%;
-		height:100%;	
+		display: block;
+		width: 100%;
+		height: 100%;	
 	}
 	
 	&:hover .cover {
-		opacity:1;
+		opacity: 1;
 		overflow: hidden;
 	}
 	
 }
 
 .circleMixin-70px {
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	width:70px;
-	height:70px;
-	background-color:white;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	background-color: white;
 	overflow: hidden;
 }
 /*** END CIRCLE MIXINS ***/
@@ -405,20 +405,20 @@ i.icon-linkedin {
 .color-circle-140,
 .greyscale-circle,
 .color-circle {
-	display:none;
+	display: none;
 }
 
 .greyscale-circle-70 {
-	position:absolute;
-	top:0;
-	z-index:2;
-	opacity:1;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	opacity: 1;
 	overflow: hidden;
-	display:block;	
+	display: block;	
 	
-	-moz-transition:opacity 500ms ease-out 10ms;
-	-webkit-transition:opacity 500ms ease-out 10ms;
-	transition:opacity 500ms ease-out 10ms;
+	-moz-transition: opacity 500ms ease-out 10ms;
+	-webkit-transition: opacity 500ms ease-out 10ms;
+	transition: opacity 500ms ease-out 10ms;
 	
 	.project:hover & {
 		opacity: 0; 
@@ -427,25 +427,25 @@ i.icon-linkedin {
 }
 
 .color-circle-70 {
-	position:absolute;
-	z-index:1;
-	top:0;
-	display:block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	display: block;
 	overflow: hidden;
 }
 /* END CIRCLE BEHAVIORS */
 
-/*** EACH PROJECT CIRCLE - POSITION & IMAGES ***/
+/*** EACH PROJECT CIRCLE - POSITION & COVERS ***/
 .cover {
-	opacity:0;
-	margin-left:20px;
-	margin-top:20px;
-	position:absolute;
-	z-index:3;
+	opacity: 0;
+	margin-left: 20px;
+	margin-top: 20px;
+	position: absolute;
+	z-index: 3;
 	
-	-moz-transition:opacity 2s;
-	-webkit-transition:opacity 2s;
-	transition:opacity 2s;
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	transition: opacity 2s;
 	
 	-moz-transition-delay: .5s;
 	-webkit-transition-delay: .5s;
@@ -455,130 +455,195 @@ i.icon-linkedin {
 }
 
 h2.cover {
-	font-size:24px;
+	font-size: 24px;
 }
 
+/* PROJECT CIRCLES */
+#earthship-seattle,
+#giddy-throng,
+#artist,
+#re-create,
+#mark,
+#vo,
+#home-connect,
+#trombone,
+#major-exploration {
+	.allCirclesMixin;
+}
+/* END PROJECT CIRCLES */
+
 #project1 {
-	margin-right:-1.5%;	
-	position:relative;
-	/*background-color:@circleDiv;*/
+	margin-right: -1.5%;	
+	position: relative;
+	/*background-color: @circleDiv;*/
 	clear: both;
 	display: block;
 }
 
-#artist {
- .circleMixin-70px;
- .stroke(1px, solid, #000);
- float:right;
-	a {
-		display:block;
-		width:100%;
-		height:100%;
-	}
+#earthship-seattle {
+	float:right;
 	
-	& h2.cover {
-		color:#FFF;
-		margin-left:14px;
-		margin-top:38px;
-		font-size:.85em;	
+ 	& h2.cover {
+		font-family: "PT Mono";
+		font-size: .7em;
+		margin-left: -5px;
+		margin-top: 20%;
+		color: #FFF;
+		text-align: center;
+		text-shadow: 0px 0px 5px #000;
 	}
-	
-	&:hover .cover {
-		opacity:1;
-	}
-	
 }
 
 #project2 {
-	padding-left:percentage(140/940);
-	z-index:40;
-	position:absolute;
-	top:10%;
-	/*background-color:@circleDiv;*/
+	padding-left: percentage(140/940);
+	z-index: 40;
+	position: absolute;
+	top: 10%;
+	/*background-color: @circleDiv;*/
 	clear: both;
 	display: block;
 }
 
-#re-create {
- .circleMixin-70px;
- .stroke(1px, solid, #000);
- clear: both;
-	a {
-	  display:block;
-	  width:100%;
-	  height:100%;
-	  overflow: hidden;
+#giddy-throng {
+	
+ 	& h2.cover {
+		font-size: 18px;
+		margin-left: 3px;
+		margin-top: 55px;
+		color: red;
+		text-align: center;
 	}
+}
+
+#project3 {
+	padding-left: percentage(320/940);
+	z-index: 30;
+	position: absolute;
+	top: 15%;
+	/*background-color:@circleDiv;*/	
+}
+
+#artist {
 	
 	& h2.cover {
-		color:#000;
-		font-size:8px;	
-		width:58px;
-		margin-left:48%;
-		margin-top:16px;
+		color: #FFF;
+		margin-left: 14px;
+		margin-top: 38px;
+		font-size: .85em;	
+	}
+	
+	&:hover .cover {
+		opacity: 1;
+	}
+	
+}
+
+#project4 {
+	clear: both;
+	padding-left: percentage(610/940);
+	position: absolute;
+	top: 35%;
+	/*background-color: @circleDiv;*/
+	z-index: 10;
+}
+
+#re-create {
+	
+	& h2.cover {
+		color: #000;
+		font-size: 8px;	
+		width: 58px;
+		margin-left: 48%;
+		margin-top: 16px;
 		font-family: "Myriad Pro", "PT Sans", sans-serif;
 		overflow: hidden;
 	}
 	
 	&:hover .cover {
-		opacity:1;
+		opacity: 1;
 		overflow: hidden;
 	}
 }
 
-#project3 {
-	padding-left:percentage(320/940);
-	z-index:30;
-	position:absolute;
-	top:15%;
-	/*background-color:@circleDiv;*/	
+#project5 {
+	clear: both;
+	padding-left: percentage(45/940);
+	position: absolute;
+	top: 52%;
+	/*background-color: @circleDiv;*/
+	z-index: 95;	
 }
 
 #mark {
- .circleMixin-70px;
- .stroke(1px, solid, #000);
-	a {
-		display:block;
-		width:100%;
-		height:100%;
-		overflow: hidden;
-	}
 	
 	& h2.cover {
-		font-size:.8em;
-		margin-left:5%;
-		margin-top:40%;
-		color:#7ED9EF;
-		font-family:"Gotham";
-		letter-spacing:3px;
+		font-size: .8em;
+		margin-left: 5%;
+		margin-top: 40%;
+		color: #7ED9EF;
+		font-family: "Gotham";
+		letter-spacing: 3px;
 		overflow: hidden;
-		display:block;
+		display: block;
 	}
 	
 	&:hover .cover {
-		opacity:1;
+		opacity: 1;
 		overflow: hidden;
 	}
 }
 
-#project4 {
-	clear:both;
-	padding-left:percentage(610/940);
-	position:absolute;
-	top:35%;
-	/*background-color:@circleDiv;*/
-	z-index:10;
+#project6 {
+	clear: both;
+	padding-left: percentage(220/940);
+	position: absolute;
+	top: 47%;
+	/*background-color: @circleDiv;*/
+	z-index: 65;
+}
+
+#vo {
+	
+ 	& h2.cover {
+		font-size: 18px;
+		margin-left: 12%;
+		margin-top: 45px;
+		color: #FFF;
+		text-align: center;
+		text-shadow: 0px 0px 5px #000;
+	}
+}
+
+#project7 {
+	clear: both;
+	padding-left: percentage(155/940);
+	position: absolute;
+	top: 75%;
+	z-index: 90;
+}
+
+#home-connect {
+	
+	& h2.cover {
+		font-size: 8px;
+		margin-left: 8%;
+		margin-top: 42%;
+		color: #FFF;
+		text-align: center;
+		display: block;
+	}	
+}
+
+#project8 {
+	clear: both;
+	padding-left: percentage(600/940);
+	position: absolute;
+	top: 71%;
+	/*background-color: @circleDiv;*/
+	z-index: 60;
 }
 
 #trombone {
- .circleMixin-70px;
- .stroke(1px, solid, #000);
- float:right;
-	a {
-		display:block;
-		width:100%;
-		height:100%;	
-	}
 	
 	& h2.cover {
 		font-size: .7em;
@@ -591,132 +656,33 @@ h2.cover {
 	}
 	
 	&:hover .cover {
-		opacity:1;
+		opacity: 1;
 		overflow: hidden;
 	}
 }
 
-#project5 {
-	clear:both;
-	padding-left:percentage(45/940);
-	position:absolute;
-	top:52%;
+#project9 {
+	clear: both;
+	padding-left: percentage(740/940);
+	position: absolute;
+	top: 65%;
 	/*background-color: @circleDiv;*/
-	z-index:95;	
-}
-
-#home-connect {
-	.allCirclesMixin;
-	.circleMixin-70px;
-	.stroke(1px, solid, #000);
-	/*background-color:#CEE9FC;*/
-	
-	& h2.cover {
-		font-size:8px;
-		margin-left:8%;
-		margin-top:42%;
-		color:#FFF;
-		text-align:center;
-		display:block;
-	}	
-}
-
-#project6 {
-	clear:both;
-	padding-left:percentage(220/940);
-	position:absolute;
-	top:47%;
-	/*background-color: @circleDiv;*/
-	z-index:65;
+	z-index: 50;
 }
 
 #major-exploration {
- 	.allCirclesMixin;
-	.circleMixin-70px;
-	.stroke(1px, solid, #000);
 	
 	& h2.cover {
-		font-size:.55em;
-		margin-left:1%;
-		margin-top:30%;
-		color:red;
-		text-align:center;
-		display:block;
+		font-size: .55em;
+		margin-left: 1%;
+		margin-top: 30%;
+		color: red;
+		text-align: center;
+		display: block;
 	}
 }
 
-#project7 {
-	clear:both;
-	padding-left:percentage(155/940);
-	position:absolute;
-	top:75%;
-	z-index:90;
-}
-
-#giddy-throng {
-	.allCirclesMixin;
-	.circleMixin-70px;
-	.stroke(1px, solid, #000);
-	
- 	& h2.cover {
-		font-size:18px;
-		margin-left:3px;
-		margin-top:55px;
-		color:red;
-		text-align:center;
-	}
-}
-
-#project8 {
-	clear:both;
-	padding-left:percentage(600/940);
-	position:absolute;
-	top:71%;
-	/*background-color: @circleDiv;*/
-	z-index:60;
-}
-
-#earthship-seattle {
-	.allCirclesMixin;
-	.circleMixin-70px;
-	.stroke(1px, solid, #000);
-	
- 	& h2.cover {
-		font-family:"PT Mono";
-		font-size:.7em;
-		margin-left:-5px;
-		margin-top:20%;
-		color:#FFF;
-		text-align:center;
-		text-shadow: 0px 0px 5px #000;
-	}
-}
-
-#project9 {
-	clear:both;
-	padding-left:percentage(740/940);
-	position:absolute;
-	top:65%;
-	/*background-color: @circleDiv;*/
-	z-index:50;
-}
-
-#vo {
-	.allCirclesMixin;
-	.circleMixin-70px;
-	.stroke(1px, solid, #000);
-	
- 	& h2.cover {
-		font-size:18px;
-		margin-left:12%;
-		margin-top:45px;
-		color:#FFF;
-		text-align:center;
-		text-shadow: 0px 0px 5px #000;
-		
-	}
-}
-/*** END EACH PROJECT CIRCLE - POSITION & IMAGES ***/
+/*** END EACH PROJECT CIRCLE - POSITION & COVERS ***/
 /***** END THE UX PROJECTS PAGE - ALL CIRCLE ICONS *****/
 
 /***** PROJECT PAGES *****/
@@ -902,50 +868,52 @@ header#header-earthship-seattle {
 /*** END SUB-NAVIGATION ***/
 
 /*** EACH PROJECT PAGE ***/
-#page-nan {
+/* First Project - 200% */
+#page-earthship-seattle {
 	top: 200%;
 	.projectPages;
 }
 
-#page-reCreate {
+#page-giddy-throng {
 	top: 300%;
 	.projectPages;
 }
 
-#page-mark {
+#page-nan {
 	top: 400%;
 	.projectPages;
 }
 
-#page-trombone {
+#page-reCreate {
 	top: 500%;
 	.projectPages;
 }
 
-#page-major-exploration {
+#page-mark {
 	top: 600%;
 	.projectPages;
 }
 
-#page-homeconnect {
+#page-joemicheals {
 	top: 700%;
 	.projectPages;
 }
 
-#page-joemicheals {
+#page-homeconnect {
 	top: 800%;
 	.projectPages;
 }
 
-#page-giddy-throng {
+#page-trombone {
 	top: 900%;
 	.projectPages;
 }
 
-#page-earthship-seattle {
+#page-major-exploration {
 	top: 1000%;
 	.projectPages;
 }
+/* Last Project - 1000% */
 /*** END EACH PROJECT PAGE ***/
 /***** END PROJECT PAGES *****/
 

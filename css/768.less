@@ -68,26 +68,26 @@ i.icon-linkedin {
  	.stroke(2px, solid, #000);
 	
 	a {
-		display:block;
-		width:100%;
-		height:100%;	
+		display: block;
+		width: 100%;
+		height: 100%;	
 	}
 	
 	&:hover .cover {
-		opacity:1;
-		overflow:hidden;
+		opacity: 1;
+		overflow: hidden;
 	}
 	
 }
 
 .circleMixin-140px {
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	width:140px;
-	height:140px;
-	background-color:white;
-	overflow:hidden;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 140px;
+	height: 140px;
+	background-color: white;
+	overflow: hidden;
 }
 /*** END MIXINS ***/
 
@@ -107,16 +107,16 @@ i.icon-linkedin {
 .color-circle-70,
 .greyscale-circle,
 .color-circle {
-	display:none;
+	display: none;
 }
 
 .greyscale-circle-140 {
-	position:absolute;
-	top:0;
-	z-index:2;
-	opacity:1;
-	overflow:hidden;
-	display:block;	
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	opacity: 1;
+	overflow: hidden;
+	display: block;	
 	
 	/* transition: 
 	1. opacity is the transition property
@@ -125,9 +125,9 @@ i.icon-linkedin {
 	4. transition delay, amount of time before opacity is fully opaque, 
 	   then amount of time before going from opaque to no opacity */
 	
-	-moz-transition:opacity 500ms ease-out 10ms;
-	-webkit-transition:opacity 500ms ease-out 10ms;
-	transition:opacity 500ms ease-out 10ms;
+	-moz-transition: opacity 500ms ease-out 10ms;
+	-webkit-transition: opacity 500ms ease-out 10ms;
+	transition: opacity 500ms ease-out 10ms;
 	
 	.project:hover & { /* greyscale image disappears when hovering over the whole project */
 		opacity: 0; 
@@ -136,52 +136,77 @@ i.icon-linkedin {
 }
 
 .color-circle-140 {
-	position:absolute;
-	z-index:1;
-	top:0;
-	display:block;
-	overflow:hidden;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	display: block;
+	overflow: hidden;
 }
 /* END CIRCLE BEHAVIORS */
 
-/* EACH PROJECT CIRCLE - POSITION & IMAGES */
+/* PROJECT CIRCLES */
+#earthship-seattle,
+#giddy-throng,
+#artist,
+#re-create,
+#mark,
+#vo,
+#home-connect,
+#trombone,
+#major-exploration {
+	.allCirclesMixin;
+}
+/* END PROJECT CIRCLES */
+
+/* PROJECT CIRCLE COVERS */
+#earthship-seattle {
+	
+ 	& h2.cover {
+		font-size: 18px;
+		margin-left: 0;
+		margin-top: 38px;
+		color: #FFF;
+	}
+}
+
 #artist {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
 	
 	& h2.cover {
-		font-size:1.3em;	
-		margin-left:23%;
-		margin-top:75px;
+		font-size: 1.3em;	
+		margin-left: 23%;
+		margin-top: 75px;
 	}
 }
 
 #re-create {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
 	
 	& h2.cover {
-		font-size:.9em;	
-		width:70px;
-		margin-left:67px;
-		margin-top:33px;
+		font-size: .9em;	
+		width: 70px;
+		margin-left: 67px;
+		margin-top: 33px;
 	}
 }
 
 #mark {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
 	
 	& h2.cover {
-		font-size:1.3em;
-		margin-left:16%;
-		margin-top:57px;
+		font-size: 1.3em;
+		margin-left: 16%;
+		margin-top: 57px;
 	}
 }
 
+#home-connect {
+	
+	& h2.cover {
+		font-size: 15px;
+		margin-left: 11%;
+		margin-top: 56px;
+	}	
+}
+
 #trombone {
- .circleMixin-140px;
- .stroke(2px, solid, #000);
 	
 	& h2.cover {
 		font-size: .9em;
@@ -190,51 +215,16 @@ i.icon-linkedin {
 	}
 }
 
-#home-connect {
-	.allCirclesMixin;
-	.circleMixin-140px;
-	
-	& h2.cover {
-		font-size:15px;
-		margin-left:11%;
-		margin-top:56px;
-	}	
-}
-
 #major-exploration {
- 	.allCirclesMixin;
-	.circleMixin-140px;
 	
 	& h2.cover {
-		font-size:12px;
-		margin-left:13%;
-		margin-top:60px;
-		color:red;
+		font-size: 12px;
+		margin-left: 13%;
+		margin-top: 60px;
+		color: red;
 	}
 }
-
-#giddy-throng {
-	.allCirclesMixin;
-	.circleMixin-140px;
-}
-
-#earthship-seattle {
-	.allCirclesMixin;
-	.circleMixin-140px;
-	
- 	& h2.cover {
-		font-size:18px;
-		margin-left:0;
-		margin-top:38px;
-		color:#FFF;
-	}
-}
-
-#vo {
-	.allCirclesMixin;
-	.circleMixin-140px;
-}
-/*** END EACH PROJECT CIRCLE - POSITION & IMAGES ***/
+/* END PROJECT CIRCLE COVERS */
 /***** END UX PROJECTS PAGE *****/
 
 /* PROJECT PAGES */
