@@ -35,6 +35,14 @@ p {
 	padding:0 0 0 0;
 }
 
+h2 {
+	margin-bottom:.5em;
+}
+
+h3 {
+	margin-bottom: .45em;	
+}
+
 a:link,
 a:visited {
 	color: #333;
@@ -114,7 +122,6 @@ ul li ul {
 	min-height: 100vh;
 	margin-bottom: 3em;
 }
-
 /*** END GLOBAL SELECTORS ***/
 
 /* VARIABLES */
@@ -136,8 +143,6 @@ ul li ul {
 		font-size:115%;
 		padding-top:15px;	
 		padding-bottom:15px;
-		
-		
 	}
 	
 	/* all paragraphs as a group in project_details */
@@ -188,28 +193,25 @@ ul li ul {
 /*** FUNCTIONS ***/
 /*** END FUNCTIONS ***/
 
-/*** HOME PAGE ***/
+/***** HOME PAGE *****/
 #home-page-container {
-	width:100%;
-	margin:auto;
-	/* margin-bottom:100px;	*/	
+	width: 100%; /* extends header bg color */
+	margin: auto;
 }
 
 .header-main {
-	margin-bottom: 25px;
 	background-color: #262626;
 	height: 60px;
-	line-height: 60px;	
-	/*padding-top: 0;*/
+	line-height: 60px;
+	margin-bottom: 25px;
 	padding-left: 2%;
 	padding-right: 2%;
 }
 
 .header-main p {
-	font-size:1.75em;
-	color:#FFF;	
-	display:inline-block;
-	
+	font-size: 1.75em;
+	color: #FFF;	
+	display: inline-block;
 }
 
 .header-main a:link,
@@ -217,45 +219,59 @@ ul li ul {
 .header-main a:hover,
 .header-main a:focus,
 .header-main a:active {
-	border-bottom:none;	
-	text-decoration:none; 	
+	border-bottom: none;	
+	text-decoration: none; 	
 }
 
 /*** CONTACT ICONS ***/
 .contact-icons {
-	float:right;
-	/*width:29.16666667%;*/
+	float: right;
 	max-width: 90px;
-	width:25%;
-	display:inline-block;
-	margin-top:10px;
+	width: 25%;
+	display: inline-block;
+	margin-top: 10px;
 }
 
 i.icon-github {
-	float:left;
+	float: left;
 	font-size: 40px;	
 }
 
 i.icon-linkedin {
-	float:right;	
-	/*width:42.85714286%;*/
+	float: right;	
 	font-size: 40px;	
 }
 /*** END CONTACT ICONS ***/
 
+#home-page-container .page-body {
+	width: 96%;
+	margin: auto;
+}
+
 .home-page-text {
-	padding:0 10px;	
+	font-size: .85em;	
 }
 
 .home-page-text p:last-child {
-	padding-top:.375em;	
+	padding-top: .375em;
+	display: none;	
 }
 
-.home-page-text h2 {
-	font-size:1.4em;
-	margin-top:.85em;
+/* Welcome! */
+#home-page-container .page-body > h2 {
+	font-size: 1.2em;	
 }
-/*** END HOME PAGE ***/
+
+/* Process */
+.home-page-text h3 {
+	font-size: 1.35em;
+	margin-top: .75em;
+}
+
+.home-image {
+	display: none;	
+}
+/***** END HOME PAGE *****/
 
 .section-label {
 	font-size:1.55em;
@@ -263,26 +279,11 @@ i.icon-linkedin {
 	margin-right: 2%;
 	margin-bottom: 15px;
 	margin-left: 2%;
-	
-}
-
-#page-contact .header-main,
-#page-thankyou .header-main {
-	/*margin-bottom:0px;*/	
-}
-
-h2 {
-	margin-bottom:.5em;
 }
 
 .project {
-	position:relative;	
+	position: relative;	
 }
-
-/*** PROJECT PAGE - ALL RECTANGLE ICONS ***/
-/*#page-projects {
-	visibility:visible;
-}*/
 
 /*** PROJECT PAGE ICONS & PROJECT HEADERS ***/
 /* numbering system - development only */

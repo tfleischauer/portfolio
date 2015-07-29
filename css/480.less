@@ -196,7 +196,7 @@ h2 {
 }
 
 .page-body { /* body of each project page NOT including header */
-	max-width: 1260px; /* 1260px of columns + 2 x 10px margin = 1280px */
+	/*max-width: 1260px;*/ /* 1260px of columns + 2 x 10px margin = 1280px */
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: .15em;
@@ -298,65 +298,83 @@ nav li a {
 /* END SUB-NAVIGATION */
 /*** END GLOBAL TABLET NAV ***/
 
-/*** HOME PAGE ***/
+/***** HOME PAGE *****/
 #home-page-container {
-	/*background:#FF1493;*/ /* magenta */
-	/*color:#FFF;*/
-	top:0;	
-	clear:both;
+	top: 0;	
+	clear: both;
 }
 
 .header-main {
-	height:100px;
-	line-height:100px;
-	margin-bottom:30px;	
-	padding:0 10px;
+	height: 100px;
+	line-height: 100px;
+	margin-bottom: 20px;	
+	padding: 0 10px;
+	clear: both;
 }
 
 .header-main p {
-	color:#FFF;
-	width:300px;	
-	display:inline;
-	font-size:2.5em;
-	position:relative;
-	line-height:100px;
-}
-
-.home-page-text h2 {
-	font-size:1.75em;
-	margin-top:.75em;
-	margin-bottom:.4em;	
-}
-
-.home-page-text {
-	max-width:500px;
-	margin:auto;
-	/* padding:0 20px; */
-	/* padding:0 20px 0 0; */
+	width: 300px;	
+	display: inline;
+	font-size: 2.5em;
+	position: relative;
+	line-height: 100px;
 }
 
 /*** CONTACT ICONS ***/
 .contact-icons {
-	float:right;
 	max-width: none;
 	width: 100px;
 	position: relative; /* position relative to normal position */
-	top:20px;
+	top: 20px;
 }
 
 i.icon-github {
-	/*width:42.85714286%;*/ /* 60/140px */
-	float:left;
-	font-size:45px;	
+	font-size: 45px;	
 }
 
 i.icon-linkedin {
-	/*width:42.85714286%;*/ /* 60/140px */
-	float:right;
-	font-size:45px;	
+	font-size: 45px;	
 }
 /*** END CONTACT ICONS ***/
-/*** END HOME PAGE ***/
+
+#home-page-container .page-body {
+	width: 100%;
+}
+
+/* Welcome! */
+#home-page-container .page-body > h2 {
+	font-size: 1.6em;
+	margin-top: .85em;
+}
+
+.home-page-text {
+	max-width: percentage(440/940);
+	padding: 0 0;
+	display: inline-block;
+	float: left;
+	font-size: .8em;
+}
+
+.home-page-text p:last-child {
+	display: block;	
+}
+
+/* Process */
+.home-page-text h3 {
+	font-size: 1.65em;
+}
+
+.home-image {
+	display: inline-block;
+	float: right;
+	width: percentage(460/940);
+	border: 2px solid #808080;	
+}
+
+.home-image img {
+	display: block;	/* remove inline descender space under image */
+}
+/***** END HOME PAGE *****/
 
 /***** THE UX PROJECTS PAGE - ALL CIRCLE ICONS *****/
 #page-projects {
