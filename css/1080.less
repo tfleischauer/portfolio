@@ -19,7 +19,12 @@
 }
 
 .page-body { /* body of each project page NOT including header */
-	max-width: 1260px; /* 1260px of columns + 2 x 10px margin = 1280px */
+	/*max-width: 1260px;*/ /* 1260px of columns + 2 x 10px margin = 1280px */
+	max-width: 940px;
+	/*margin-left: percentage(10/940);
+	margin-right: percentage(10/940);*/
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .figure_large {
@@ -31,18 +36,21 @@
 }
 
 .section-label {
-	padding-left: percentage(20/980);
-	padding-right: percentage(20/980);
+	/*padding-left: percentage(20/980);
+	padding-right: percentage(20/980);*/
 }
 
 .projectDetails1080 {
    & .project_details_p { 
-   		width: percentage(220/700);
-		font-size: 1em;
+   		/*width: percentage(220/700);
+		font-size: 1em;*/
 	}
 	
 	& figure {
-		width:percentage(460/700);
+		/*float: right;
+		width:percentage(300/620);
+		margin-left: percentage(20/620);*/
+		margin-bottom: 15px;
 	}
 	
 	& img.no-border {

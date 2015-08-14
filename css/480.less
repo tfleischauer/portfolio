@@ -11,7 +11,7 @@
 /*** GLOBAL MIXINS ***/
 .projectDetailsTablet {
 	& h1 {
-		padding-bottom:25px;
+		padding-bottom: 20px;
 	}
 	
 	& img {
@@ -19,29 +19,38 @@
 	}
 	 /* each paragraph */
 	& p {
-		margin-bottom:.4em;
+		margin-bottom: .75em;
 		float:left;
-		padding:0 2% 2% 0%;	
+		/*padding:0 2% 2% 0%;*/	
 		overflow: hidden;
+		
+		font-size: .85em;
 	}
 	/* all paragraphs as a group in project_details */
 	& .project_details_p { 
 		/*width:percentage(300/460);*/
-		width: 100%;
-		padding-top: 0;
+		/*width: 100%; */
+		/*padding-top: 0;
 		padding-bottom: 1.5em;
 		padding-left: 0;
 		font-size: .85em;
-		overflow: hidden;
+		overflow: hidden;*/
 	}
 	
-	& .project_details_p ul {
+	/*& .project_details_p ul {
 		clear: both;	
 		padding-left: 1.375em;
+	}*/
+	
+	& ul {
+		clear: both;	
+		padding-left: 1.375em;
+		font-size: .85em;
 	}
 	
 	& .pdf-link {
-		margin-top: 2em;	
+		margin-top: 2em;
+		/*display: inline-block;*/	
 	}
 	/* div contining the image */
 	& figure {
@@ -51,10 +60,11 @@
 		/*border: 2px solid grey;*/
 		text-align: center;
 		alignment-baseline: baseline;
+		
 	}
 	
 	& figure img {
-		border: 2px solid grey;
+		/*border: 2px solid grey;*/
 	}
 	
 	& figcaption {
@@ -122,7 +132,7 @@
 	}
 	
 	& ul li ul {
-		padding-top: 0.25em; /* creaters vertical space for sub list */
+		padding-top: 0.25em; /* creates vertical space for sub list */
 		margin-bottom: 0; /* zeros out for bottom of the list */
 		padding: 0;	/* overrides global ul padding */
 		margin-left: 0;	
