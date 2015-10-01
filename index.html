@@ -12,21 +12,20 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
-    <link rel="shortcut icon" type="image/png" href="images/favicon16x16.png" /> 
-       
-<!--    
-    <link rel="stylesheet/less" href="css/mobile.less" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon16x16.png" />       
+    
+    <!--<link rel="stylesheet/less" href="css/mobile.less" />
     <link rel="stylesheet/less" href="css/480.less" media="screen and (min-width:480px)" />
     <link rel="stylesheet/less" href="css/768.less" media="screen and (min-width:768px)" />
-    <link rel="stylesheet/less" href="css/1080.less" media="screen and (min-width:1080px)" />
-     -->
-     
+    <link rel="stylesheet/less" href="css/1080.less" media="screen and (min-width:1080px)" />-->
+        
     <link rel="stylesheet" href="css/mobile.css" type="text/css" /> 
-    <link rel="stylesheet" href="css/480.css" media="screen and (min-width:480px)" /> 
+    <link rel="stylesheet" href="css/480.css" media="screen and (min-width:480px)" type="text/css" /> 
     <link rel="stylesheet" href="css/768.css" media="screen and (min-width:768px)" type="text/css" /> 
     <link rel="stylesheet" href="css/1080.css" media="screen and (min-width:1080px)" type="text/css" /> 
    
-    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css"> 
+    <link href="css/lightbox.css" rel="stylesheet">   
     
     <meta name="viewport" content="width=device-width" />    
     
@@ -40,16 +39,16 @@
   <body>
   
     <nav class="clear">
-          <ul>
-		      <li><a class="scroll prevPage" title="Previous Page">&lt;</a></li>
-              <li><a href="#home-page-container" class="jump">Home</a></li>
-              <!--<li><a href="#page-projects" class="jump">Projects</a></li>-->
-              <li><a href="#page-contact" class="jump">Contact</a></li>
-		      <li><a class="scroll nextPage" title="Next Page">&gt;</a></li>
-          </ul>
+      <ul>
+          <li><a class="scroll prevPage" title="Previous Page">&lt;</a></li>
+          <li><a href="#home-page-container" class="jump">Home</a></li>
+          <!--<li><a href="#page-projects" class="jump">Projects</a></li>-->
+          <li><a href="#page-contact" class="jump">Contact</a></li>
+          <li><a class="scroll nextPage" title="Next Page">&gt;</a></li>
+      </ul>
           
-            <div class="clear"></div>
-    </nav>   
+       <div class="clear"></div>
+     </nav>   
         
   <div id="home-page-container" class="page">
 
@@ -76,6 +75,8 @@
           
           <h3>Process</h3>
           
+          
+          
           <p>I enjoy the process of making information systems usable by researching user needs to make artifacts such as:</p>
               <ul>
                   <li>Information Architecture Diagrams</li>
@@ -89,6 +90,7 @@
                   <li>Interaction Design</li>
                   <li>Copywriting</li>
               </ul>
+              
               
               <!--<p class="italic">I live in the space between user objectives and business goals.</p>-->
               
@@ -326,42 +328,7 @@
       </div>  <!-- end menu-content --> 
     
     </div> <!-- end page-body -->   
-   </div> <!-- end page-giddy-throng --> 
-        
-   
-   <div id="page-trombone" class="page">
-    <header id="header-trombone">
-    	<div class="max940px">
-        	<!--<img class="small-header-image" src="images/wavelength-gold-on-green-481x75px-outerglow.png" alt="Random Trombone header image" />-->
-        	<img src="images/wavelength-gold-on-green-481x110px-outerglow-3.png" alt="Random Trombone header image" />
-        </div>
-    </header>
-    
-    <div class="page-body">
-        
-      <div class="menu-content">
-        <a href="#nav-sub-trombone" id="nav-collapse-trombone">Menu &equiv;</a>
-        <div id="nav-sub-trombone">
-          <div id="project_details_trombone_list">
-              <ul>
-              	  <li><a class="project_title_trombone first" href="hcde419/overview.html">Overview</a></li>
-                  <li><a class="project_title_trombone" href="hcde419/project-proposal.html">Project Proposal</a></li>
-                  <li><a class="project_title_trombone" href="hcde419/research-report.html">Research Report</a></li>
-                  <li><a class="project_title_trombone" href="hcde419/personas-scenarios.html">Personas &amp; Scenarios</a></li>
-                  <li><a class="project_title_trombone" href="hcde419/prototype-presentation.html">Prototype Presentations</a></li>
-                  <li><a class="project_title_trombone" href="hcde419/final-report.html">Final Report</a></li>
-              </ul>
-              <div class="clear"></div>
-          </div><!-- project_details_trombone -->
-        </div> <!-- nav-sub-trombone -->
-        
-        <div id="content-area-trombone">
-        </div>  <!--content-area-trombone --> 
-      
-      </div>  <!-- end menu-content --> 
-    
-    </div> <!-- end page-body --> 
-   </div> <!-- end page-trombone -->  
+   </div> <!-- end page-giddy-throng -->   
    
    
    <div id="page-major-exploration" class="page">
@@ -402,6 +369,41 @@
     
     </div> <!-- end page-body --> 
    </div> <!-- end page-major-exploration --> 
+   
+   
+   <div id="page-trombone" class="page">
+    <header id="header-trombone">
+    	<div class="max940px">
+        	<!--<img class="small-header-image" src="images/wavelength-gold-on-green-481x75px-outerglow.png" alt="Random Trombone header image" />-->
+        	<img src="images/wavelength-gold-on-green-481x110px-outerglow-3.png" alt="Random Trombone header image" />
+        </div>
+    </header>
+    
+    <div class="page-body">
+        
+      <div class="menu-content">
+        <a href="#nav-sub-trombone" id="nav-collapse-trombone">Menu &equiv;</a>
+        <div id="nav-sub-trombone">
+          <div id="project_details_trombone_list">
+              <ul>
+              	  <li><a class="project_title_trombone first" href="hcde419/overview.html">Overview</a></li>
+                  <li><a class="project_title_trombone" href="hcde419/project-proposal.html">Project Proposal</a></li>
+                  <li><a class="project_title_trombone" href="hcde419/research-report.html">Research Report</a></li>
+                  <li><a class="project_title_trombone" href="hcde419/personas-scenarios.html">Personas &amp; Scenarios</a></li>
+                  <li><a class="project_title_trombone" href="hcde419/prototype-presentation.html">Prototype Presentations</a></li>
+                  <li><a class="project_title_trombone" href="hcde419/final-report.html">Final Report</a></li>
+              </ul>
+              <div class="clear"></div>
+          </div><!-- project_details_trombone -->
+        </div> <!-- nav-sub-trombone -->
+        
+        <div id="content-area-trombone">
+        </div>  <!--content-area-trombone --> 
+      
+      </div>  <!-- end menu-content --> 
+    
+    </div> <!-- end page-body --> 
+   </div> <!-- end page-trombone -->
    
    
    <div id="page-joemicheals" class="page">
@@ -498,7 +500,9 @@
     
     <script src="js/less-2.3.1.min.js"></script>
 
-    <script src="js/myscript.js"></script> 
+    <script src="js/myscript.js"></script>
+    
+    <script src="js/lightbox.js"></script> 
     
     <script src="//localhost:35729/livereload.js"></script>
    
