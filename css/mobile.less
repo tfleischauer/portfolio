@@ -85,6 +85,31 @@ a:link img {
 	font-weight: 600;	
 }
 
+.float-left-figure {
+	float: left;
+	clear: both;
+	display: inline-block;	
+	width: percentage(300/620);
+}
+
+.float-right-figure {
+	float: right;
+	clear: right;	
+	display: inline-block;
+	width: percentage(300/620);
+}
+
+figure {
+	/*width: percentage(620/940);*/	
+	/*display: block;*/
+	/*margin-bottom: 2em;*/
+}
+
+/*figcaption {
+	clear: both;
+	padding-top: .75em;	
+}*/
+
 figure a:link,
 figure a:hover,
 .logo a:link,
@@ -173,19 +198,35 @@ ul li ul {
 	}
 	/* div containing the image */
 	& figure {
-		width:96%;
-		margin-bottom: 1em;
+		width: 96%;
+		margin-bottom: 2em;
+		/*outline: 1px solid lightgrey;*/
 	}
 	
 	& figure img {
 		border: 1px solid lightgrey;
 	}
 	
+	& .white-outline {
+		outline: 1px solid white;
+	}
+	
+	& .white-outline a:hover img {
+		outline: 1px solid darkgrey;
+	}
+	
+	& .lb-hover a:hover img {
+		border: 1px solid darkgrey;	
+	}
+	
 	& figcaption {
 		font-size: .7em;
-		margin-top: .5em;
+		/*margin-top: .5em;*/
 		text-align: center;	
 		font-weight: 600;
+		
+		clear: both;
+		padding-top: .75em;
 	}
 	
 	& ul {
