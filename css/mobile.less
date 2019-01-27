@@ -617,9 +617,9 @@ nav ul {
 	/*min-width:320px;*/
 	max-width: 480px;
 	/*width: 320px;*/
-	width: 230px;
+	width: 234px; /* added 4px to fix layout break in Firefox */
 	margin:auto;
-	padding-left: 0; /* removes global style */
+	padding-left: 4px; /* removes global style */  /* added 4px padding to center (Firefox) */
 }
 
 nav ul li {
