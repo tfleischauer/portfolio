@@ -11,11 +11,13 @@ $(document).ready(function() {
       , 1200);
       
       return false;     
-    }
+    }		
   
   $("a.project").click(changePage);
   $("nav li a.jump").click(changePage);
   $("#contact a").click(changePage);
+  
+  $("#nav-collapse-klu").click(showHideMenu);
   
   $("#hideable-ul-nan-designs").hide();
   $("#hideable-ul-nan-php-templates").hide();	
@@ -45,6 +47,7 @@ $(document).ready(function() {
   
   
   // make id div after menu / inside #content-area-x
+  $("#content-area-klu").prepend("<div id='description_klu'></div>");
   $("#content-area-nan").prepend("<div id='description_nan'></div>");
   $("#content-area-recreate").prepend("<div id='description_recreate'></div>");
   $("#content-area-mark").prepend("<div id='description_mark'></div>"); 
@@ -56,6 +59,7 @@ $(document).ready(function() {
   $("#content-area-joemicheals").prepend("<div id='description_joemicheals'></div>");
   
   // jQuery class 'hide', hides the contents of the div
+  $("#description_klu").hide();
   $("#description_nan").hide();
   $("#description_recreate").hide();
   $("#description_mark").hide();
@@ -67,6 +71,7 @@ $(document).ready(function() {
   $("#description_joemicheals").hide();
   
   // each list item in the sub-nav
+  $(".project_title_klu").click(showDescriptionKlu); 
   $(".project_title_nan").click(showDescriptionNan); 
   $(".project_title_recreate").click(showDescriptionRecreate);
   $(".project_title_mark").click(showDescriptionMark);
@@ -77,6 +82,7 @@ $(document).ready(function() {
   $(".project_title_earthship_seattle").click(showDescriptionEarthshipSeattle);  
   $(".project_title_joemicheals").click(showDescriptionJoeMicheals); 
   
+  showFirstDescriptionKlu();
   showFirstDescriptionNan();
   showFirstDescriptionRecreate();
   showFirstDescriptionMark();
@@ -95,6 +101,17 @@ function showHideMenu() {
   $(menuId).toggle();
   return false;		
 }
+
+/*function showHideKluDesigns() {
+  if($("#hideable-ul-klu-designs").is(":visible")) {
+	  $("#show-hide-klu-designs-li").html; // the li containing the ul
+  } else {
+	  $("#show-hide-klu-designs-li").html;
+  }
+  
+  $("#hideable-ul-klu-designs").slideToggle();
+  return false;	
+}*/
 
 function showHideNanDesigns() {
   if($("#hideable-ul-nan-designs").is(":visible")) {
@@ -141,10 +158,18 @@ function showHideMajorExplorationImages() {
 }
 /*** END SHOW-HIDE SUB-SUB MENUS ***/
 
+function showDescriptionKlu() {
+  $("#description_klu").show();
+  var pageHref = $(this).attr("href");
+  // targets <div class="project_details_klu"> in project folder (e.g. rickklu/overview.html)
+  $("#description_klu").load(pageHref + " .project_details_klu"); 
+  return false;	
+}
+
 function showDescriptionNan() {
   $("#description_nan").show();
   var pageHref = $(this).attr("href");
-  $("#description_nan").load(pageHref + " .project_details_nan"); // class targets div in each project folder	
+  $("#description_nan").load(pageHref + " .project_details_nan");
   return false;	
 }
 
@@ -208,6 +233,12 @@ function showDescriptionJoeMicheals() {
 }
 
 /*** SET OPENING PAGES ***/
+function showFirstDescriptionKlu() {
+  $("#description_klu").show();
+  $("#description_klu").load("rickklu/overview.html" + " .project_details_klu");
+  return false;	
+}
+
 function showFirstDescriptionNan() {
   $("#description_nan").show();
   $("#description_nan").load("web120/overview.html" + " .project_details_nan");
